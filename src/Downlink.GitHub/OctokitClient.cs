@@ -39,7 +39,7 @@ namespace Downlink.GitHub
                 k => k.TagName,
                 v => v.Assets.Select(a => PatternMatcher(a.Name)));
 
-            return releases.Select(r => (VersionSpec)r.TagName);
+            return releases.Select(r => new VersionSpec(r.TagName, string.Empty, string.Empty));
         }
 
         public async Task<IFileSource> GetFileAsync(VersionSpec version)
@@ -73,7 +73,7 @@ namespace Downlink.GitHub
                 case 4:
                     return new VersionSpec(parts[1], parts[2], parts[3]);
                 default:
-                    return s;
+                    return new VersionSpec(s, null, null);
             }
         }
     }

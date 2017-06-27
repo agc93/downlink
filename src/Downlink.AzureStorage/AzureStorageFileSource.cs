@@ -6,7 +6,7 @@ namespace Downlink.AzureStorage
 {
     public class AzureStorageFileSource : IFileSource
     {
-        public AzureStorageFileSource(Uri fileUri) {
+        internal AzureStorageFileSource(Uri fileUri) {
             FileUri = fileUri;
         }
         public Uri FileUri  {get;}

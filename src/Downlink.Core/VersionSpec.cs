@@ -5,8 +5,8 @@ namespace Downlink.Core
 
         public VersionSpec(string version, string platform, string architecture) {
             VersionString = version;
-            Platform = platform ?? string.Empty;
-            Architecture = architecture ?? string.Empty;
+            Platform = platform ?? "any";
+            Architecture = architecture ?? "any";
         }
 
         private VersionSpec(string version) {
@@ -18,9 +18,9 @@ namespace Downlink.Core
             return v.ToString();
         }
 
-        public static implicit operator VersionSpec(string s) {
+        /*public static implicit operator VersionSpec(string s) {
             return new VersionSpec(s);
-        }
+        } */
 
         public string Platform { get; } = string.Empty;
 

@@ -1,6 +1,7 @@
 using Downlink.AzureStorage;
 using Downlink.GitHub;
 using Downlink.Handlers;
+using Downlink.S3;
 using Downlink.Storage;
 using MediatR;
 using Microsoft.AspNetCore.Builder;
@@ -57,15 +58,20 @@ namespace Downlink
             var backend = config.GetValue("Storage", "LocalStorage").ToLower().Trim();
             switch (backend)
             {
+                case "local":
                 case "localstorage":
                     services.AddLocalStorage();
                     break;
                 case "github":
-                    services.AddGitHubReleaseStorage(config);
+                    services.AddGitHubReleaseStorage();
                     break;
                 case "azure":
                 case "azurestorage":
                     services.AddAzureStorage();
+                    break;
+                case "aws":
+                case "s3":
+                    services.AddS3Storage();
                     break;
                 default:
                     services.AddFallbackStorage();
