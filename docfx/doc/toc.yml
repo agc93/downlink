@@ -1,0 +1,24 @@
+- name: Introduction
+  href: intro.md
+- name: Installation
+  href: installation.md
+- name: Usage
+  href: usage.md
+- name: Profiles
+  href: profiles.md
+- name: Storage
+  items:
+  - name: GitHub Releases
+    href: storage-gh.md
+  - name: Azure Storage
+    href: storage-az.md
+  - name: Amazon S3
+    href: storage-s3.md
+- name: FAQ
+  href: faq.md
+- name: Developers
+  items:
+  - name: Contributing
+    href: contributing.md
+  - name: Developer Guide
+    href: developers.md

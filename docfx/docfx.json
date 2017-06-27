@@ -1,0 +1,142 @@
+{
+  "metadata": [{
+    "src": [{
+      "files": [
+        "src/**/*.csproj"
+      ],
+      "exclude": [
+        "**/obj/**",
+        "**/bin/**",
+        "docfx/**"
+      ],
+      "src": "../"
+    }],
+    "dest": "api"
+  }],
+  "build": {
+    "content": [{
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "doc/**.md",
+          "doc/**/toc.yml"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml",
+          "*.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "resource": [{
+      "files": [
+        "assets/**"
+      ],
+      "exclude": [
+        "obj/**",
+        "_site/**"
+      ]
+    }],
+    "overwrite": [{
+      "files": [
+        "apidoc/**.md"
+      ],
+      "exclude": [
+        "obj/**",
+        "_site/**"
+      ]
+    }],
+    "dest": "_site",
+    "template": [
+      "statictoc"
+    ],
+    "globalMetadata": {
+      "_appTitle": "Downlink",
+      "_enableSearch": true,
+      "_appLogoPath": "assets/downlink-logo.png",
+      "_appFaviconPath": "assets/favicon.ico",
+      "_appFooter": "Downlink is MIT licensed and © Alistair Chapman 2017"
+    },
+    "noLangKeyword": false
+  },
+  "pdf": {
+    "content": [{
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ],
+        "exclude": [
+          "**/toc.yml",
+          "**/toc.md"
+        ]
+      },
+      {
+        "files": [
+          "doc/**.md",
+          "doc/toc.yml"
+        ],
+        "exclude": [
+          "**/toc.yml",
+          "obj/**",
+          "_site/**",
+          "_site_pdf/**"
+        ]
+      },
+      {
+        "files": [
+          "*.md",
+          "pdf/*"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      },
+      {
+        "files": "pdf/toc.yml"
+      }
+    ],
+    "resource": [{
+      "files": [
+        "assets/**"
+      ],
+      "exclude": [
+        "obj/**",
+        "_site/**",
+        "_site_pdf/**"
+      ]
+    }],
+    "overwrite": [{
+      "files": [
+        "apidoc/**.md"
+      ],
+      "exclude": [
+        "obj/**",
+        "_site/**",
+        "_site_pdf/**"
+      ]
+    }],
+    "dest": "_site_pdf",
+    "globalMetadata": {
+      "_appTitle": "Downlink",
+      "_enableSearch": true,
+      "_appLogoPath": "assets/downlink-logo.png",
+      "_appFaviconPath": "assets/favicon.ico",
+      "_appFooter": "Downlink is MIT licensed and © Alistair Chapman 2017"
+    },
+    "noLangKeyword": false
+  }
+}

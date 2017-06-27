@@ -1,0 +1,6 @@
+- name: User Documentation
+  href: doc/
+  homepage: doc/intro.md
+- name: Developer Reference
+  href: api/
+  homepage: api/index.md
