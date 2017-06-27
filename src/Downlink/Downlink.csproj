@@ -19,5 +19,6 @@
   <ItemGroup>
     <ProjectReference Include="..\Downlink.Core\Downlink.Core.csproj" />
     <ProjectReference Include="..\Downlink.GitHub\Downlink.GitHub.csproj" />
+    <ProjectReference Include="..\Downlink.AzureStorage\Downlink.AzureStorage.csproj" />
   </ItemGroup>
 </Project>

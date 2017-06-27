@@ -1,3 +1,4 @@
+using Downlink.AzureStorage;
 using Downlink.GitHub;
 using Downlink.Handlers;
 using Downlink.Storage;
@@ -61,6 +62,10 @@ namespace Downlink
                     break;
                 case "github":
                     services.AddGitHubReleaseStorage(config);
+                    break;
+                case "azure":
+                case "azurestorage":
+                    services.AddAzureStorage();
                     break;
                 default:
                     services.AddFallbackStorage();
