@@ -22,6 +22,16 @@ namespace Downlink.AzureStorage
 
         public static IFileSource ToSource(this CloudBlockBlob blob, VersionSpec version)
         {
+            blob.FetchAttributesAsync().RunSynchronously();
+            return new AzureStorageFileSource(blob.Uri)
+            {
+                Version = version,
+                Metadata = new FileMetadata(blob.Properties.Length, blob.Name)
+            };
+        }
+
+        public static async Task<IFileSource> ToSourceAsync(this CloudBlockBlob blob, VersionSpec version) {
+            await blob.FetchAttributesAsync();
             return new AzureStorageFileSource(blob.Uri)
             {
                 Version = version,

@@ -1,5 +1,6 @@
 using Microsoft.Extensions.DependencyInjection;
 using Downlink.Core;
+using Downlink.AzureStorage.Strategies;
 
 namespace Downlink.AzureStorage
 {
@@ -7,6 +8,11 @@ namespace Downlink.AzureStorage
     {
         public static IServiceCollection AddAzureStorage(this IServiceCollection services) {
             services.AddSingleton<IRemoteStorage, AzureStorage>();
+            return services;
+        }
+
+        public static IServiceCollection AddAzureMatchStrategies(this IServiceCollection services) {
+            services.AddTransient<AzureMatchStrategy, HierarchicalMatchStrategy>();
             return services;
         }
     }

@@ -1,4 +1,6 @@
 using Downlink.AzureStorage;
+using Downlink.Core;
+using Downlink.Core.Runtime;
 using Downlink.GitHub;
 using Downlink.Handlers;
 using Downlink.S3;
@@ -99,6 +101,10 @@ namespace Downlink
             {
                 services.AddSingleton<IResponseHandler, RedirectingResponseHandler>();
             }
+        }
+
+        private static void AddPatternMatchers(this IServiceCollection services) {
+            services.AddTransient<IPatternMatcher, HierarchicalPatternMatcher>();
         }
     }
 }

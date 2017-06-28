@@ -33,5 +33,27 @@ namespace Downlink.Core
         {
             return VersionString;
         }
+
+        // override object.Equals
+        public override bool Equals (object obj)
+        {
+            //
+            // See the full list of guidelines at
+            //   http://go.microsoft.com/fwlink/?LinkID=85237
+            // and also the guidance for operator== at
+            //   http://go.microsoft.com/fwlink/?LinkId=85238
+            //
+            
+            if (obj == null || GetType() != obj.GetType())
+            {
+                return false;
+            }
+            
+            // TODO: write your implementation of Equals() here
+            var spec = (VersionSpec)obj;
+            return obj.ToString() == ToString() &&
+                spec.Platform == Platform &&
+                spec.Architecture == Architecture;
+        }    
     }
 }

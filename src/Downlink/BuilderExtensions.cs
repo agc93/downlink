@@ -22,7 +22,8 @@ namespace Downlink
 
                 config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                       .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
-                      .AddYamlFile("config.yml", optional: true, reloadOnChange: true);
+                      .AddJsonFile("downlink.json", optional: true, reloadOnChange: true)
+                      .AddYamlFile("downlink.yml", optional: true, reloadOnChange: true);
                       //.AddYamlFile("/etc/downlink/config.yml", optional: true, reloadOnChange: true);
 
                 if (env.IsDevelopment())

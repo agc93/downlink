@@ -20,79 +20,74 @@ namespace Downlink.S3
         private readonly AWSCredentials _credentials;
 
         public S3Storage(
-            //IConfiguration configuration,
-            AWSCredentials credentials,
-            RegionEndpoint region,
-            string bucket = "downlink-storage"
+            IConfiguration configuration,
+            S3Configuration opts,
+            IEnumerable<IPatternMatcher> patternMatchers,
+            IEnumerable<S3MatchStrategy> strategies
         )
         {
-            _credentials = credentials;
-            _region = region;
-            BucketName = bucket;
+            _credentials = opts.Credentials;
+            _region = opts.Region;
+            BucketName = opts.BucketName;
+            var stratName = configuration.GetSection("AWS").GetSection("MatchStrategy").Value;
+            stratName = string.IsNullOrWhiteSpace(stratName) ? "Hierarchical" : stratName;
+            MatchStrategy = strategies.GetFor<S3MatchStrategy, S3Object>(stratName);
+            PatternMatcher = patternMatchers.GetFor(stratName);
         }
         private AmazonS3Client BuildClient() => new AmazonS3Client(_credentials, _region);
         public string BucketName { get; private set; }
 
+        private S3MatchStrategy MatchStrategy { get; }
+        private IPatternMatcher PatternMatcher { get; }
+
         public async Task<IFileSource> GetFileAsync(VersionSpec version)
         {
-            var pattern = BuildPattern(version);
-            var files = await Search(pattern);
-            if (!files.Any()) throw new VersionNotFoundException();
-            var firstMatch = files.First();
-            using(var client = BuildClient())
+            var blobs = new List<S3Object>();
+            using (var client = BuildClient())
             {
-                var req = new GetPreSignedUrlRequest {
+                ListObjectsV2Request request = new ListObjectsV2Request
+                {
+                    BucketName = BucketName,
+                    MaxKeys = 10
+                };
+                ListObjectsV2Response response;
+                do
+                {
+                    response = await client.ListObjectsV2Async(request);
+                    blobs.AddRange(response.S3Objects);
+                    request.ContinuationToken = response.NextContinuationToken;
+
+                } while (response.IsTruncated == true);
+            }
+            if (MatchStrategy == null)
+            {
+                var blob = blobs.FirstOrDefault(
+                    o => PatternMatcher.Match(o.Key, version)
+                );
+                if (blob == null) throw new VersionNotFoundException();
+                return ToSource(version, blob);
+            }
+            var match = await MatchStrategy.MatchAsync(blobs, version);
+            return match;
+        }
+
+        private IFileSource ToSource(VersionSpec version, S3Object firstMatch)
+        {
+            using (var client = BuildClient())
+            {
+                var req = new GetPreSignedUrlRequest
+                {
                     BucketName = BucketName,
                     Key = firstMatch.Key,
                     Expires = DateTime.Now.AddMinutes(15)
                 };
                 var url = client.GetPreSignedURL(req);
-                return new S3FileSource(new Uri(url)) {
+                return new S3FileSource(new Uri(url))
+                {
                     Metadata = new FileMetadata(firstMatch.Size, firstMatch.Key.Split('/', '\\', ':').Last()),
                     Version = version
                 };
             }
-        }
-
-        private async Task<IEnumerable<S3Object>> Search(string searchPattern, CancellationToken cancellationToken = default(CancellationToken)) {
-
-            searchPattern = searchPattern?.Replace('\\', '/');
-            string prefix = searchPattern;
-            Regex patternRegex = null;
-            int wildcardPos = searchPattern?.IndexOf('*') ?? -1;
-            if (searchPattern != null && wildcardPos >= 0) {
-                patternRegex = new Regex("^" + Regex.Escape(searchPattern).Replace("\\*", ".*?") + "$");
-                int slashPos = searchPattern.LastIndexOf('/');
-                prefix = slashPos >= 0 ? searchPattern.Substring(0, slashPos) : String.Empty;
-            }
-            prefix = prefix ?? String.Empty;
-
-            var objects = new List<S3Object>();
-            using (var client = BuildClient()) {
-                var req = new ListObjectsRequest {
-                    BucketName = BucketName,
-                    Prefix = prefix
-                };
-
-                do {
-                    var res = await client.ListObjectsAsync(req, cancellationToken).AnyContext();
-                    if (res.IsTruncated)
-                        req.Marker = res.NextMarker;
-                    else
-                        req = null;
-
-                    // TODO: Implement paging
-                    objects.AddRange(res.S3Objects.Where(blob => patternRegex == null || patternRegex.IsMatch(blob.Key)));
-                } while (req != null);
-
-                return objects;
-            }
-        }
-
-        private static string BuildPattern(VersionSpec version)
-        {
-            var path = $"{version.Platform}/{version.Architecture}/*{version.ToString()}*";
-            return path;
         }
     }
 }

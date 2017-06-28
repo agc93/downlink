@@ -1,13 +1,11 @@
 - name: Introduction
   href: intro.md
-- name: Installation
-  href: installation.md
-- name: Usage
-  href: usage.md
-- name: Profiles
-  href: profiles.md
+- name: Getting Started
+  href: getting-started.md
 - name: Storage
   items:
+  - name: Version Matching
+    href: matching.md
   - name: GitHub Releases
     href: storage-gh.md
   - name: Azure Storage
