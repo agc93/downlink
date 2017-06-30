@@ -11,6 +11,7 @@
     <PackageReference Include="MediatR" Version="3.0.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview1-final" />
+    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.0.0-preview1-final" />
     <PackageReference Include="NetEscapades.Configuration.Yaml" Version="1.2.0" />
   </ItemGroup>
   <ItemGroup>

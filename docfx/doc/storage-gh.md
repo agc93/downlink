@@ -46,6 +46,23 @@ my-awesome-app_v2_macos_x64.app -> /v2/macos/x64
 my-awesome-app_patch_macos_x64.app -> /patch/macos/x64
 ```
 
+You can also change what character Downlink uses to parse the release name by using the `GitHubStorage/SplitCharacters` configuration key:
+
+```json
+{
+    "GitHubStorage": {
+        "SplitCharacters": [ "_", "-" ]
+    }
+}
+```
+
+```yaml
+GitHubStorage:
+  SplitCharacters:
+    - '-'
+    - '_'
+```
+
 > Remember that as with any other backends, the easiest way to 'skip' a field, such as when you are only building for one architecture, is to use a single value like `any` or `default`.
 
 ### Alternate modes

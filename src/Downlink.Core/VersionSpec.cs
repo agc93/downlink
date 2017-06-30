@@ -54,6 +54,17 @@ namespace Downlink.Core
             return obj.ToString() == ToString() &&
                 spec.Platform == Platform &&
                 spec.Architecture == Architecture;
-        }    
+        }
+
+        public override int GetHashCode() {
+            unchecked
+            {
+                int hash = 17;
+                hash = hash * 23 + (Architecture ?? "").GetHashCode();
+                hash = hash * 23 + (Platform ?? "").GetHashCode();
+                hash = hash * 23 + (VersionString ?? "").GetHashCode();
+                return hash;
+            }
+        } 
     }
 }
