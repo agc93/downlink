@@ -152,8 +152,6 @@ Task("Publish")
 });
 
 Task("Default")
-.Does(() => {
-	Information("Hello Cake!");
-});
+.IsDependentOn("Publish");
 
 RunTarget(target);

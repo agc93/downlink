@@ -8,9 +8,9 @@ namespace Downlink.Storage
 {
     public class NoneStorage : IRemoteStorage
     {
-        private ILogger _logger;
+        private ILogger<NoneStorage> _logger;
 
-        public NoneStorage(ILogger logger) {
+        public NoneStorage(ILogger<NoneStorage> logger) {
             _logger = logger;
         }
         public Task<IFileSource> GetFileAsync(VersionSpec version)

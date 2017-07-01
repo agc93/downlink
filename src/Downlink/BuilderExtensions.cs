@@ -10,7 +10,7 @@ namespace Downlink
         public static IWebHostBuilder ConfigureLogging(this IWebHostBuilder builder) =>
             builder.ConfigureLogging((ctx, factory) =>
             {
-                factory.UseConfiguration(ctx.Configuration.GetSection("Logging"));
+                factory.AddConfiguration(ctx.Configuration.GetSection("Logging"));
                 factory.AddConsole();
                 factory.AddDebug();
             });
@@ -22,9 +22,9 @@ namespace Downlink
 
                 config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
                       .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
-                      .AddJsonFile("downlink.json", optional: true, reloadOnChange: true)
-                      .AddYamlFile("downlink.yml", optional: true, reloadOnChange: true);
-                      //.AddYamlFile("/etc/downlink/config.yml", optional: true, reloadOnChange: true);
+                      .AddConfigFile("downlink")
+                      .AddConfigFile("config")
+                      .AddConfigFile("./config/downlink");
 
                 if (env.IsDevelopment())
                 {
@@ -35,12 +35,19 @@ namespace Downlink
                     }
                 }
 
-                config.AddEnvironmentVariables();
+                config.AddEnvironmentVariables("Downlink");
 
                 if (args != null)
                 {
                     config.AddCommandLine(args);
                 }
             });
+
+            public static IConfigurationBuilder AddConfigFile(this IConfigurationBuilder config, string fileName) {
+                fileName = fileName.Replace(".json", string.Empty).Replace(".yml", string.Empty);
+                config.AddJsonFile($"{fileName}.json", optional: true, reloadOnChange: true);
+                config.AddYamlFile($"{fileName}.yml", optional: true, reloadOnChange: true);
+                return config;
+            }
     }
 }

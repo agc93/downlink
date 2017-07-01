@@ -14,11 +14,11 @@ namespace Downlink.AzureStorage
 {
     public class AzureStorage : IRemoteStorage
     {
-        private readonly ILogger _logger;
+        private readonly ILogger<AzureStorage> _logger;
 
         public AzureStorage(
             IConfiguration configuration,
-            ILogger logger,
+            ILogger<AzureStorage> logger,
             IEnumerable<IPatternMatcher> matchers,
             IEnumerable<AzureMatchStrategy> strategies)
         {

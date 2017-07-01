@@ -1,11 +1,13 @@
 
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Downlink.Core;
 using Downlink.Handlers;
 using Downlink.Messaging;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
 namespace Downlink.Controllers
@@ -16,14 +18,26 @@ namespace Downlink.Controllers
         private readonly ILogger<DownlinkController> _logger;
 
         public IResponseHandler Handler { get; }
+        private IConfiguration Configuration { get; }
 
         public DownlinkController(
+            IConfiguration config,
             MediatR.IMediator mediator,
             IResponseHandler handler,
             ILogger<DownlinkController> logger) : base(mediator)
         {
+            Configuration = config;
             Handler = handler;
             _logger = logger;
+        }
+
+        [HttpGet]
+        [Route("info")]
+        public IActionResult GetInfo() {
+            return Ok(new {
+                version = this.GetType().Assembly.GetName().Version.ToString(),
+                config = Configuration.AsEnumerable().Select(k => $"{k.Key}={k.Value}").ToList()
+            });
         }
 
         [HttpGet]
