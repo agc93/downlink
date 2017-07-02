@@ -27,6 +27,8 @@ namespace Downlink.Core
         public string Architecture { get; } = string.Empty;
         private string VersionString { get; }
 
+        public string Summary => $"'{VersionString}' [{(Platform ?? "unknown")}/{(Architecture ?? "unknown")}]";
+
         public bool IsStable {get;}
 
         public override string ToString()

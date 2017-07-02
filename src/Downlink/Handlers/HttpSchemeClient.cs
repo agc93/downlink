@@ -6,13 +6,17 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using Downlink.Core;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 
 namespace Downlink.Handlers
 {
-    public class HttpSchemeClient : SchemeClient
+    public class HttpDownloadClient : SchemeClient
     {
-        public HttpSchemeClient() : base(new[] { "http", "https" })
+        private readonly ILogger<HttpDownloadClient> _logger;
+
+        public HttpDownloadClient(ILogger<HttpDownloadClient> logger) : base(new[] { "http", "https" })
         {
+            _logger = logger;
             DownloadLocation = System.IO.Path.GetTempPath();
         }
 
@@ -22,19 +26,26 @@ namespace Downlink.Handlers
         {
             if (!Schemes.Contains(file.FileUri.Scheme))
             {
+                _logger.LogError(405, $"Scheme mismatch! '{file.FileUri.Scheme}' not supported..");
                 throw new InvalidOperationException();
             }
+            _logger.LogInformation("Downloading remote file from {0}", file.FileUri.ToString());
             var fileStream = await DownloadRemoteFileAsync(file.FileUri);
-            return new FileStreamResult(fileStream, "application/octet-stream");
+            //_logger.LogDebug("Downloaded remote file to stream (length {0})", fileStream.Length);
+            _logger.LogDebug("File downloaded, streaming {0} to browser...", file.Metadata.FileName);
+            return new FileStreamResult(fileStream, "application/octet-stream") {
+                FileDownloadName = file.Metadata.FileName
+            };
         }
 
         private async System.Threading.Tasks.Task<Stream> DownloadRemoteFileAsync(Uri requestUri)
         {
             using (var client = new HttpClient())
             {
-                var ms = new MemoryStream();
-                var stream = (await client.GetStreamAsync(requestUri)).CopyToAsync(ms);
-                return ms;
+                return await client.GetStreamAsync(requestUri);
+                /*var ms = new MemoryStream();
+                await (await client.GetStreamAsync(requestUri)).CopyToAsync(ms);
+                return ms; */
             }
         }
     }

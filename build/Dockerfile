@@ -2,6 +2,7 @@ FROM microsoft/aspnetcore:2.0
 
 WORKDIR /downlink
 RUN mkdir /downlink/config
-COPY ./dist/publish/Downlink .
+COPY ./publish/Downlink .
 VOLUME /downlink/config
+EXPOSE 80
 ENTRYPOINT ["dotnet", "Downlink.dll"]

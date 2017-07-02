@@ -44,6 +44,7 @@ namespace Downlink.Core.Runtime
         }
         internal static VersionSpec ParseSpec(string s)
         {
+            s = System.IO.Path.GetFileNameWithoutExtension(s);
             var parts = s.Split('_');
             if (parts.Length == 1)
             {

@@ -13,23 +13,22 @@ namespace Downlink.Handlers
         {
         }
 
-        public override Task<IActionResult> HandleAsync(IFileSource file)
+        public override async Task<IActionResult> HandleAsync(IFileSource file)
         {
             IActionResult result;
             switch (file.FileUri.Scheme)
             {
-                case "file":
+                /*case "file":
                     result =  new FileStreamResult(System.IO.File.OpenRead(file.FileUri.AbsolutePath), "application/octet-stream");
-                    break;
+                    break; */
                 case "http":
                 case "https":
-                    result =  new RedirectResult(file.FileUri.AbsoluteUri);
+                    result = new RedirectResult(file.FileUri.AbsoluteUri);
                     break;
                 default:
-                    result = new StatusCodeResult(412);
-                    break;
+                    return await HandleUnknownAsync(file);
             }
-            return Task.FromResult(result);
+            return result;
         }
     }
 }

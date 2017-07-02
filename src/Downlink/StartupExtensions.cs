@@ -85,7 +85,7 @@ namespace Downlink
         internal static IServiceCollection AddDownlinkServices(this IServiceCollection services, IConfiguration config)
         {
             services.AddTransient<ISchemeClient, FileSchemeClient>();
-            services.AddTransient<ISchemeClient, HttpSchemeClient>();
+            services.AddTransient<ISchemeClient, HttpDownloadClient>();
             services.AddResponseHandler(config);
             return services;
         }

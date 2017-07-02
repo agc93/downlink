@@ -151,6 +151,18 @@ Task("Publish")
 		}
 });
 
+Task("Docker-Build")
+	.IsDependentOn("Publish")
+	.Does(() =>
+{
+	CopyFileToDirectory("./build/Dockerfile", artifacts);
+	var dSettings = new DockerBuildSettings {
+		//Rm = "true",
+		Tag = new[] { "agc93/downlink:latest" }
+	};
+	DockerBuild(dSettings, artifacts);
+});
+
 Task("Default")
 .IsDependentOn("Publish");
 

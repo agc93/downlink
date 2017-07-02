@@ -34,8 +34,10 @@ namespace Downlink
                         config.AddUserSecrets(appAssembly, optional: true);
                     }
                 }
-
-                config.AddEnvironmentVariables("Downlink");
+                //config.AddEnvironmentVariables();
+                config.AddEnvironmentVariables("DOWNLINK_");
+                config.AddEnvironmentVariables("DOWNLINK__");
+                config.AddEnvironmentVariables("DOWNLINK:");
 
                 if (args != null)
                 {
