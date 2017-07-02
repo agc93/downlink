@@ -2,6 +2,8 @@
   href: intro.md
 - name: Getting Started
   href: getting-started.md
+- name: Configuration
+  href: configuration.md
 - name: Storage
   items:
   - name: Version Matching

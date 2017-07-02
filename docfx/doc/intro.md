@@ -16,7 +16,7 @@ Downlink is built entirely using ASP.NET Core and is supported on Windows, Linux
 
 ## Getting Started
 
-To get started, check out [the getting started guide](./getting-started.md), read the [usage guide](./usage.md) and check out the [FAQ](./faq.md) for common questions.
+To get started, check out [the getting started guide](./getting-started.md) for a quick demo, or check out the [FAQ](./faq.md) for common questions.
 
 ## Contributing
 

@@ -18,6 +18,12 @@ Not even close. Downlink is much closer to an API gateway than a web app and (at
 
 You should make your website SEO friendly and let Downlink do the one thing it's good at: predictable, stable download links.
 
+### Why can't I just download the 'latest' version?
+
+Because what defines "latest"? We could use the most recently uploaded, but now users might get hotfixes instead of new versions? Or serve based on version numbers, but then Downlink needs to be opinionated about how you version your app. As it is, this is considered a bit too heavy-handed and isn't natively supported.
+
+Note that for Azure Storage and S3 backends, you can always just create a version folder named `latest` and Downlink will happily serve it up.
+
 ### What platforms are supported?
 
 Downlink is built with ASP.NET Core meaning it can be run essentially anywhere .NET Core is supported.
