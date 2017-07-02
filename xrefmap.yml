@@ -28,22 +28,10 @@ references:
   fullName.vb: Downlink.AzureStorage.AzureStorage.AzureStorage(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger(Of Downlink.AzureStorage.AzureStorage), System.Collections.Generic.IEnumerable(Of Downlink.Core.IPatternMatcher), System.Collections.Generic.IEnumerable(Of Downlink.AzureStorage.Strategies.AzureMatchStrategy))
   nameWithType: AzureStorage.AzureStorage(IConfiguration, ILogger<AzureStorage>, IEnumerable<IPatternMatcher>, IEnumerable<AzureMatchStrategy>)
   nameWithType.vb: AzureStorage.AzureStorage(IConfiguration, ILogger(Of AzureStorage), IEnumerable(Of IPatternMatcher), IEnumerable(Of AzureMatchStrategy))
-- uid: Downlink.AzureStorage.AzureStorage.#ctor*
-  name: AzureStorage
-  href: api/Downlink.AzureStorage.AzureStorage.html#Downlink_AzureStorage_AzureStorage__ctor_
-  commentId: Overload:Downlink.AzureStorage.AzureStorage.#ctor
-  fullName: Downlink.AzureStorage.AzureStorage.AzureStorage
-  nameWithType: AzureStorage.AzureStorage
 - uid: Downlink.AzureStorage.AzureStorage.Account
   name: Account
   href: api/Downlink.AzureStorage.AzureStorage.html#Downlink_AzureStorage_AzureStorage_Account
   commentId: P:Downlink.AzureStorage.AzureStorage.Account
-  fullName: Downlink.AzureStorage.AzureStorage.Account
-  nameWithType: AzureStorage.Account
-- uid: Downlink.AzureStorage.AzureStorage.Account*
-  name: Account
-  href: api/Downlink.AzureStorage.AzureStorage.html#Downlink_AzureStorage_AzureStorage_Account_
-  commentId: Overload:Downlink.AzureStorage.AzureStorage.Account
   fullName: Downlink.AzureStorage.AzureStorage.Account
   nameWithType: AzureStorage.Account
 - uid: Downlink.AzureStorage.AzureStorage.Client
@@ -52,24 +40,12 @@ references:
   commentId: P:Downlink.AzureStorage.AzureStorage.Client
   fullName: Downlink.AzureStorage.AzureStorage.Client
   nameWithType: AzureStorage.Client
-- uid: Downlink.AzureStorage.AzureStorage.Client*
-  name: Client
-  href: api/Downlink.AzureStorage.AzureStorage.html#Downlink_AzureStorage_AzureStorage_Client_
-  commentId: Overload:Downlink.AzureStorage.AzureStorage.Client
-  fullName: Downlink.AzureStorage.AzureStorage.Client
-  nameWithType: AzureStorage.Client
 - uid: Downlink.AzureStorage.AzureStorage.GetFileAsync(Downlink.Core.VersionSpec)
   name: GetFileAsync(VersionSpec)
   href: api/Downlink.AzureStorage.AzureStorage.html#Downlink_AzureStorage_AzureStorage_GetFileAsync_Downlink_Core_VersionSpec_
   commentId: M:Downlink.AzureStorage.AzureStorage.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.AzureStorage.AzureStorage.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: AzureStorage.GetFileAsync(VersionSpec)
-- uid: Downlink.AzureStorage.AzureStorage.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.AzureStorage.AzureStorage.html#Downlink_AzureStorage_AzureStorage_GetFileAsync_
-  commentId: Overload:Downlink.AzureStorage.AzureStorage.GetFileAsync
-  fullName: Downlink.AzureStorage.AzureStorage.GetFileAsync
-  nameWithType: AzureStorage.GetFileAsync
 - uid: Downlink.AzureStorage.AzureStorageExtensions
   name: AzureStorageExtensions
   href: api/Downlink.AzureStorage.AzureStorageExtensions.html
@@ -82,48 +58,24 @@ references:
   commentId: M:Downlink.AzureStorage.AzureStorageExtensions.ListBlobsAsync(Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer)
   fullName: Downlink.AzureStorage.AzureStorageExtensions.ListBlobsAsync(Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer)
   nameWithType: AzureStorageExtensions.ListBlobsAsync(CloudBlobContainer)
-- uid: Downlink.AzureStorage.AzureStorageExtensions.ListBlobsAsync*
-  name: ListBlobsAsync
-  href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_ListBlobsAsync_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageExtensions.ListBlobsAsync
-  fullName: Downlink.AzureStorage.AzureStorageExtensions.ListBlobsAsync
-  nameWithType: AzureStorageExtensions.ListBlobsAsync
 - uid: Downlink.AzureStorage.AzureStorageExtensions.PrepContainer(Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer)
   name: PrepContainer(CloudBlobContainer)
   href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_PrepContainer_Microsoft_WindowsAzure_Storage_Blob_CloudBlobContainer_
   commentId: M:Downlink.AzureStorage.AzureStorageExtensions.PrepContainer(Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer)
   fullName: Downlink.AzureStorage.AzureStorageExtensions.PrepContainer(Microsoft.WindowsAzure.Storage.Blob.CloudBlobContainer)
   nameWithType: AzureStorageExtensions.PrepContainer(CloudBlobContainer)
-- uid: Downlink.AzureStorage.AzureStorageExtensions.PrepContainer*
-  name: PrepContainer
-  href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_PrepContainer_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageExtensions.PrepContainer
-  fullName: Downlink.AzureStorage.AzureStorageExtensions.PrepContainer
-  nameWithType: AzureStorageExtensions.PrepContainer
 - uid: Downlink.AzureStorage.AzureStorageExtensions.ToSource(Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob,Downlink.Core.VersionSpec)
   name: ToSource(CloudBlockBlob, VersionSpec)
   href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_ToSource_Microsoft_WindowsAzure_Storage_Blob_CloudBlockBlob_Downlink_Core_VersionSpec_
   commentId: M:Downlink.AzureStorage.AzureStorageExtensions.ToSource(Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob,Downlink.Core.VersionSpec)
   fullName: Downlink.AzureStorage.AzureStorageExtensions.ToSource(Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob, Downlink.Core.VersionSpec)
   nameWithType: AzureStorageExtensions.ToSource(CloudBlockBlob, VersionSpec)
-- uid: Downlink.AzureStorage.AzureStorageExtensions.ToSource*
-  name: ToSource
-  href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_ToSource_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageExtensions.ToSource
-  fullName: Downlink.AzureStorage.AzureStorageExtensions.ToSource
-  nameWithType: AzureStorageExtensions.ToSource
 - uid: Downlink.AzureStorage.AzureStorageExtensions.ToSourceAsync(Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob,Downlink.Core.VersionSpec)
   name: ToSourceAsync(CloudBlockBlob, VersionSpec)
   href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_ToSourceAsync_Microsoft_WindowsAzure_Storage_Blob_CloudBlockBlob_Downlink_Core_VersionSpec_
   commentId: M:Downlink.AzureStorage.AzureStorageExtensions.ToSourceAsync(Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob,Downlink.Core.VersionSpec)
   fullName: Downlink.AzureStorage.AzureStorageExtensions.ToSourceAsync(Microsoft.WindowsAzure.Storage.Blob.CloudBlockBlob, Downlink.Core.VersionSpec)
   nameWithType: AzureStorageExtensions.ToSourceAsync(CloudBlockBlob, VersionSpec)
-- uid: Downlink.AzureStorage.AzureStorageExtensions.ToSourceAsync*
-  name: ToSourceAsync
-  href: api/Downlink.AzureStorage.AzureStorageExtensions.html#Downlink_AzureStorage_AzureStorageExtensions_ToSourceAsync_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageExtensions.ToSourceAsync
-  fullName: Downlink.AzureStorage.AzureStorageExtensions.ToSourceAsync
-  nameWithType: AzureStorageExtensions.ToSourceAsync
 - uid: Downlink.AzureStorage.AzureStorageFileSource
   name: AzureStorageFileSource
   href: api/Downlink.AzureStorage.AzureStorageFileSource.html
@@ -136,22 +88,10 @@ references:
   commentId: P:Downlink.AzureStorage.AzureStorageFileSource.Available
   fullName: Downlink.AzureStorage.AzureStorageFileSource.Available
   nameWithType: AzureStorageFileSource.Available
-- uid: Downlink.AzureStorage.AzureStorageFileSource.Available*
-  name: Available
-  href: api/Downlink.AzureStorage.AzureStorageFileSource.html#Downlink_AzureStorage_AzureStorageFileSource_Available_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageFileSource.Available
-  fullName: Downlink.AzureStorage.AzureStorageFileSource.Available
-  nameWithType: AzureStorageFileSource.Available
 - uid: Downlink.AzureStorage.AzureStorageFileSource.FileUri
   name: FileUri
   href: api/Downlink.AzureStorage.AzureStorageFileSource.html#Downlink_AzureStorage_AzureStorageFileSource_FileUri
   commentId: P:Downlink.AzureStorage.AzureStorageFileSource.FileUri
-  fullName: Downlink.AzureStorage.AzureStorageFileSource.FileUri
-  nameWithType: AzureStorageFileSource.FileUri
-- uid: Downlink.AzureStorage.AzureStorageFileSource.FileUri*
-  name: FileUri
-  href: api/Downlink.AzureStorage.AzureStorageFileSource.html#Downlink_AzureStorage_AzureStorageFileSource_FileUri_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageFileSource.FileUri
   fullName: Downlink.AzureStorage.AzureStorageFileSource.FileUri
   nameWithType: AzureStorageFileSource.FileUri
 - uid: Downlink.AzureStorage.AzureStorageFileSource.Metadata
@@ -160,22 +100,10 @@ references:
   commentId: P:Downlink.AzureStorage.AzureStorageFileSource.Metadata
   fullName: Downlink.AzureStorage.AzureStorageFileSource.Metadata
   nameWithType: AzureStorageFileSource.Metadata
-- uid: Downlink.AzureStorage.AzureStorageFileSource.Metadata*
-  name: Metadata
-  href: api/Downlink.AzureStorage.AzureStorageFileSource.html#Downlink_AzureStorage_AzureStorageFileSource_Metadata_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageFileSource.Metadata
-  fullName: Downlink.AzureStorage.AzureStorageFileSource.Metadata
-  nameWithType: AzureStorageFileSource.Metadata
 - uid: Downlink.AzureStorage.AzureStorageFileSource.Version
   name: Version
   href: api/Downlink.AzureStorage.AzureStorageFileSource.html#Downlink_AzureStorage_AzureStorageFileSource_Version
   commentId: P:Downlink.AzureStorage.AzureStorageFileSource.Version
-  fullName: Downlink.AzureStorage.AzureStorageFileSource.Version
-  nameWithType: AzureStorageFileSource.Version
-- uid: Downlink.AzureStorage.AzureStorageFileSource.Version*
-  name: Version
-  href: api/Downlink.AzureStorage.AzureStorageFileSource.html#Downlink_AzureStorage_AzureStorageFileSource_Version_
-  commentId: Overload:Downlink.AzureStorage.AzureStorageFileSource.Version
   fullName: Downlink.AzureStorage.AzureStorageFileSource.Version
   nameWithType: AzureStorageFileSource.Version
 - uid: Downlink.AzureStorage.ServiceCollectionExtensions
@@ -190,24 +118,12 @@ references:
   commentId: M:Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureMatchStrategies(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   fullName: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureMatchStrategies(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddAzureMatchStrategies(IServiceCollection)
-- uid: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureMatchStrategies*
-  name: AddAzureMatchStrategies
-  href: api/Downlink.AzureStorage.ServiceCollectionExtensions.html#Downlink_AzureStorage_ServiceCollectionExtensions_AddAzureMatchStrategies_
-  commentId: Overload:Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureMatchStrategies
-  fullName: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureMatchStrategies
-  nameWithType: ServiceCollectionExtensions.AddAzureMatchStrategies
 - uid: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   name: AddAzureStorage(IServiceCollection)
   href: api/Downlink.AzureStorage.ServiceCollectionExtensions.html#Downlink_AzureStorage_ServiceCollectionExtensions_AddAzureStorage_Microsoft_Extensions_DependencyInjection_IServiceCollection_
   commentId: M:Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   fullName: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddAzureStorage(IServiceCollection)
-- uid: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureStorage*
-  name: AddAzureStorage
-  href: api/Downlink.AzureStorage.ServiceCollectionExtensions.html#Downlink_AzureStorage_ServiceCollectionExtensions_AddAzureStorage_
-  commentId: Overload:Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureStorage
-  fullName: Downlink.AzureStorage.ServiceCollectionExtensions.AddAzureStorage
-  nameWithType: ServiceCollectionExtensions.AddAzureStorage
 - uid: Downlink.AzureStorage.Strategies
   name: Downlink.AzureStorage.Strategies
   href: api/Downlink.AzureStorage.Strategies.html
@@ -226,12 +142,6 @@ references:
   commentId: M:Downlink.AzureStorage.Strategies.AzureMatchStrategy.#ctor(System.String)
   fullName: Downlink.AzureStorage.Strategies.AzureMatchStrategy.AzureMatchStrategy(System.String)
   nameWithType: AzureMatchStrategy.AzureMatchStrategy(String)
-- uid: Downlink.AzureStorage.Strategies.AzureMatchStrategy.#ctor*
-  name: AzureMatchStrategy
-  href: api/Downlink.AzureStorage.Strategies.AzureMatchStrategy.html#Downlink_AzureStorage_Strategies_AzureMatchStrategy__ctor_
-  commentId: Overload:Downlink.AzureStorage.Strategies.AzureMatchStrategy.#ctor
-  fullName: Downlink.AzureStorage.Strategies.AzureMatchStrategy.AzureMatchStrategy
-  nameWithType: AzureMatchStrategy.AzureMatchStrategy
 - uid: Downlink.AzureStorage.Strategies.AzureMatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable{Microsoft.WindowsAzure.Storage.Blob.IListBlobItem},Downlink.Core.VersionSpec)
   name: MatchAsync(IEnumerable<IListBlobItem>, VersionSpec)
   href: api/Downlink.AzureStorage.Strategies.AzureMatchStrategy.html#Downlink_AzureStorage_Strategies_AzureMatchStrategy_MatchAsync_System_Collections_Generic_IEnumerable_Microsoft_WindowsAzure_Storage_Blob_IListBlobItem__Downlink_Core_VersionSpec_
@@ -241,22 +151,10 @@ references:
   fullName.vb: Downlink.AzureStorage.Strategies.AzureMatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable(Of Microsoft.WindowsAzure.Storage.Blob.IListBlobItem), Downlink.Core.VersionSpec)
   nameWithType: AzureMatchStrategy.MatchAsync(IEnumerable<IListBlobItem>, VersionSpec)
   nameWithType.vb: AzureMatchStrategy.MatchAsync(IEnumerable(Of IListBlobItem), VersionSpec)
-- uid: Downlink.AzureStorage.Strategies.AzureMatchStrategy.MatchAsync*
-  name: MatchAsync
-  href: api/Downlink.AzureStorage.Strategies.AzureMatchStrategy.html#Downlink_AzureStorage_Strategies_AzureMatchStrategy_MatchAsync_
-  commentId: Overload:Downlink.AzureStorage.Strategies.AzureMatchStrategy.MatchAsync
-  fullName: Downlink.AzureStorage.Strategies.AzureMatchStrategy.MatchAsync
-  nameWithType: AzureMatchStrategy.MatchAsync
 - uid: Downlink.AzureStorage.Strategies.AzureMatchStrategy.Name
   name: Name
   href: api/Downlink.AzureStorage.Strategies.AzureMatchStrategy.html#Downlink_AzureStorage_Strategies_AzureMatchStrategy_Name
   commentId: P:Downlink.AzureStorage.Strategies.AzureMatchStrategy.Name
-  fullName: Downlink.AzureStorage.Strategies.AzureMatchStrategy.Name
-  nameWithType: AzureMatchStrategy.Name
-- uid: Downlink.AzureStorage.Strategies.AzureMatchStrategy.Name*
-  name: Name
-  href: api/Downlink.AzureStorage.Strategies.AzureMatchStrategy.html#Downlink_AzureStorage_Strategies_AzureMatchStrategy_Name_
-  commentId: Overload:Downlink.AzureStorage.Strategies.AzureMatchStrategy.Name
   fullName: Downlink.AzureStorage.Strategies.AzureMatchStrategy.Name
   nameWithType: AzureMatchStrategy.Name
 - uid: Downlink.BuilderExtensions
@@ -271,12 +169,6 @@ references:
   commentId: M:Downlink.BuilderExtensions.AddConfigFile(IConfigurationBuilder,System.String)
   fullName: Downlink.BuilderExtensions.AddConfigFile(IConfigurationBuilder, System.String)
   nameWithType: BuilderExtensions.AddConfigFile(IConfigurationBuilder, String)
-- uid: Downlink.BuilderExtensions.AddConfigFile*
-  name: AddConfigFile
-  href: api/Downlink.BuilderExtensions.html#Downlink_BuilderExtensions_AddConfigFile_
-  commentId: Overload:Downlink.BuilderExtensions.AddConfigFile
-  fullName: Downlink.BuilderExtensions.AddConfigFile
-  nameWithType: BuilderExtensions.AddConfigFile
 - uid: Downlink.BuilderExtensions.ConfigureAppConfiguration(IWebHostBuilder,System.String[])
   name: ConfigureAppConfiguration(IWebHostBuilder, String[])
   href: api/Downlink.BuilderExtensions.html#Downlink_BuilderExtensions_ConfigureAppConfiguration_IWebHostBuilder_System_String___
@@ -286,24 +178,12 @@ references:
   fullName.vb: Downlink.BuilderExtensions.ConfigureAppConfiguration(IWebHostBuilder, System.String())
   nameWithType: BuilderExtensions.ConfigureAppConfiguration(IWebHostBuilder, String[])
   nameWithType.vb: BuilderExtensions.ConfigureAppConfiguration(IWebHostBuilder, String())
-- uid: Downlink.BuilderExtensions.ConfigureAppConfiguration*
-  name: ConfigureAppConfiguration
-  href: api/Downlink.BuilderExtensions.html#Downlink_BuilderExtensions_ConfigureAppConfiguration_
-  commentId: Overload:Downlink.BuilderExtensions.ConfigureAppConfiguration
-  fullName: Downlink.BuilderExtensions.ConfigureAppConfiguration
-  nameWithType: BuilderExtensions.ConfigureAppConfiguration
 - uid: Downlink.BuilderExtensions.ConfigureLogging(IWebHostBuilder)
   name: ConfigureLogging(IWebHostBuilder)
   href: api/Downlink.BuilderExtensions.html#Downlink_BuilderExtensions_ConfigureLogging_IWebHostBuilder_
   commentId: M:Downlink.BuilderExtensions.ConfigureLogging(IWebHostBuilder)
   fullName: Downlink.BuilderExtensions.ConfigureLogging(IWebHostBuilder)
   nameWithType: BuilderExtensions.ConfigureLogging(IWebHostBuilder)
-- uid: Downlink.BuilderExtensions.ConfigureLogging*
-  name: ConfigureLogging
-  href: api/Downlink.BuilderExtensions.html#Downlink_BuilderExtensions_ConfigureLogging_
-  commentId: Overload:Downlink.BuilderExtensions.ConfigureLogging
-  fullName: Downlink.BuilderExtensions.ConfigureLogging
-  nameWithType: BuilderExtensions.ConfigureLogging
 - uid: Downlink.Controllers
   name: Downlink.Controllers
   href: api/Downlink.Controllers.html
@@ -322,24 +202,12 @@ references:
   commentId: M:Downlink.Controllers.ApiController.#ctor(IMediator)
   fullName: Downlink.Controllers.ApiController.ApiController(IMediator)
   nameWithType: ApiController.ApiController(IMediator)
-- uid: Downlink.Controllers.ApiController.#ctor*
-  name: ApiController
-  href: api/Downlink.Controllers.ApiController.html#Downlink_Controllers_ApiController__ctor_
-  commentId: Overload:Downlink.Controllers.ApiController.#ctor
-  fullName: Downlink.Controllers.ApiController.ApiController
-  nameWithType: ApiController.ApiController
 - uid: Downlink.Controllers.ApiController.Gone
   name: Gone()
   href: api/Downlink.Controllers.ApiController.html#Downlink_Controllers_ApiController_Gone
   commentId: M:Downlink.Controllers.ApiController.Gone
   fullName: Downlink.Controllers.ApiController.Gone()
   nameWithType: ApiController.Gone()
-- uid: Downlink.Controllers.ApiController.Gone*
-  name: Gone
-  href: api/Downlink.Controllers.ApiController.html#Downlink_Controllers_ApiController_Gone_
-  commentId: Overload:Downlink.Controllers.ApiController.Gone
-  fullName: Downlink.Controllers.ApiController.Gone
-  nameWithType: ApiController.Gone
 - uid: Downlink.Controllers.ApiController.GoneResult
   name: ApiController.GoneResult
   href: api/Downlink.Controllers.ApiController.GoneResult.html
@@ -352,22 +220,10 @@ references:
   commentId: M:Downlink.Controllers.ApiController.GoneResult.ExecuteResultAsync(ActionContext)
   fullName: Downlink.Controllers.ApiController.GoneResult.ExecuteResultAsync(ActionContext)
   nameWithType: ApiController.GoneResult.ExecuteResultAsync(ActionContext)
-- uid: Downlink.Controllers.ApiController.GoneResult.ExecuteResultAsync*
-  name: ExecuteResultAsync
-  href: api/Downlink.Controllers.ApiController.GoneResult.html#Downlink_Controllers_ApiController_GoneResult_ExecuteResultAsync_
-  commentId: Overload:Downlink.Controllers.ApiController.GoneResult.ExecuteResultAsync
-  fullName: Downlink.Controllers.ApiController.GoneResult.ExecuteResultAsync
-  nameWithType: ApiController.GoneResult.ExecuteResultAsync
 - uid: Downlink.Controllers.ApiController.Mediator
   name: Mediator
   href: api/Downlink.Controllers.ApiController.html#Downlink_Controllers_ApiController_Mediator
   commentId: P:Downlink.Controllers.ApiController.Mediator
-  fullName: Downlink.Controllers.ApiController.Mediator
-  nameWithType: ApiController.Mediator
-- uid: Downlink.Controllers.ApiController.Mediator*
-  name: Mediator
-  href: api/Downlink.Controllers.ApiController.html#Downlink_Controllers_ApiController_Mediator_
-  commentId: Overload:Downlink.Controllers.ApiController.Mediator
   fullName: Downlink.Controllers.ApiController.Mediator
   nameWithType: ApiController.Mediator
 - uid: Downlink.Controllers.DownlinkController
@@ -385,12 +241,6 @@ references:
   fullName.vb: Downlink.Controllers.DownlinkController.DownlinkController(IConfiguration, MediatR.IMediator, Downlink.Handlers.IResponseHandler, ILogger(Of Downlink.Controllers.DownlinkController))
   nameWithType: DownlinkController.DownlinkController(IConfiguration, MediatR.IMediator, IResponseHandler, ILogger<DownlinkController>)
   nameWithType.vb: DownlinkController.DownlinkController(IConfiguration, MediatR.IMediator, IResponseHandler, ILogger(Of DownlinkController))
-- uid: Downlink.Controllers.DownlinkController.#ctor*
-  name: DownlinkController
-  href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController__ctor_
-  commentId: Overload:Downlink.Controllers.DownlinkController.#ctor
-  fullName: Downlink.Controllers.DownlinkController.DownlinkController
-  nameWithType: DownlinkController.DownlinkController
 - uid: Downlink.Controllers.DownlinkController.AddArtifact(System.String,System.String,System.String,System.String,IEnumerable{IFormFile})
   name: AddArtifact(String, String, String, String, IEnumerable<IFormFile>)
   href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_AddArtifact_System_String_System_String_System_String_System_String_IEnumerable_IFormFile__
@@ -400,46 +250,22 @@ references:
   fullName.vb: Downlink.Controllers.DownlinkController.AddArtifact(System.String, System.String, System.String, System.String, IEnumerable(Of IFormFile))
   nameWithType: DownlinkController.AddArtifact(String, String, String, String, IEnumerable<IFormFile>)
   nameWithType.vb: DownlinkController.AddArtifact(String, String, String, String, IEnumerable(Of IFormFile))
-- uid: Downlink.Controllers.DownlinkController.AddArtifact*
-  name: AddArtifact
-  href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_AddArtifact_
-  commentId: Overload:Downlink.Controllers.DownlinkController.AddArtifact
-  fullName: Downlink.Controllers.DownlinkController.AddArtifact
-  nameWithType: DownlinkController.AddArtifact
 - uid: Downlink.Controllers.DownlinkController.GetDownloadAsync(System.String,System.String,System.String,System.String)
   name: GetDownloadAsync(String, String, String, String)
   href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_GetDownloadAsync_System_String_System_String_System_String_System_String_
   commentId: M:Downlink.Controllers.DownlinkController.GetDownloadAsync(System.String,System.String,System.String,System.String)
   fullName: Downlink.Controllers.DownlinkController.GetDownloadAsync(System.String, System.String, System.String, System.String)
   nameWithType: DownlinkController.GetDownloadAsync(String, String, String, String)
-- uid: Downlink.Controllers.DownlinkController.GetDownloadAsync*
-  name: GetDownloadAsync
-  href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_GetDownloadAsync_
-  commentId: Overload:Downlink.Controllers.DownlinkController.GetDownloadAsync
-  fullName: Downlink.Controllers.DownlinkController.GetDownloadAsync
-  nameWithType: DownlinkController.GetDownloadAsync
 - uid: Downlink.Controllers.DownlinkController.GetInfo
   name: GetInfo()
   href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_GetInfo
   commentId: M:Downlink.Controllers.DownlinkController.GetInfo
   fullName: Downlink.Controllers.DownlinkController.GetInfo()
   nameWithType: DownlinkController.GetInfo()
-- uid: Downlink.Controllers.DownlinkController.GetInfo*
-  name: GetInfo
-  href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_GetInfo_
-  commentId: Overload:Downlink.Controllers.DownlinkController.GetInfo
-  fullName: Downlink.Controllers.DownlinkController.GetInfo
-  nameWithType: DownlinkController.GetInfo
 - uid: Downlink.Controllers.DownlinkController.Handler
   name: Handler
   href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_Handler
   commentId: P:Downlink.Controllers.DownlinkController.Handler
-  fullName: Downlink.Controllers.DownlinkController.Handler
-  nameWithType: DownlinkController.Handler
-- uid: Downlink.Controllers.DownlinkController.Handler*
-  name: Handler
-  href: api/Downlink.Controllers.DownlinkController.html#Downlink_Controllers_DownlinkController_Handler_
-  commentId: Overload:Downlink.Controllers.DownlinkController.Handler
   fullName: Downlink.Controllers.DownlinkController.Handler
   nameWithType: DownlinkController.Handler
 - uid: Downlink.Core
@@ -484,12 +310,6 @@ references:
   commentId: M:Downlink.Core.Diagnostics.ArchitectureNotFoundException.#ctor(System.String,System.Exception)
   fullName: Downlink.Core.Diagnostics.ArchitectureNotFoundException.ArchitectureNotFoundException(System.String, System.Exception)
   nameWithType: ArchitectureNotFoundException.ArchitectureNotFoundException(String, Exception)
-- uid: Downlink.Core.Diagnostics.ArchitectureNotFoundException.#ctor*
-  name: ArchitectureNotFoundException
-  href: api/Downlink.Core.Diagnostics.ArchitectureNotFoundException.html#Downlink_Core_Diagnostics_ArchitectureNotFoundException__ctor_
-  commentId: Overload:Downlink.Core.Diagnostics.ArchitectureNotFoundException.#ctor
-  fullName: Downlink.Core.Diagnostics.ArchitectureNotFoundException.ArchitectureNotFoundException
-  nameWithType: ArchitectureNotFoundException.ArchitectureNotFoundException
 - uid: Downlink.Core.Diagnostics.NotFoundException
   name: NotFoundException
   href: api/Downlink.Core.Diagnostics.NotFoundException.html
@@ -520,12 +340,6 @@ references:
   commentId: M:Downlink.Core.Diagnostics.NotFoundException.#ctor(System.String,System.Exception)
   fullName: Downlink.Core.Diagnostics.NotFoundException.NotFoundException(System.String, System.Exception)
   nameWithType: NotFoundException.NotFoundException(String, Exception)
-- uid: Downlink.Core.Diagnostics.NotFoundException.#ctor*
-  name: NotFoundException
-  href: api/Downlink.Core.Diagnostics.NotFoundException.html#Downlink_Core_Diagnostics_NotFoundException__ctor_
-  commentId: Overload:Downlink.Core.Diagnostics.NotFoundException.#ctor
-  fullName: Downlink.Core.Diagnostics.NotFoundException.NotFoundException
-  nameWithType: NotFoundException.NotFoundException
 - uid: Downlink.Core.Diagnostics.PlatformNotFoundException
   name: PlatformNotFoundException
   href: api/Downlink.Core.Diagnostics.PlatformNotFoundException.html
@@ -556,12 +370,6 @@ references:
   commentId: M:Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor(System.String,System.Exception)
   fullName: Downlink.Core.Diagnostics.PlatformNotFoundException.PlatformNotFoundException(System.String, System.Exception)
   nameWithType: PlatformNotFoundException.PlatformNotFoundException(String, Exception)
-- uid: Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor*
-  name: PlatformNotFoundException
-  href: api/Downlink.Core.Diagnostics.PlatformNotFoundException.html#Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_
-  commentId: Overload:Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor
-  fullName: Downlink.Core.Diagnostics.PlatformNotFoundException.PlatformNotFoundException
-  nameWithType: PlatformNotFoundException.PlatformNotFoundException
 - uid: Downlink.Core.Diagnostics.VersionNotFoundException
   name: VersionNotFoundException
   href: api/Downlink.Core.Diagnostics.VersionNotFoundException.html
@@ -586,12 +394,6 @@ references:
   commentId: M:Downlink.Core.Diagnostics.VersionNotFoundException.#ctor(System.String,System.Exception)
   fullName: Downlink.Core.Diagnostics.VersionNotFoundException.VersionNotFoundException(System.String, System.Exception)
   nameWithType: VersionNotFoundException.VersionNotFoundException(String, Exception)
-- uid: Downlink.Core.Diagnostics.VersionNotFoundException.#ctor*
-  name: VersionNotFoundException
-  href: api/Downlink.Core.Diagnostics.VersionNotFoundException.html#Downlink_Core_Diagnostics_VersionNotFoundException__ctor_
-  commentId: Overload:Downlink.Core.Diagnostics.VersionNotFoundException.#ctor
-  fullName: Downlink.Core.Diagnostics.VersionNotFoundException.VersionNotFoundException
-  nameWithType: VersionNotFoundException.VersionNotFoundException
 - uid: Downlink.Core.Diagnostics.VersionParseException
   name: VersionParseException
   href: api/Downlink.Core.Diagnostics.VersionParseException.html
@@ -622,12 +424,6 @@ references:
   commentId: M:Downlink.Core.Diagnostics.VersionParseException.#ctor(System.String,System.Exception)
   fullName: Downlink.Core.Diagnostics.VersionParseException.VersionParseException(System.String, System.Exception)
   nameWithType: VersionParseException.VersionParseException(String, Exception)
-- uid: Downlink.Core.Diagnostics.VersionParseException.#ctor*
-  name: VersionParseException
-  href: api/Downlink.Core.Diagnostics.VersionParseException.html#Downlink_Core_Diagnostics_VersionParseException__ctor_
-  commentId: Overload:Downlink.Core.Diagnostics.VersionParseException.#ctor
-  fullName: Downlink.Core.Diagnostics.VersionParseException.VersionParseException
-  nameWithType: VersionParseException.VersionParseException
 - uid: Downlink.Core.FileMetadata
   name: FileMetadata
   href: api/Downlink.Core.FileMetadata.html
@@ -640,22 +436,10 @@ references:
   commentId: M:Downlink.Core.FileMetadata.#ctor(System.Double,System.String)
   fullName: Downlink.Core.FileMetadata.FileMetadata(System.Double, System.String)
   nameWithType: FileMetadata.FileMetadata(Double, String)
-- uid: Downlink.Core.FileMetadata.#ctor*
-  name: FileMetadata
-  href: api/Downlink.Core.FileMetadata.html#Downlink_Core_FileMetadata__ctor_
-  commentId: Overload:Downlink.Core.FileMetadata.#ctor
-  fullName: Downlink.Core.FileMetadata.FileMetadata
-  nameWithType: FileMetadata.FileMetadata
 - uid: Downlink.Core.FileMetadata.FileName
   name: FileName
   href: api/Downlink.Core.FileMetadata.html#Downlink_Core_FileMetadata_FileName
   commentId: P:Downlink.Core.FileMetadata.FileName
-  fullName: Downlink.Core.FileMetadata.FileName
-  nameWithType: FileMetadata.FileName
-- uid: Downlink.Core.FileMetadata.FileName*
-  name: FileName
-  href: api/Downlink.Core.FileMetadata.html#Downlink_Core_FileMetadata_FileName_
-  commentId: Overload:Downlink.Core.FileMetadata.FileName
   fullName: Downlink.Core.FileMetadata.FileName
   nameWithType: FileMetadata.FileName
 - uid: Downlink.Core.FileMetadata.Public
@@ -664,22 +448,10 @@ references:
   commentId: P:Downlink.Core.FileMetadata.Public
   fullName: Downlink.Core.FileMetadata.Public
   nameWithType: FileMetadata.Public
-- uid: Downlink.Core.FileMetadata.Public*
-  name: Public
-  href: api/Downlink.Core.FileMetadata.html#Downlink_Core_FileMetadata_Public_
-  commentId: Overload:Downlink.Core.FileMetadata.Public
-  fullName: Downlink.Core.FileMetadata.Public
-  nameWithType: FileMetadata.Public
 - uid: Downlink.Core.FileMetadata.SizeInBytes
   name: SizeInBytes
   href: api/Downlink.Core.FileMetadata.html#Downlink_Core_FileMetadata_SizeInBytes
   commentId: P:Downlink.Core.FileMetadata.SizeInBytes
-  fullName: Downlink.Core.FileMetadata.SizeInBytes
-  nameWithType: FileMetadata.SizeInBytes
-- uid: Downlink.Core.FileMetadata.SizeInBytes*
-  name: SizeInBytes
-  href: api/Downlink.Core.FileMetadata.html#Downlink_Core_FileMetadata_SizeInBytes_
-  commentId: Overload:Downlink.Core.FileMetadata.SizeInBytes
   fullName: Downlink.Core.FileMetadata.SizeInBytes
   nameWithType: FileMetadata.SizeInBytes
 - uid: Downlink.Core.IFileSource
@@ -694,22 +466,10 @@ references:
   commentId: P:Downlink.Core.IFileSource.Available
   fullName: Downlink.Core.IFileSource.Available
   nameWithType: IFileSource.Available
-- uid: Downlink.Core.IFileSource.Available*
-  name: Available
-  href: api/Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_Available_
-  commentId: Overload:Downlink.Core.IFileSource.Available
-  fullName: Downlink.Core.IFileSource.Available
-  nameWithType: IFileSource.Available
 - uid: Downlink.Core.IFileSource.FileUri
   name: FileUri
   href: api/Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_FileUri
   commentId: P:Downlink.Core.IFileSource.FileUri
-  fullName: Downlink.Core.IFileSource.FileUri
-  nameWithType: IFileSource.FileUri
-- uid: Downlink.Core.IFileSource.FileUri*
-  name: FileUri
-  href: api/Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_FileUri_
-  commentId: Overload:Downlink.Core.IFileSource.FileUri
   fullName: Downlink.Core.IFileSource.FileUri
   nameWithType: IFileSource.FileUri
 - uid: Downlink.Core.IFileSource.Metadata
@@ -718,22 +478,10 @@ references:
   commentId: P:Downlink.Core.IFileSource.Metadata
   fullName: Downlink.Core.IFileSource.Metadata
   nameWithType: IFileSource.Metadata
-- uid: Downlink.Core.IFileSource.Metadata*
-  name: Metadata
-  href: api/Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_Metadata_
-  commentId: Overload:Downlink.Core.IFileSource.Metadata
-  fullName: Downlink.Core.IFileSource.Metadata
-  nameWithType: IFileSource.Metadata
 - uid: Downlink.Core.IFileSource.Version
   name: Version
   href: api/Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_Version
   commentId: P:Downlink.Core.IFileSource.Version
-  fullName: Downlink.Core.IFileSource.Version
-  nameWithType: IFileSource.Version
-- uid: Downlink.Core.IFileSource.Version*
-  name: Version
-  href: api/Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_Version_
-  commentId: Overload:Downlink.Core.IFileSource.Version
   fullName: Downlink.Core.IFileSource.Version
   nameWithType: IFileSource.Version
 - uid: Downlink.Core.IMatchStrategy`1
@@ -754,12 +502,6 @@ references:
   fullName.vb: Downlink.Core.IMatchStrategy(Of TObject).MatchAsync(System.Collections.Generic.IEnumerable(Of TObject), Downlink.Core.VersionSpec)
   nameWithType: IMatchStrategy<TObject>.MatchAsync(IEnumerable<TObject>, VersionSpec)
   nameWithType.vb: IMatchStrategy(Of TObject).MatchAsync(IEnumerable(Of TObject), VersionSpec)
-- uid: Downlink.Core.IMatchStrategy`1.MatchAsync*
-  name: MatchAsync
-  href: api/Downlink.Core.IMatchStrategy-1.html#Downlink_Core_IMatchStrategy_1_MatchAsync_
-  commentId: Overload:Downlink.Core.IMatchStrategy`1.MatchAsync
-  fullName: Downlink.Core.IMatchStrategy<TObject>.MatchAsync
-  nameWithType: IMatchStrategy<TObject>.MatchAsync
 - uid: Downlink.Core.IMatchStrategy`1.Name
   name: Name
   href: api/Downlink.Core.IMatchStrategy-1.html#Downlink_Core_IMatchStrategy_1_Name
@@ -768,12 +510,6 @@ references:
   fullName.vb: Downlink.Core.IMatchStrategy(Of TObject).Name
   nameWithType: IMatchStrategy<TObject>.Name
   nameWithType.vb: IMatchStrategy(Of TObject).Name
-- uid: Downlink.Core.IMatchStrategy`1.Name*
-  name: Name
-  href: api/Downlink.Core.IMatchStrategy-1.html#Downlink_Core_IMatchStrategy_1_Name_
-  commentId: Overload:Downlink.Core.IMatchStrategy`1.Name
-  fullName: Downlink.Core.IMatchStrategy<TObject>.Name
-  nameWithType: IMatchStrategy<TObject>.Name
 - uid: Downlink.Core.IO
   name: Downlink.Core.IO
   href: api/Downlink.Core.IO.html
@@ -792,34 +528,16 @@ references:
   commentId: M:Downlink.Core.IO.Path.#ctor(System.String)
   fullName: Downlink.Core.IO.Path.Path(System.String)
   nameWithType: Path.Path(String)
-- uid: Downlink.Core.IO.Path.#ctor*
-  name: Path
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path__ctor_
-  commentId: Overload:Downlink.Core.IO.Path.#ctor
-  fullName: Downlink.Core.IO.Path.Path
-  nameWithType: Path.Path
 - uid: Downlink.Core.IO.Path.Collapse
   name: Collapse()
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_Collapse
   commentId: M:Downlink.Core.IO.Path.Collapse
   fullName: Downlink.Core.IO.Path.Collapse()
   nameWithType: Path.Collapse()
-- uid: Downlink.Core.IO.Path.Collapse*
-  name: Collapse
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_Collapse_
-  commentId: Overload:Downlink.Core.IO.Path.Collapse
-  fullName: Downlink.Core.IO.Path.Collapse
-  nameWithType: Path.Collapse
 - uid: Downlink.Core.IO.Path.FullPath
   name: FullPath
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_FullPath
   commentId: P:Downlink.Core.IO.Path.FullPath
-  fullName: Downlink.Core.IO.Path.FullPath
-  nameWithType: Path.FullPath
-- uid: Downlink.Core.IO.Path.FullPath*
-  name: FullPath
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_FullPath_
-  commentId: Overload:Downlink.Core.IO.Path.FullPath
   fullName: Downlink.Core.IO.Path.FullPath
   nameWithType: Path.FullPath
 - uid: Downlink.Core.IO.Path.GetDirectory
@@ -828,46 +546,22 @@ references:
   commentId: M:Downlink.Core.IO.Path.GetDirectory
   fullName: Downlink.Core.IO.Path.GetDirectory()
   nameWithType: Path.GetDirectory()
-- uid: Downlink.Core.IO.Path.GetDirectory*
-  name: GetDirectory
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_GetDirectory_
-  commentId: Overload:Downlink.Core.IO.Path.GetDirectory
-  fullName: Downlink.Core.IO.Path.GetDirectory
-  nameWithType: Path.GetDirectory
 - uid: Downlink.Core.IO.Path.GetFilename
   name: GetFilename()
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_GetFilename
   commentId: M:Downlink.Core.IO.Path.GetFilename
   fullName: Downlink.Core.IO.Path.GetFilename()
   nameWithType: Path.GetFilename()
-- uid: Downlink.Core.IO.Path.GetFilename*
-  name: GetFilename
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_GetFilename_
-  commentId: Overload:Downlink.Core.IO.Path.GetFilename
-  fullName: Downlink.Core.IO.Path.GetFilename
-  nameWithType: Path.GetFilename
 - uid: Downlink.Core.IO.Path.GetFilenameWithoutExtension
   name: GetFilenameWithoutExtension()
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_GetFilenameWithoutExtension
   commentId: M:Downlink.Core.IO.Path.GetFilenameWithoutExtension
   fullName: Downlink.Core.IO.Path.GetFilenameWithoutExtension()
   nameWithType: Path.GetFilenameWithoutExtension()
-- uid: Downlink.Core.IO.Path.GetFilenameWithoutExtension*
-  name: GetFilenameWithoutExtension
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_GetFilenameWithoutExtension_
-  commentId: Overload:Downlink.Core.IO.Path.GetFilenameWithoutExtension
-  fullName: Downlink.Core.IO.Path.GetFilenameWithoutExtension
-  nameWithType: Path.GetFilenameWithoutExtension
 - uid: Downlink.Core.IO.Path.IsRelative
   name: IsRelative
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_IsRelative
   commentId: P:Downlink.Core.IO.Path.IsRelative
-  fullName: Downlink.Core.IO.Path.IsRelative
-  nameWithType: Path.IsRelative
-- uid: Downlink.Core.IO.Path.IsRelative*
-  name: IsRelative
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_IsRelative_
-  commentId: Overload:Downlink.Core.IO.Path.IsRelative
   fullName: Downlink.Core.IO.Path.IsRelative
   nameWithType: Path.IsRelative
 - uid: Downlink.Core.IO.Path.Normalize
@@ -876,12 +570,6 @@ references:
   commentId: M:Downlink.Core.IO.Path.Normalize
   fullName: Downlink.Core.IO.Path.Normalize()
   nameWithType: Path.Normalize()
-- uid: Downlink.Core.IO.Path.Normalize*
-  name: Normalize
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_Normalize_
-  commentId: Overload:Downlink.Core.IO.Path.Normalize
-  fullName: Downlink.Core.IO.Path.Normalize
-  nameWithType: Path.Normalize
 - uid: Downlink.Core.IO.Path.op_Implicit(Downlink.Core.IO.Path)~System.String
   name: Implicit(Path to String)
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_op_Implicit_Downlink_Core_IO_Path__System_String
@@ -900,22 +588,10 @@ references:
   fullName.vb: Downlink.Core.IO.Path.Widening(System.String to Downlink.Core.IO.Path)
   nameWithType: Path.Implicit(String to Path)
   nameWithType.vb: Path.Widening(String to Path)
-- uid: Downlink.Core.IO.Path.op_Implicit*
-  name: Implicit
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_op_Implicit_
-  commentId: Overload:Downlink.Core.IO.Path.op_Implicit
-  fullName: Downlink.Core.IO.Path.Implicit
-  nameWithType: Path.Implicit
 - uid: Downlink.Core.IO.Path.Segments
   name: Segments
   href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_Segments
   commentId: P:Downlink.Core.IO.Path.Segments
-  fullName: Downlink.Core.IO.Path.Segments
-  nameWithType: Path.Segments
-- uid: Downlink.Core.IO.Path.Segments*
-  name: Segments
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_Segments_
-  commentId: Overload:Downlink.Core.IO.Path.Segments
   fullName: Downlink.Core.IO.Path.Segments
   nameWithType: Path.Segments
 - uid: Downlink.Core.IO.Path.ToString
@@ -924,12 +600,6 @@ references:
   commentId: M:Downlink.Core.IO.Path.ToString
   fullName: Downlink.Core.IO.Path.ToString()
   nameWithType: Path.ToString()
-- uid: Downlink.Core.IO.Path.ToString*
-  name: ToString
-  href: api/Downlink.Core.IO.Path.html#Downlink_Core_IO_Path_ToString_
-  commentId: Overload:Downlink.Core.IO.Path.ToString
-  fullName: Downlink.Core.IO.Path.ToString
-  nameWithType: Path.ToString
 - uid: Downlink.Core.IPatternMatcher
   name: IPatternMatcher
   href: api/Downlink.Core.IPatternMatcher.html
@@ -942,22 +612,10 @@ references:
   commentId: M:Downlink.Core.IPatternMatcher.Match(Downlink.Core.IO.Path,Downlink.Core.VersionSpec)
   fullName: Downlink.Core.IPatternMatcher.Match(Downlink.Core.IO.Path, Downlink.Core.VersionSpec)
   nameWithType: IPatternMatcher.Match(Path, VersionSpec)
-- uid: Downlink.Core.IPatternMatcher.Match*
-  name: Match
-  href: api/Downlink.Core.IPatternMatcher.html#Downlink_Core_IPatternMatcher_Match_
-  commentId: Overload:Downlink.Core.IPatternMatcher.Match
-  fullName: Downlink.Core.IPatternMatcher.Match
-  nameWithType: IPatternMatcher.Match
 - uid: Downlink.Core.IPatternMatcher.Name
   name: Name
   href: api/Downlink.Core.IPatternMatcher.html#Downlink_Core_IPatternMatcher_Name
   commentId: P:Downlink.Core.IPatternMatcher.Name
-  fullName: Downlink.Core.IPatternMatcher.Name
-  nameWithType: IPatternMatcher.Name
-- uid: Downlink.Core.IPatternMatcher.Name*
-  name: Name
-  href: api/Downlink.Core.IPatternMatcher.html#Downlink_Core_IPatternMatcher_Name_
-  commentId: Overload:Downlink.Core.IPatternMatcher.Name
   fullName: Downlink.Core.IPatternMatcher.Name
   nameWithType: IPatternMatcher.Name
 - uid: Downlink.Core.IRemoteStorage
@@ -972,12 +630,6 @@ references:
   commentId: M:Downlink.Core.IRemoteStorage.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.Core.IRemoteStorage.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: IRemoteStorage.GetFileAsync(VersionSpec)
-- uid: Downlink.Core.IRemoteStorage.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.Core.IRemoteStorage.html#Downlink_Core_IRemoteStorage_GetFileAsync_
-  commentId: Overload:Downlink.Core.IRemoteStorage.GetFileAsync
-  fullName: Downlink.Core.IRemoteStorage.GetFileAsync
-  nameWithType: IRemoteStorage.GetFileAsync
 - uid: Downlink.Core.IStreamingStorage
   name: IStreamingStorage
   href: api/Downlink.Core.IStreamingStorage.html
@@ -990,24 +642,12 @@ references:
   commentId: M:Downlink.Core.IStreamingStorage.GetFile(Downlink.Core.VersionSpec)
   fullName: Downlink.Core.IStreamingStorage.GetFile(Downlink.Core.VersionSpec)
   nameWithType: IStreamingStorage.GetFile(VersionSpec)
-- uid: Downlink.Core.IStreamingStorage.GetFile*
-  name: GetFile
-  href: api/Downlink.Core.IStreamingStorage.html#Downlink_Core_IStreamingStorage_GetFile_
-  commentId: Overload:Downlink.Core.IStreamingStorage.GetFile
-  fullName: Downlink.Core.IStreamingStorage.GetFile
-  nameWithType: IStreamingStorage.GetFile
 - uid: Downlink.Core.IStreamingStorage.GetFileContents(Downlink.Core.VersionSpec)
   name: GetFileContents(VersionSpec)
   href: api/Downlink.Core.IStreamingStorage.html#Downlink_Core_IStreamingStorage_GetFileContents_Downlink_Core_VersionSpec_
   commentId: M:Downlink.Core.IStreamingStorage.GetFileContents(Downlink.Core.VersionSpec)
   fullName: Downlink.Core.IStreamingStorage.GetFileContents(Downlink.Core.VersionSpec)
   nameWithType: IStreamingStorage.GetFileContents(VersionSpec)
-- uid: Downlink.Core.IStreamingStorage.GetFileContents*
-  name: GetFileContents
-  href: api/Downlink.Core.IStreamingStorage.html#Downlink_Core_IStreamingStorage_GetFileContents_
-  commentId: Overload:Downlink.Core.IStreamingStorage.GetFileContents
-  fullName: Downlink.Core.IStreamingStorage.GetFileContents
-  nameWithType: IStreamingStorage.GetFileContents
 - uid: Downlink.Core.MatchStrategyExtensions
   name: MatchStrategyExtensions
   href: api/Downlink.Core.MatchStrategyExtensions.html
@@ -1023,12 +663,6 @@ references:
   fullName.vb: Downlink.Core.MatchStrategyExtensions.GetFor(System.Collections.Generic.IEnumerable(Of Downlink.Core.IPatternMatcher), System.String)
   nameWithType: MatchStrategyExtensions.GetFor(IEnumerable<IPatternMatcher>, String)
   nameWithType.vb: MatchStrategyExtensions.GetFor(IEnumerable(Of IPatternMatcher), String)
-- uid: Downlink.Core.MatchStrategyExtensions.GetFor*
-  name: GetFor
-  href: api/Downlink.Core.MatchStrategyExtensions.html#Downlink_Core_MatchStrategyExtensions_GetFor_
-  commentId: Overload:Downlink.Core.MatchStrategyExtensions.GetFor
-  fullName: Downlink.Core.MatchStrategyExtensions.GetFor
-  nameWithType: MatchStrategyExtensions.GetFor
 - uid: Downlink.Core.MatchStrategyExtensions.GetFor``2(System.Collections.Generic.IEnumerable{``0},System.String)
   name: GetFor<T, TObject>(IEnumerable<T>, String)
   href: api/Downlink.Core.MatchStrategyExtensions.html#Downlink_Core_MatchStrategyExtensions_GetFor__2_System_Collections_Generic_IEnumerable___0__System_String_
@@ -1056,22 +690,10 @@ references:
   commentId: M:Downlink.Core.Runtime.FlatPatternMatcher.Match(Downlink.Core.IO.Path,Downlink.Core.VersionSpec)
   fullName: Downlink.Core.Runtime.FlatPatternMatcher.Match(Downlink.Core.IO.Path, Downlink.Core.VersionSpec)
   nameWithType: FlatPatternMatcher.Match(Path, VersionSpec)
-- uid: Downlink.Core.Runtime.FlatPatternMatcher.Match*
-  name: Match
-  href: api/Downlink.Core.Runtime.FlatPatternMatcher.html#Downlink_Core_Runtime_FlatPatternMatcher_Match_
-  commentId: Overload:Downlink.Core.Runtime.FlatPatternMatcher.Match
-  fullName: Downlink.Core.Runtime.FlatPatternMatcher.Match
-  nameWithType: FlatPatternMatcher.Match
 - uid: Downlink.Core.Runtime.FlatPatternMatcher.Name
   name: Name
   href: api/Downlink.Core.Runtime.FlatPatternMatcher.html#Downlink_Core_Runtime_FlatPatternMatcher_Name
   commentId: P:Downlink.Core.Runtime.FlatPatternMatcher.Name
-  fullName: Downlink.Core.Runtime.FlatPatternMatcher.Name
-  nameWithType: FlatPatternMatcher.Name
-- uid: Downlink.Core.Runtime.FlatPatternMatcher.Name*
-  name: Name
-  href: api/Downlink.Core.Runtime.FlatPatternMatcher.html#Downlink_Core_Runtime_FlatPatternMatcher_Name_
-  commentId: Overload:Downlink.Core.Runtime.FlatPatternMatcher.Name
   fullName: Downlink.Core.Runtime.FlatPatternMatcher.Name
   nameWithType: FlatPatternMatcher.Name
 - uid: Downlink.Core.Runtime.HierarchicalPatternMatcher
@@ -1086,34 +708,16 @@ references:
   commentId: M:Downlink.Core.Runtime.HierarchicalPatternMatcher.#ctor(System.Boolean)
   fullName: Downlink.Core.Runtime.HierarchicalPatternMatcher.HierarchicalPatternMatcher(System.Boolean)
   nameWithType: HierarchicalPatternMatcher.HierarchicalPatternMatcher(Boolean)
-- uid: Downlink.Core.Runtime.HierarchicalPatternMatcher.#ctor*
-  name: HierarchicalPatternMatcher
-  href: api/Downlink.Core.Runtime.HierarchicalPatternMatcher.html#Downlink_Core_Runtime_HierarchicalPatternMatcher__ctor_
-  commentId: Overload:Downlink.Core.Runtime.HierarchicalPatternMatcher.#ctor
-  fullName: Downlink.Core.Runtime.HierarchicalPatternMatcher.HierarchicalPatternMatcher
-  nameWithType: HierarchicalPatternMatcher.HierarchicalPatternMatcher
 - uid: Downlink.Core.Runtime.HierarchicalPatternMatcher.Match(Downlink.Core.IO.Path,Downlink.Core.VersionSpec)
   name: Match(Path, VersionSpec)
   href: api/Downlink.Core.Runtime.HierarchicalPatternMatcher.html#Downlink_Core_Runtime_HierarchicalPatternMatcher_Match_Downlink_Core_IO_Path_Downlink_Core_VersionSpec_
   commentId: M:Downlink.Core.Runtime.HierarchicalPatternMatcher.Match(Downlink.Core.IO.Path,Downlink.Core.VersionSpec)
   fullName: Downlink.Core.Runtime.HierarchicalPatternMatcher.Match(Downlink.Core.IO.Path, Downlink.Core.VersionSpec)
   nameWithType: HierarchicalPatternMatcher.Match(Path, VersionSpec)
-- uid: Downlink.Core.Runtime.HierarchicalPatternMatcher.Match*
-  name: Match
-  href: api/Downlink.Core.Runtime.HierarchicalPatternMatcher.html#Downlink_Core_Runtime_HierarchicalPatternMatcher_Match_
-  commentId: Overload:Downlink.Core.Runtime.HierarchicalPatternMatcher.Match
-  fullName: Downlink.Core.Runtime.HierarchicalPatternMatcher.Match
-  nameWithType: HierarchicalPatternMatcher.Match
 - uid: Downlink.Core.Runtime.HierarchicalPatternMatcher.Name
   name: Name
   href: api/Downlink.Core.Runtime.HierarchicalPatternMatcher.html#Downlink_Core_Runtime_HierarchicalPatternMatcher_Name
   commentId: P:Downlink.Core.Runtime.HierarchicalPatternMatcher.Name
-  fullName: Downlink.Core.Runtime.HierarchicalPatternMatcher.Name
-  nameWithType: HierarchicalPatternMatcher.Name
-- uid: Downlink.Core.Runtime.HierarchicalPatternMatcher.Name*
-  name: Name
-  href: api/Downlink.Core.Runtime.HierarchicalPatternMatcher.html#Downlink_Core_Runtime_HierarchicalPatternMatcher_Name_
-  commentId: Overload:Downlink.Core.Runtime.HierarchicalPatternMatcher.Name
   fullName: Downlink.Core.Runtime.HierarchicalPatternMatcher.Name
   nameWithType: HierarchicalPatternMatcher.Name
 - uid: Downlink.Core.VersionSpec
@@ -1128,22 +732,10 @@ references:
   commentId: M:Downlink.Core.VersionSpec.#ctor(System.String,System.String,System.String)
   fullName: Downlink.Core.VersionSpec.VersionSpec(System.String, System.String, System.String)
   nameWithType: VersionSpec.VersionSpec(String, String, String)
-- uid: Downlink.Core.VersionSpec.#ctor*
-  name: VersionSpec
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec__ctor_
-  commentId: Overload:Downlink.Core.VersionSpec.#ctor
-  fullName: Downlink.Core.VersionSpec.VersionSpec
-  nameWithType: VersionSpec.VersionSpec
 - uid: Downlink.Core.VersionSpec.Architecture
   name: Architecture
   href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_Architecture
   commentId: P:Downlink.Core.VersionSpec.Architecture
-  fullName: Downlink.Core.VersionSpec.Architecture
-  nameWithType: VersionSpec.Architecture
-- uid: Downlink.Core.VersionSpec.Architecture*
-  name: Architecture
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_Architecture_
-  commentId: Overload:Downlink.Core.VersionSpec.Architecture
   fullName: Downlink.Core.VersionSpec.Architecture
   nameWithType: VersionSpec.Architecture
 - uid: Downlink.Core.VersionSpec.Equals(System.Object)
@@ -1152,34 +744,16 @@ references:
   commentId: M:Downlink.Core.VersionSpec.Equals(System.Object)
   fullName: Downlink.Core.VersionSpec.Equals(System.Object)
   nameWithType: VersionSpec.Equals(Object)
-- uid: Downlink.Core.VersionSpec.Equals*
-  name: Equals
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_Equals_
-  commentId: Overload:Downlink.Core.VersionSpec.Equals
-  fullName: Downlink.Core.VersionSpec.Equals
-  nameWithType: VersionSpec.Equals
 - uid: Downlink.Core.VersionSpec.GetHashCode
   name: GetHashCode()
   href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_GetHashCode
   commentId: M:Downlink.Core.VersionSpec.GetHashCode
   fullName: Downlink.Core.VersionSpec.GetHashCode()
   nameWithType: VersionSpec.GetHashCode()
-- uid: Downlink.Core.VersionSpec.GetHashCode*
-  name: GetHashCode
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_GetHashCode_
-  commentId: Overload:Downlink.Core.VersionSpec.GetHashCode
-  fullName: Downlink.Core.VersionSpec.GetHashCode
-  nameWithType: VersionSpec.GetHashCode
 - uid: Downlink.Core.VersionSpec.IsStable
   name: IsStable
   href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_IsStable
   commentId: P:Downlink.Core.VersionSpec.IsStable
-  fullName: Downlink.Core.VersionSpec.IsStable
-  nameWithType: VersionSpec.IsStable
-- uid: Downlink.Core.VersionSpec.IsStable*
-  name: IsStable
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_IsStable_
-  commentId: Overload:Downlink.Core.VersionSpec.IsStable
   fullName: Downlink.Core.VersionSpec.IsStable
   nameWithType: VersionSpec.IsStable
 - uid: Downlink.Core.VersionSpec.op_Implicit(Downlink.Core.VersionSpec)~System.String
@@ -1191,22 +765,10 @@ references:
   fullName.vb: Downlink.Core.VersionSpec.Widening(Downlink.Core.VersionSpec to System.String)
   nameWithType: VersionSpec.Implicit(VersionSpec to String)
   nameWithType.vb: VersionSpec.Widening(VersionSpec to String)
-- uid: Downlink.Core.VersionSpec.op_Implicit*
-  name: Implicit
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_op_Implicit_
-  commentId: Overload:Downlink.Core.VersionSpec.op_Implicit
-  fullName: Downlink.Core.VersionSpec.Implicit
-  nameWithType: VersionSpec.Implicit
 - uid: Downlink.Core.VersionSpec.Platform
   name: Platform
   href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_Platform
   commentId: P:Downlink.Core.VersionSpec.Platform
-  fullName: Downlink.Core.VersionSpec.Platform
-  nameWithType: VersionSpec.Platform
-- uid: Downlink.Core.VersionSpec.Platform*
-  name: Platform
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_Platform_
-  commentId: Overload:Downlink.Core.VersionSpec.Platform
   fullName: Downlink.Core.VersionSpec.Platform
   nameWithType: VersionSpec.Platform
 - uid: Downlink.Core.VersionSpec.Summary
@@ -1215,24 +777,12 @@ references:
   commentId: P:Downlink.Core.VersionSpec.Summary
   fullName: Downlink.Core.VersionSpec.Summary
   nameWithType: VersionSpec.Summary
-- uid: Downlink.Core.VersionSpec.Summary*
-  name: Summary
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_Summary_
-  commentId: Overload:Downlink.Core.VersionSpec.Summary
-  fullName: Downlink.Core.VersionSpec.Summary
-  nameWithType: VersionSpec.Summary
 - uid: Downlink.Core.VersionSpec.ToString
   name: ToString()
   href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_ToString
   commentId: M:Downlink.Core.VersionSpec.ToString
   fullName: Downlink.Core.VersionSpec.ToString()
   nameWithType: VersionSpec.ToString()
-- uid: Downlink.Core.VersionSpec.ToString*
-  name: ToString
-  href: api/Downlink.Core.VersionSpec.html#Downlink_Core_VersionSpec_ToString_
-  commentId: Overload:Downlink.Core.VersionSpec.ToString
-  fullName: Downlink.Core.VersionSpec.ToString
-  nameWithType: VersionSpec.ToString
 - uid: Downlink.GitHub
   name: Downlink.GitHub
   href: api/Downlink.GitHub.html
@@ -1257,12 +807,6 @@ references:
   commentId: M:Downlink.GitHub.CredentialFactory.BuildCredentials(System.IServiceProvider)
   fullName: Downlink.GitHub.CredentialFactory.BuildCredentials(System.IServiceProvider)
   nameWithType: CredentialFactory.BuildCredentials(IServiceProvider)
-- uid: Downlink.GitHub.CredentialFactory.BuildCredentials*
-  name: BuildCredentials
-  href: api/Downlink.GitHub.CredentialFactory.html#Downlink_GitHub_CredentialFactory_BuildCredentials_
-  commentId: Overload:Downlink.GitHub.CredentialFactory.BuildCredentials
-  fullName: Downlink.GitHub.CredentialFactory.BuildCredentials
-  nameWithType: CredentialFactory.BuildCredentials
 - uid: Downlink.GitHub.FlatMatchStrategy
   name: FlatMatchStrategy
   href: api/Downlink.GitHub.FlatMatchStrategy.html
@@ -1278,12 +822,6 @@ references:
   fullName.vb: Downlink.GitHub.FlatMatchStrategy.FlatMatchStrategy(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.Extensions.Logging.ILogger(Of Downlink.GitHub.FlatMatchStrategy))
   nameWithType: FlatMatchStrategy.FlatMatchStrategy(IConfiguration, ILogger<FlatMatchStrategy>)
   nameWithType.vb: FlatMatchStrategy.FlatMatchStrategy(IConfiguration, ILogger(Of FlatMatchStrategy))
-- uid: Downlink.GitHub.FlatMatchStrategy.#ctor*
-  name: FlatMatchStrategy
-  href: api/Downlink.GitHub.FlatMatchStrategy.html#Downlink_GitHub_FlatMatchStrategy__ctor_
-  commentId: Overload:Downlink.GitHub.FlatMatchStrategy.#ctor
-  fullName: Downlink.GitHub.FlatMatchStrategy.FlatMatchStrategy
-  nameWithType: FlatMatchStrategy.FlatMatchStrategy
 - uid: Downlink.GitHub.FlatMatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable{Release},Downlink.Core.VersionSpec)
   name: MatchAsync(IEnumerable<Release>, VersionSpec)
   href: api/Downlink.GitHub.FlatMatchStrategy.html#Downlink_GitHub_FlatMatchStrategy_MatchAsync_System_Collections_Generic_IEnumerable_Release__Downlink_Core_VersionSpec_
@@ -1293,12 +831,6 @@ references:
   fullName.vb: Downlink.GitHub.FlatMatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable(Of Release), Downlink.Core.VersionSpec)
   nameWithType: FlatMatchStrategy.MatchAsync(IEnumerable<Release>, VersionSpec)
   nameWithType.vb: FlatMatchStrategy.MatchAsync(IEnumerable(Of Release), VersionSpec)
-- uid: Downlink.GitHub.FlatMatchStrategy.MatchAsync*
-  name: MatchAsync
-  href: api/Downlink.GitHub.FlatMatchStrategy.html#Downlink_GitHub_FlatMatchStrategy_MatchAsync_
-  commentId: Overload:Downlink.GitHub.FlatMatchStrategy.MatchAsync
-  fullName: Downlink.GitHub.FlatMatchStrategy.MatchAsync
-  nameWithType: FlatMatchStrategy.MatchAsync
 - uid: Downlink.GitHub.GitHubCredentials
   name: GitHubCredentials
   href: api/Downlink.GitHub.GitHubCredentials.html
@@ -1311,22 +843,10 @@ references:
   commentId: M:Downlink.GitHub.GitHubCredentials.#ctor(System.String,System.String)
   fullName: Downlink.GitHub.GitHubCredentials.GitHubCredentials(System.String, System.String)
   nameWithType: GitHubCredentials.GitHubCredentials(String, String)
-- uid: Downlink.GitHub.GitHubCredentials.#ctor*
-  name: GitHubCredentials
-  href: api/Downlink.GitHub.GitHubCredentials.html#Downlink_GitHub_GitHubCredentials__ctor_
-  commentId: Overload:Downlink.GitHub.GitHubCredentials.#ctor
-  fullName: Downlink.GitHub.GitHubCredentials.GitHubCredentials
-  nameWithType: GitHubCredentials.GitHubCredentials
 - uid: Downlink.GitHub.GitHubCredentials.Owner
   name: Owner
   href: api/Downlink.GitHub.GitHubCredentials.html#Downlink_GitHub_GitHubCredentials_Owner
   commentId: P:Downlink.GitHub.GitHubCredentials.Owner
-  fullName: Downlink.GitHub.GitHubCredentials.Owner
-  nameWithType: GitHubCredentials.Owner
-- uid: Downlink.GitHub.GitHubCredentials.Owner*
-  name: Owner
-  href: api/Downlink.GitHub.GitHubCredentials.html#Downlink_GitHub_GitHubCredentials_Owner_
-  commentId: Overload:Downlink.GitHub.GitHubCredentials.Owner
   fullName: Downlink.GitHub.GitHubCredentials.Owner
   nameWithType: GitHubCredentials.Owner
 - uid: Downlink.GitHub.GitHubCredentials.Repo
@@ -1335,22 +855,10 @@ references:
   commentId: P:Downlink.GitHub.GitHubCredentials.Repo
   fullName: Downlink.GitHub.GitHubCredentials.Repo
   nameWithType: GitHubCredentials.Repo
-- uid: Downlink.GitHub.GitHubCredentials.Repo*
-  name: Repo
-  href: api/Downlink.GitHub.GitHubCredentials.html#Downlink_GitHub_GitHubCredentials_Repo_
-  commentId: Overload:Downlink.GitHub.GitHubCredentials.Repo
-  fullName: Downlink.GitHub.GitHubCredentials.Repo
-  nameWithType: GitHubCredentials.Repo
 - uid: Downlink.GitHub.GitHubCredentials.Token
   name: Token
   href: api/Downlink.GitHub.GitHubCredentials.html#Downlink_GitHub_GitHubCredentials_Token
   commentId: P:Downlink.GitHub.GitHubCredentials.Token
-  fullName: Downlink.GitHub.GitHubCredentials.Token
-  nameWithType: GitHubCredentials.Token
-- uid: Downlink.GitHub.GitHubCredentials.Token*
-  name: Token
-  href: api/Downlink.GitHub.GitHubCredentials.html#Downlink_GitHub_GitHubCredentials_Token_
-  commentId: Overload:Downlink.GitHub.GitHubCredentials.Token
   fullName: Downlink.GitHub.GitHubCredentials.Token
   nameWithType: GitHubCredentials.Token
 - uid: Downlink.GitHub.GitHubFileSource
@@ -1365,22 +873,10 @@ references:
   commentId: P:Downlink.GitHub.GitHubFileSource.Available
   fullName: Downlink.GitHub.GitHubFileSource.Available
   nameWithType: GitHubFileSource.Available
-- uid: Downlink.GitHub.GitHubFileSource.Available*
-  name: Available
-  href: api/Downlink.GitHub.GitHubFileSource.html#Downlink_GitHub_GitHubFileSource_Available_
-  commentId: Overload:Downlink.GitHub.GitHubFileSource.Available
-  fullName: Downlink.GitHub.GitHubFileSource.Available
-  nameWithType: GitHubFileSource.Available
 - uid: Downlink.GitHub.GitHubFileSource.FileUri
   name: FileUri
   href: api/Downlink.GitHub.GitHubFileSource.html#Downlink_GitHub_GitHubFileSource_FileUri
   commentId: P:Downlink.GitHub.GitHubFileSource.FileUri
-  fullName: Downlink.GitHub.GitHubFileSource.FileUri
-  nameWithType: GitHubFileSource.FileUri
-- uid: Downlink.GitHub.GitHubFileSource.FileUri*
-  name: FileUri
-  href: api/Downlink.GitHub.GitHubFileSource.html#Downlink_GitHub_GitHubFileSource_FileUri_
-  commentId: Overload:Downlink.GitHub.GitHubFileSource.FileUri
   fullName: Downlink.GitHub.GitHubFileSource.FileUri
   nameWithType: GitHubFileSource.FileUri
 - uid: Downlink.GitHub.GitHubFileSource.Metadata
@@ -1389,22 +885,10 @@ references:
   commentId: P:Downlink.GitHub.GitHubFileSource.Metadata
   fullName: Downlink.GitHub.GitHubFileSource.Metadata
   nameWithType: GitHubFileSource.Metadata
-- uid: Downlink.GitHub.GitHubFileSource.Metadata*
-  name: Metadata
-  href: api/Downlink.GitHub.GitHubFileSource.html#Downlink_GitHub_GitHubFileSource_Metadata_
-  commentId: Overload:Downlink.GitHub.GitHubFileSource.Metadata
-  fullName: Downlink.GitHub.GitHubFileSource.Metadata
-  nameWithType: GitHubFileSource.Metadata
 - uid: Downlink.GitHub.GitHubFileSource.Version
   name: Version
   href: api/Downlink.GitHub.GitHubFileSource.html#Downlink_GitHub_GitHubFileSource_Version
   commentId: P:Downlink.GitHub.GitHubFileSource.Version
-  fullName: Downlink.GitHub.GitHubFileSource.Version
-  nameWithType: GitHubFileSource.Version
-- uid: Downlink.GitHub.GitHubFileSource.Version*
-  name: Version
-  href: api/Downlink.GitHub.GitHubFileSource.html#Downlink_GitHub_GitHubFileSource_Version_
-  commentId: Overload:Downlink.GitHub.GitHubFileSource.Version
   fullName: Downlink.GitHub.GitHubFileSource.Version
   nameWithType: GitHubFileSource.Version
 - uid: Downlink.GitHub.GitHubMatchStrategy
@@ -1419,12 +903,6 @@ references:
   commentId: M:Downlink.GitHub.GitHubMatchStrategy.#ctor(System.String)
   fullName: Downlink.GitHub.GitHubMatchStrategy.GitHubMatchStrategy(System.String)
   nameWithType: GitHubMatchStrategy.GitHubMatchStrategy(String)
-- uid: Downlink.GitHub.GitHubMatchStrategy.#ctor*
-  name: GitHubMatchStrategy
-  href: api/Downlink.GitHub.GitHubMatchStrategy.html#Downlink_GitHub_GitHubMatchStrategy__ctor_
-  commentId: Overload:Downlink.GitHub.GitHubMatchStrategy.#ctor
-  fullName: Downlink.GitHub.GitHubMatchStrategy.GitHubMatchStrategy
-  nameWithType: GitHubMatchStrategy.GitHubMatchStrategy
 - uid: Downlink.GitHub.GitHubMatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable{Release},Downlink.Core.VersionSpec)
   name: MatchAsync(IEnumerable<Release>, VersionSpec)
   href: api/Downlink.GitHub.GitHubMatchStrategy.html#Downlink_GitHub_GitHubMatchStrategy_MatchAsync_System_Collections_Generic_IEnumerable_Release__Downlink_Core_VersionSpec_
@@ -1434,22 +912,10 @@ references:
   fullName.vb: Downlink.GitHub.GitHubMatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable(Of Release), Downlink.Core.VersionSpec)
   nameWithType: GitHubMatchStrategy.MatchAsync(IEnumerable<Release>, VersionSpec)
   nameWithType.vb: GitHubMatchStrategy.MatchAsync(IEnumerable(Of Release), VersionSpec)
-- uid: Downlink.GitHub.GitHubMatchStrategy.MatchAsync*
-  name: MatchAsync
-  href: api/Downlink.GitHub.GitHubMatchStrategy.html#Downlink_GitHub_GitHubMatchStrategy_MatchAsync_
-  commentId: Overload:Downlink.GitHub.GitHubMatchStrategy.MatchAsync
-  fullName: Downlink.GitHub.GitHubMatchStrategy.MatchAsync
-  nameWithType: GitHubMatchStrategy.MatchAsync
 - uid: Downlink.GitHub.GitHubMatchStrategy.Name
   name: Name
   href: api/Downlink.GitHub.GitHubMatchStrategy.html#Downlink_GitHub_GitHubMatchStrategy_Name
   commentId: P:Downlink.GitHub.GitHubMatchStrategy.Name
-  fullName: Downlink.GitHub.GitHubMatchStrategy.Name
-  nameWithType: GitHubMatchStrategy.Name
-- uid: Downlink.GitHub.GitHubMatchStrategy.Name*
-  name: Name
-  href: api/Downlink.GitHub.GitHubMatchStrategy.html#Downlink_GitHub_GitHubMatchStrategy_Name_
-  commentId: Overload:Downlink.GitHub.GitHubMatchStrategy.Name
   fullName: Downlink.GitHub.GitHubMatchStrategy.Name
   nameWithType: GitHubMatchStrategy.Name
 - uid: Downlink.GitHub.IGitHubClient
@@ -1473,22 +939,10 @@ references:
   fullName.vb: Downlink.GitHub.OctokitClient.OctokitClient(Downlink.GitHub.GitHubCredentials, Microsoft.Extensions.Configuration.IConfiguration, System.Collections.Generic.IEnumerable(Of Downlink.GitHub.GitHubMatchStrategy), System.Collections.Generic.IEnumerable(Of Downlink.Core.IPatternMatcher))
   nameWithType: OctokitClient.OctokitClient(GitHubCredentials, IConfiguration, IEnumerable<GitHubMatchStrategy>, IEnumerable<IPatternMatcher>)
   nameWithType.vb: OctokitClient.OctokitClient(GitHubCredentials, IConfiguration, IEnumerable(Of GitHubMatchStrategy), IEnumerable(Of IPatternMatcher))
-- uid: Downlink.GitHub.OctokitClient.#ctor*
-  name: OctokitClient
-  href: api/Downlink.GitHub.OctokitClient.html#Downlink_GitHub_OctokitClient__ctor_
-  commentId: Overload:Downlink.GitHub.OctokitClient.#ctor
-  fullName: Downlink.GitHub.OctokitClient.OctokitClient
-  nameWithType: OctokitClient.OctokitClient
 - uid: Downlink.GitHub.OctokitClient.Client
   name: Client
   href: api/Downlink.GitHub.OctokitClient.html#Downlink_GitHub_OctokitClient_Client
   commentId: P:Downlink.GitHub.OctokitClient.Client
-  fullName: Downlink.GitHub.OctokitClient.Client
-  nameWithType: OctokitClient.Client
-- uid: Downlink.GitHub.OctokitClient.Client*
-  name: Client
-  href: api/Downlink.GitHub.OctokitClient.html#Downlink_GitHub_OctokitClient_Client_
-  commentId: Overload:Downlink.GitHub.OctokitClient.Client
   fullName: Downlink.GitHub.OctokitClient.Client
   nameWithType: OctokitClient.Client
 - uid: Downlink.GitHub.OctokitClient.GetAllVersions
@@ -1497,24 +951,12 @@ references:
   commentId: M:Downlink.GitHub.OctokitClient.GetAllVersions
   fullName: Downlink.GitHub.OctokitClient.GetAllVersions()
   nameWithType: OctokitClient.GetAllVersions()
-- uid: Downlink.GitHub.OctokitClient.GetAllVersions*
-  name: GetAllVersions
-  href: api/Downlink.GitHub.OctokitClient.html#Downlink_GitHub_OctokitClient_GetAllVersions_
-  commentId: Overload:Downlink.GitHub.OctokitClient.GetAllVersions
-  fullName: Downlink.GitHub.OctokitClient.GetAllVersions
-  nameWithType: OctokitClient.GetAllVersions
 - uid: Downlink.GitHub.OctokitClient.GetFileAsync(Downlink.Core.VersionSpec)
   name: GetFileAsync(VersionSpec)
   href: api/Downlink.GitHub.OctokitClient.html#Downlink_GitHub_OctokitClient_GetFileAsync_Downlink_Core_VersionSpec_
   commentId: M:Downlink.GitHub.OctokitClient.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.GitHub.OctokitClient.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: OctokitClient.GetFileAsync(VersionSpec)
-- uid: Downlink.GitHub.OctokitClient.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.GitHub.OctokitClient.html#Downlink_GitHub_OctokitClient_GetFileAsync_
-  commentId: Overload:Downlink.GitHub.OctokitClient.GetFileAsync
-  fullName: Downlink.GitHub.OctokitClient.GetFileAsync
-  nameWithType: OctokitClient.GetFileAsync
 - uid: Downlink.GitHub.ServiceCollectionExtensions
   name: ServiceCollectionExtensions
   href: api/Downlink.GitHub.ServiceCollectionExtensions.html
@@ -1527,12 +969,6 @@ references:
   commentId: M:Downlink.GitHub.ServiceCollectionExtensions.AddGitHubReleaseStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   fullName: Downlink.GitHub.ServiceCollectionExtensions.AddGitHubReleaseStorage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddGitHubReleaseStorage(IServiceCollection)
-- uid: Downlink.GitHub.ServiceCollectionExtensions.AddGitHubReleaseStorage*
-  name: AddGitHubReleaseStorage
-  href: api/Downlink.GitHub.ServiceCollectionExtensions.html#Downlink_GitHub_ServiceCollectionExtensions_AddGitHubReleaseStorage_
-  commentId: Overload:Downlink.GitHub.ServiceCollectionExtensions.AddGitHubReleaseStorage
-  fullName: Downlink.GitHub.ServiceCollectionExtensions.AddGitHubReleaseStorage
-  nameWithType: ServiceCollectionExtensions.AddGitHubReleaseStorage
 - uid: Downlink.Handlers
   name: Downlink.Handlers
   href: api/Downlink.Handlers.html
@@ -1551,24 +987,12 @@ references:
   commentId: M:Downlink.Handlers.FileSchemeClient.#ctor
   fullName: Downlink.Handlers.FileSchemeClient.FileSchemeClient()
   nameWithType: FileSchemeClient.FileSchemeClient()
-- uid: Downlink.Handlers.FileSchemeClient.#ctor*
-  name: FileSchemeClient
-  href: api/Downlink.Handlers.FileSchemeClient.html#Downlink_Handlers_FileSchemeClient__ctor_
-  commentId: Overload:Downlink.Handlers.FileSchemeClient.#ctor
-  fullName: Downlink.Handlers.FileSchemeClient.FileSchemeClient
-  nameWithType: FileSchemeClient.FileSchemeClient
 - uid: Downlink.Handlers.FileSchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   name: GetContentAsync(IFileSource)
   href: api/Downlink.Handlers.FileSchemeClient.html#Downlink_Handlers_FileSchemeClient_GetContentAsync_Downlink_Core_IFileSource_
   commentId: M:Downlink.Handlers.FileSchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.FileSchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   nameWithType: FileSchemeClient.GetContentAsync(IFileSource)
-- uid: Downlink.Handlers.FileSchemeClient.GetContentAsync*
-  name: GetContentAsync
-  href: api/Downlink.Handlers.FileSchemeClient.html#Downlink_Handlers_FileSchemeClient_GetContentAsync_
-  commentId: Overload:Downlink.Handlers.FileSchemeClient.GetContentAsync
-  fullName: Downlink.Handlers.FileSchemeClient.GetContentAsync
-  nameWithType: FileSchemeClient.GetContentAsync
 - uid: Downlink.Handlers.HttpDownloadClient
   name: HttpDownloadClient
   href: api/Downlink.Handlers.HttpDownloadClient.html
@@ -1584,22 +1008,10 @@ references:
   fullName.vb: Downlink.Handlers.HttpDownloadClient.HttpDownloadClient(ILogger(Of Downlink.Handlers.HttpDownloadClient))
   nameWithType: HttpDownloadClient.HttpDownloadClient(ILogger<HttpDownloadClient>)
   nameWithType.vb: HttpDownloadClient.HttpDownloadClient(ILogger(Of HttpDownloadClient))
-- uid: Downlink.Handlers.HttpDownloadClient.#ctor*
-  name: HttpDownloadClient
-  href: api/Downlink.Handlers.HttpDownloadClient.html#Downlink_Handlers_HttpDownloadClient__ctor_
-  commentId: Overload:Downlink.Handlers.HttpDownloadClient.#ctor
-  fullName: Downlink.Handlers.HttpDownloadClient.HttpDownloadClient
-  nameWithType: HttpDownloadClient.HttpDownloadClient
 - uid: Downlink.Handlers.HttpDownloadClient.DownloadLocation
   name: DownloadLocation
   href: api/Downlink.Handlers.HttpDownloadClient.html#Downlink_Handlers_HttpDownloadClient_DownloadLocation
   commentId: P:Downlink.Handlers.HttpDownloadClient.DownloadLocation
-  fullName: Downlink.Handlers.HttpDownloadClient.DownloadLocation
-  nameWithType: HttpDownloadClient.DownloadLocation
-- uid: Downlink.Handlers.HttpDownloadClient.DownloadLocation*
-  name: DownloadLocation
-  href: api/Downlink.Handlers.HttpDownloadClient.html#Downlink_Handlers_HttpDownloadClient_DownloadLocation_
-  commentId: Overload:Downlink.Handlers.HttpDownloadClient.DownloadLocation
   fullName: Downlink.Handlers.HttpDownloadClient.DownloadLocation
   nameWithType: HttpDownloadClient.DownloadLocation
 - uid: Downlink.Handlers.HttpDownloadClient.GetContentAsync(Downlink.Core.IFileSource)
@@ -1608,12 +1020,6 @@ references:
   commentId: M:Downlink.Handlers.HttpDownloadClient.GetContentAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.HttpDownloadClient.GetContentAsync(Downlink.Core.IFileSource)
   nameWithType: HttpDownloadClient.GetContentAsync(IFileSource)
-- uid: Downlink.Handlers.HttpDownloadClient.GetContentAsync*
-  name: GetContentAsync
-  href: api/Downlink.Handlers.HttpDownloadClient.html#Downlink_Handlers_HttpDownloadClient_GetContentAsync_
-  commentId: Overload:Downlink.Handlers.HttpDownloadClient.GetContentAsync
-  fullName: Downlink.Handlers.HttpDownloadClient.GetContentAsync
-  nameWithType: HttpDownloadClient.GetContentAsync
 - uid: Downlink.Handlers.IResponseHandler
   name: IResponseHandler
   href: api/Downlink.Handlers.IResponseHandler.html
@@ -1626,12 +1032,6 @@ references:
   commentId: M:Downlink.Handlers.IResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.IResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   nameWithType: IResponseHandler.HandleAsync(IFileSource)
-- uid: Downlink.Handlers.IResponseHandler.HandleAsync*
-  name: HandleAsync
-  href: api/Downlink.Handlers.IResponseHandler.html#Downlink_Handlers_IResponseHandler_HandleAsync_
-  commentId: Overload:Downlink.Handlers.IResponseHandler.HandleAsync
-  fullName: Downlink.Handlers.IResponseHandler.HandleAsync
-  nameWithType: IResponseHandler.HandleAsync
 - uid: Downlink.Handlers.ISchemeClient
   name: ISchemeClient
   href: api/Downlink.Handlers.ISchemeClient.html
@@ -1644,22 +1044,10 @@ references:
   commentId: M:Downlink.Handlers.ISchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.ISchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   nameWithType: ISchemeClient.GetContentAsync(IFileSource)
-- uid: Downlink.Handlers.ISchemeClient.GetContentAsync*
-  name: GetContentAsync
-  href: api/Downlink.Handlers.ISchemeClient.html#Downlink_Handlers_ISchemeClient_GetContentAsync_
-  commentId: Overload:Downlink.Handlers.ISchemeClient.GetContentAsync
-  fullName: Downlink.Handlers.ISchemeClient.GetContentAsync
-  nameWithType: ISchemeClient.GetContentAsync
 - uid: Downlink.Handlers.ISchemeClient.Schemes
   name: Schemes
   href: api/Downlink.Handlers.ISchemeClient.html#Downlink_Handlers_ISchemeClient_Schemes
   commentId: P:Downlink.Handlers.ISchemeClient.Schemes
-  fullName: Downlink.Handlers.ISchemeClient.Schemes
-  nameWithType: ISchemeClient.Schemes
-- uid: Downlink.Handlers.ISchemeClient.Schemes*
-  name: Schemes
-  href: api/Downlink.Handlers.ISchemeClient.html#Downlink_Handlers_ISchemeClient_Schemes_
-  commentId: Overload:Downlink.Handlers.ISchemeClient.Schemes
   fullName: Downlink.Handlers.ISchemeClient.Schemes
   nameWithType: ISchemeClient.Schemes
 - uid: Downlink.Handlers.ProxyingResponseHandler
@@ -1677,24 +1065,12 @@ references:
   fullName.vb: Downlink.Handlers.ProxyingResponseHandler.ProxyingResponseHandler(IEnumerable(Of Downlink.Handlers.ISchemeClient), ILogger(Of Downlink.Handlers.ProxyingResponseHandler))
   nameWithType: ProxyingResponseHandler.ProxyingResponseHandler(IEnumerable<ISchemeClient>, ILogger<ProxyingResponseHandler>)
   nameWithType.vb: ProxyingResponseHandler.ProxyingResponseHandler(IEnumerable(Of ISchemeClient), ILogger(Of ProxyingResponseHandler))
-- uid: Downlink.Handlers.ProxyingResponseHandler.#ctor*
-  name: ProxyingResponseHandler
-  href: api/Downlink.Handlers.ProxyingResponseHandler.html#Downlink_Handlers_ProxyingResponseHandler__ctor_
-  commentId: Overload:Downlink.Handlers.ProxyingResponseHandler.#ctor
-  fullName: Downlink.Handlers.ProxyingResponseHandler.ProxyingResponseHandler
-  nameWithType: ProxyingResponseHandler.ProxyingResponseHandler
 - uid: Downlink.Handlers.ProxyingResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   name: HandleAsync(IFileSource)
   href: api/Downlink.Handlers.ProxyingResponseHandler.html#Downlink_Handlers_ProxyingResponseHandler_HandleAsync_Downlink_Core_IFileSource_
   commentId: M:Downlink.Handlers.ProxyingResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.ProxyingResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   nameWithType: ProxyingResponseHandler.HandleAsync(IFileSource)
-- uid: Downlink.Handlers.ProxyingResponseHandler.HandleAsync*
-  name: HandleAsync
-  href: api/Downlink.Handlers.ProxyingResponseHandler.html#Downlink_Handlers_ProxyingResponseHandler_HandleAsync_
-  commentId: Overload:Downlink.Handlers.ProxyingResponseHandler.HandleAsync
-  fullName: Downlink.Handlers.ProxyingResponseHandler.HandleAsync
-  nameWithType: ProxyingResponseHandler.HandleAsync
 - uid: Downlink.Handlers.RedirectingResponseHandler
   name: RedirectingResponseHandler
   href: api/Downlink.Handlers.RedirectingResponseHandler.html
@@ -1710,24 +1086,12 @@ references:
   fullName.vb: Downlink.Handlers.RedirectingResponseHandler.RedirectingResponseHandler(IEnumerable(Of Downlink.Handlers.ISchemeClient))
   nameWithType: RedirectingResponseHandler.RedirectingResponseHandler(IEnumerable<ISchemeClient>)
   nameWithType.vb: RedirectingResponseHandler.RedirectingResponseHandler(IEnumerable(Of ISchemeClient))
-- uid: Downlink.Handlers.RedirectingResponseHandler.#ctor*
-  name: RedirectingResponseHandler
-  href: api/Downlink.Handlers.RedirectingResponseHandler.html#Downlink_Handlers_RedirectingResponseHandler__ctor_
-  commentId: Overload:Downlink.Handlers.RedirectingResponseHandler.#ctor
-  fullName: Downlink.Handlers.RedirectingResponseHandler.RedirectingResponseHandler
-  nameWithType: RedirectingResponseHandler.RedirectingResponseHandler
 - uid: Downlink.Handlers.RedirectingResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   name: HandleAsync(IFileSource)
   href: api/Downlink.Handlers.RedirectingResponseHandler.html#Downlink_Handlers_RedirectingResponseHandler_HandleAsync_Downlink_Core_IFileSource_
   commentId: M:Downlink.Handlers.RedirectingResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.RedirectingResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   nameWithType: RedirectingResponseHandler.HandleAsync(IFileSource)
-- uid: Downlink.Handlers.RedirectingResponseHandler.HandleAsync*
-  name: HandleAsync
-  href: api/Downlink.Handlers.RedirectingResponseHandler.html#Downlink_Handlers_RedirectingResponseHandler_HandleAsync_
-  commentId: Overload:Downlink.Handlers.RedirectingResponseHandler.HandleAsync
-  fullName: Downlink.Handlers.RedirectingResponseHandler.HandleAsync
-  nameWithType: RedirectingResponseHandler.HandleAsync
 - uid: Downlink.Handlers.ResponseHandler
   name: ResponseHandler
   href: api/Downlink.Handlers.ResponseHandler.html
@@ -1743,22 +1107,10 @@ references:
   fullName.vb: Downlink.Handlers.ResponseHandler.ResponseHandler(IEnumerable(Of Downlink.Handlers.ISchemeClient))
   nameWithType: ResponseHandler.ResponseHandler(IEnumerable<ISchemeClient>)
   nameWithType.vb: ResponseHandler.ResponseHandler(IEnumerable(Of ISchemeClient))
-- uid: Downlink.Handlers.ResponseHandler.#ctor*
-  name: ResponseHandler
-  href: api/Downlink.Handlers.ResponseHandler.html#Downlink_Handlers_ResponseHandler__ctor_
-  commentId: Overload:Downlink.Handlers.ResponseHandler.#ctor
-  fullName: Downlink.Handlers.ResponseHandler.ResponseHandler
-  nameWithType: ResponseHandler.ResponseHandler
 - uid: Downlink.Handlers.ResponseHandler.AdditionalClients
   name: AdditionalClients
   href: api/Downlink.Handlers.ResponseHandler.html#Downlink_Handlers_ResponseHandler_AdditionalClients
   commentId: P:Downlink.Handlers.ResponseHandler.AdditionalClients
-  fullName: Downlink.Handlers.ResponseHandler.AdditionalClients
-  nameWithType: ResponseHandler.AdditionalClients
-- uid: Downlink.Handlers.ResponseHandler.AdditionalClients*
-  name: AdditionalClients
-  href: api/Downlink.Handlers.ResponseHandler.html#Downlink_Handlers_ResponseHandler_AdditionalClients_
-  commentId: Overload:Downlink.Handlers.ResponseHandler.AdditionalClients
   fullName: Downlink.Handlers.ResponseHandler.AdditionalClients
   nameWithType: ResponseHandler.AdditionalClients
 - uid: Downlink.Handlers.ResponseHandler.HandleAsync(Downlink.Core.IFileSource)
@@ -1767,24 +1119,12 @@ references:
   commentId: M:Downlink.Handlers.ResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.ResponseHandler.HandleAsync(Downlink.Core.IFileSource)
   nameWithType: ResponseHandler.HandleAsync(IFileSource)
-- uid: Downlink.Handlers.ResponseHandler.HandleAsync*
-  name: HandleAsync
-  href: api/Downlink.Handlers.ResponseHandler.html#Downlink_Handlers_ResponseHandler_HandleAsync_
-  commentId: Overload:Downlink.Handlers.ResponseHandler.HandleAsync
-  fullName: Downlink.Handlers.ResponseHandler.HandleAsync
-  nameWithType: ResponseHandler.HandleAsync
 - uid: Downlink.Handlers.ResponseHandler.HandleUnknownAsync(Downlink.Core.IFileSource)
   name: HandleUnknownAsync(IFileSource)
   href: api/Downlink.Handlers.ResponseHandler.html#Downlink_Handlers_ResponseHandler_HandleUnknownAsync_Downlink_Core_IFileSource_
   commentId: M:Downlink.Handlers.ResponseHandler.HandleUnknownAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.ResponseHandler.HandleUnknownAsync(Downlink.Core.IFileSource)
   nameWithType: ResponseHandler.HandleUnknownAsync(IFileSource)
-- uid: Downlink.Handlers.ResponseHandler.HandleUnknownAsync*
-  name: HandleUnknownAsync
-  href: api/Downlink.Handlers.ResponseHandler.html#Downlink_Handlers_ResponseHandler_HandleUnknownAsync_
-  commentId: Overload:Downlink.Handlers.ResponseHandler.HandleUnknownAsync
-  fullName: Downlink.Handlers.ResponseHandler.HandleUnknownAsync
-  nameWithType: ResponseHandler.HandleUnknownAsync
 - uid: Downlink.Handlers.SchemeClient
   name: SchemeClient
   href: api/Downlink.Handlers.SchemeClient.html
@@ -1806,34 +1146,16 @@ references:
   commentId: M:Downlink.Handlers.SchemeClient.#ctor(System.String)
   fullName: Downlink.Handlers.SchemeClient.SchemeClient(System.String)
   nameWithType: SchemeClient.SchemeClient(String)
-- uid: Downlink.Handlers.SchemeClient.#ctor*
-  name: SchemeClient
-  href: api/Downlink.Handlers.SchemeClient.html#Downlink_Handlers_SchemeClient__ctor_
-  commentId: Overload:Downlink.Handlers.SchemeClient.#ctor
-  fullName: Downlink.Handlers.SchemeClient.SchemeClient
-  nameWithType: SchemeClient.SchemeClient
 - uid: Downlink.Handlers.SchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   name: GetContentAsync(IFileSource)
   href: api/Downlink.Handlers.SchemeClient.html#Downlink_Handlers_SchemeClient_GetContentAsync_Downlink_Core_IFileSource_
   commentId: M:Downlink.Handlers.SchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   fullName: Downlink.Handlers.SchemeClient.GetContentAsync(Downlink.Core.IFileSource)
   nameWithType: SchemeClient.GetContentAsync(IFileSource)
-- uid: Downlink.Handlers.SchemeClient.GetContentAsync*
-  name: GetContentAsync
-  href: api/Downlink.Handlers.SchemeClient.html#Downlink_Handlers_SchemeClient_GetContentAsync_
-  commentId: Overload:Downlink.Handlers.SchemeClient.GetContentAsync
-  fullName: Downlink.Handlers.SchemeClient.GetContentAsync
-  nameWithType: SchemeClient.GetContentAsync
 - uid: Downlink.Handlers.SchemeClient.Schemes
   name: Schemes
   href: api/Downlink.Handlers.SchemeClient.html#Downlink_Handlers_SchemeClient_Schemes
   commentId: P:Downlink.Handlers.SchemeClient.Schemes
-  fullName: Downlink.Handlers.SchemeClient.Schemes
-  nameWithType: SchemeClient.Schemes
-- uid: Downlink.Handlers.SchemeClient.Schemes*
-  name: Schemes
-  href: api/Downlink.Handlers.SchemeClient.html#Downlink_Handlers_SchemeClient_Schemes_
-  commentId: Overload:Downlink.Handlers.SchemeClient.Schemes
   fullName: Downlink.Handlers.SchemeClient.Schemes
   nameWithType: SchemeClient.Schemes
 - uid: Downlink.Infrastructure
@@ -1848,12 +1170,6 @@ references:
   commentId: T:Downlink.Infrastructure.ConfigurationExtensions
   fullName: Downlink.Infrastructure.ConfigurationExtensions
   nameWithType: ConfigurationExtensions
-- uid: Downlink.Infrastructure.ConfigurationExtensions.Get*
-  name: Get
-  href: api/Downlink.Infrastructure.ConfigurationExtensions.html#Downlink_Infrastructure_ConfigurationExtensions_Get_
-  commentId: Overload:Downlink.Infrastructure.ConfigurationExtensions.Get
-  fullName: Downlink.Infrastructure.ConfigurationExtensions.Get
-  nameWithType: ConfigurationExtensions.Get
 - uid: Downlink.Infrastructure.ConfigurationExtensions.Get``1(IConfiguration,System.String)
   name: Get<T>(IConfiguration, String)
   href: api/Downlink.Infrastructure.ConfigurationExtensions.html#Downlink_Infrastructure_ConfigurationExtensions_Get__1_IConfiguration_System_String_
@@ -1875,12 +1191,6 @@ references:
   commentId: M:Downlink.Infrastructure.HttpClientExtensions.ReadAsFileAsync(HttpContent,System.String,System.Boolean)
   fullName: Downlink.Infrastructure.HttpClientExtensions.ReadAsFileAsync(HttpContent, System.String, System.Boolean)
   nameWithType: HttpClientExtensions.ReadAsFileAsync(HttpContent, String, Boolean)
-- uid: Downlink.Infrastructure.HttpClientExtensions.ReadAsFileAsync*
-  name: ReadAsFileAsync
-  href: api/Downlink.Infrastructure.HttpClientExtensions.html#Downlink_Infrastructure_HttpClientExtensions_ReadAsFileAsync_
-  commentId: Overload:Downlink.Infrastructure.HttpClientExtensions.ReadAsFileAsync
-  fullName: Downlink.Infrastructure.HttpClientExtensions.ReadAsFileAsync
-  nameWithType: HttpClientExtensions.ReadAsFileAsync
 - uid: Downlink.Messaging
   name: Downlink.Messaging
   href: api/Downlink.Messaging.html
@@ -1899,34 +1209,16 @@ references:
   commentId: M:Downlink.Messaging.AppVersionRequest.#ctor(Downlink.Core.VersionSpec,System.String)
   fullName: Downlink.Messaging.AppVersionRequest.AppVersionRequest(Downlink.Core.VersionSpec, System.String)
   nameWithType: AppVersionRequest.AppVersionRequest(VersionSpec, String)
-- uid: Downlink.Messaging.AppVersionRequest.#ctor*
-  name: AppVersionRequest
-  href: api/Downlink.Messaging.AppVersionRequest.html#Downlink_Messaging_AppVersionRequest__ctor_
-  commentId: Overload:Downlink.Messaging.AppVersionRequest.#ctor
-  fullName: Downlink.Messaging.AppVersionRequest.AppVersionRequest
-  nameWithType: AppVersionRequest.AppVersionRequest
 - uid: Downlink.Messaging.AppVersionRequest.Format
   name: Format
   href: api/Downlink.Messaging.AppVersionRequest.html#Downlink_Messaging_AppVersionRequest_Format
   commentId: P:Downlink.Messaging.AppVersionRequest.Format
   fullName: Downlink.Messaging.AppVersionRequest.Format
   nameWithType: AppVersionRequest.Format
-- uid: Downlink.Messaging.AppVersionRequest.Format*
-  name: Format
-  href: api/Downlink.Messaging.AppVersionRequest.html#Downlink_Messaging_AppVersionRequest_Format_
-  commentId: Overload:Downlink.Messaging.AppVersionRequest.Format
-  fullName: Downlink.Messaging.AppVersionRequest.Format
-  nameWithType: AppVersionRequest.Format
 - uid: Downlink.Messaging.AppVersionRequest.Version
   name: Version
   href: api/Downlink.Messaging.AppVersionRequest.html#Downlink_Messaging_AppVersionRequest_Version
   commentId: P:Downlink.Messaging.AppVersionRequest.Version
-  fullName: Downlink.Messaging.AppVersionRequest.Version
-  nameWithType: AppVersionRequest.Version
-- uid: Downlink.Messaging.AppVersionRequest.Version*
-  name: Version
-  href: api/Downlink.Messaging.AppVersionRequest.html#Downlink_Messaging_AppVersionRequest_Version_
-  commentId: Overload:Downlink.Messaging.AppVersionRequest.Version
   fullName: Downlink.Messaging.AppVersionRequest.Version
   nameWithType: AppVersionRequest.Version
 - uid: Downlink.Messaging.AppVersionRequestHandler
@@ -1941,24 +1233,12 @@ references:
   commentId: M:Downlink.Messaging.AppVersionRequestHandler.#ctor(Downlink.Core.IRemoteStorage)
   fullName: Downlink.Messaging.AppVersionRequestHandler.AppVersionRequestHandler(Downlink.Core.IRemoteStorage)
   nameWithType: AppVersionRequestHandler.AppVersionRequestHandler(IRemoteStorage)
-- uid: Downlink.Messaging.AppVersionRequestHandler.#ctor*
-  name: AppVersionRequestHandler
-  href: api/Downlink.Messaging.AppVersionRequestHandler.html#Downlink_Messaging_AppVersionRequestHandler__ctor_
-  commentId: Overload:Downlink.Messaging.AppVersionRequestHandler.#ctor
-  fullName: Downlink.Messaging.AppVersionRequestHandler.AppVersionRequestHandler
-  nameWithType: AppVersionRequestHandler.AppVersionRequestHandler
 - uid: Downlink.Messaging.AppVersionRequestHandler.Handle(Downlink.Messaging.AppVersionRequest)
   name: Handle(AppVersionRequest)
   href: api/Downlink.Messaging.AppVersionRequestHandler.html#Downlink_Messaging_AppVersionRequestHandler_Handle_Downlink_Messaging_AppVersionRequest_
   commentId: M:Downlink.Messaging.AppVersionRequestHandler.Handle(Downlink.Messaging.AppVersionRequest)
   fullName: Downlink.Messaging.AppVersionRequestHandler.Handle(Downlink.Messaging.AppVersionRequest)
   nameWithType: AppVersionRequestHandler.Handle(AppVersionRequest)
-- uid: Downlink.Messaging.AppVersionRequestHandler.Handle*
-  name: Handle
-  href: api/Downlink.Messaging.AppVersionRequestHandler.html#Downlink_Messaging_AppVersionRequestHandler_Handle_
-  commentId: Overload:Downlink.Messaging.AppVersionRequestHandler.Handle
-  fullName: Downlink.Messaging.AppVersionRequestHandler.Handle
-  nameWithType: AppVersionRequestHandler.Handle
 - uid: Downlink.Messaging.AppVersionResponseModel
   name: AppVersionResponseModel
   href: api/Downlink.Messaging.AppVersionResponseModel.html
@@ -1980,12 +1260,6 @@ references:
   fullName.vb: Downlink.Program.BuildWebHost(System.String())
   nameWithType: Program.BuildWebHost(String[])
   nameWithType.vb: Program.BuildWebHost(String())
-- uid: Downlink.Program.BuildWebHost*
-  name: BuildWebHost
-  href: api/Downlink.Program.html#Downlink_Program_BuildWebHost_
-  commentId: Overload:Downlink.Program.BuildWebHost
-  fullName: Downlink.Program.BuildWebHost
-  nameWithType: Program.BuildWebHost
 - uid: Downlink.Program.Main(System.String[])
   name: Main(String[])
   href: api/Downlink.Program.html#Downlink_Program_Main_System_String___
@@ -1995,12 +1269,6 @@ references:
   fullName.vb: Downlink.Program.Main(System.String())
   nameWithType: Program.Main(String[])
   nameWithType.vb: Program.Main(String())
-- uid: Downlink.Program.Main*
-  name: Main
-  href: api/Downlink.Program.html#Downlink_Program_Main_
-  commentId: Overload:Downlink.Program.Main
-  fullName: Downlink.Program.Main
-  nameWithType: Program.Main
 - uid: Downlink.S3
   name: Downlink.S3
   href: api/Downlink.S3.html
@@ -2025,22 +1293,10 @@ references:
   commentId: P:Downlink.S3.S3FileSource.Available
   fullName: Downlink.S3.S3FileSource.Available
   nameWithType: S3FileSource.Available
-- uid: Downlink.S3.S3FileSource.Available*
-  name: Available
-  href: api/Downlink.S3.S3FileSource.html#Downlink_S3_S3FileSource_Available_
-  commentId: Overload:Downlink.S3.S3FileSource.Available
-  fullName: Downlink.S3.S3FileSource.Available
-  nameWithType: S3FileSource.Available
 - uid: Downlink.S3.S3FileSource.FileUri
   name: FileUri
   href: api/Downlink.S3.S3FileSource.html#Downlink_S3_S3FileSource_FileUri
   commentId: P:Downlink.S3.S3FileSource.FileUri
-  fullName: Downlink.S3.S3FileSource.FileUri
-  nameWithType: S3FileSource.FileUri
-- uid: Downlink.S3.S3FileSource.FileUri*
-  name: FileUri
-  href: api/Downlink.S3.S3FileSource.html#Downlink_S3_S3FileSource_FileUri_
-  commentId: Overload:Downlink.S3.S3FileSource.FileUri
   fullName: Downlink.S3.S3FileSource.FileUri
   nameWithType: S3FileSource.FileUri
 - uid: Downlink.S3.S3FileSource.Metadata
@@ -2049,22 +1305,10 @@ references:
   commentId: P:Downlink.S3.S3FileSource.Metadata
   fullName: Downlink.S3.S3FileSource.Metadata
   nameWithType: S3FileSource.Metadata
-- uid: Downlink.S3.S3FileSource.Metadata*
-  name: Metadata
-  href: api/Downlink.S3.S3FileSource.html#Downlink_S3_S3FileSource_Metadata_
-  commentId: Overload:Downlink.S3.S3FileSource.Metadata
-  fullName: Downlink.S3.S3FileSource.Metadata
-  nameWithType: S3FileSource.Metadata
 - uid: Downlink.S3.S3FileSource.Version
   name: Version
   href: api/Downlink.S3.S3FileSource.html#Downlink_S3_S3FileSource_Version
   commentId: P:Downlink.S3.S3FileSource.Version
-  fullName: Downlink.S3.S3FileSource.Version
-  nameWithType: S3FileSource.Version
-- uid: Downlink.S3.S3FileSource.Version*
-  name: Version
-  href: api/Downlink.S3.S3FileSource.html#Downlink_S3_S3FileSource_Version_
-  commentId: Overload:Downlink.S3.S3FileSource.Version
   fullName: Downlink.S3.S3FileSource.Version
   nameWithType: S3FileSource.Version
 - uid: Downlink.S3.S3FileStorageFactory
@@ -2079,12 +1323,6 @@ references:
   commentId: M:Downlink.S3.S3FileStorageFactory.BuildS3FileStorage(System.IServiceProvider)
   fullName: Downlink.S3.S3FileStorageFactory.BuildS3FileStorage(System.IServiceProvider)
   nameWithType: S3FileStorageFactory.BuildS3FileStorage(IServiceProvider)
-- uid: Downlink.S3.S3FileStorageFactory.BuildS3FileStorage*
-  name: BuildS3FileStorage
-  href: api/Downlink.S3.S3FileStorageFactory.html#Downlink_S3_S3FileStorageFactory_BuildS3FileStorage_
-  commentId: Overload:Downlink.S3.S3FileStorageFactory.BuildS3FileStorage
-  fullName: Downlink.S3.S3FileStorageFactory.BuildS3FileStorage
-  nameWithType: S3FileStorageFactory.BuildS3FileStorage
 - uid: Downlink.S3.S3MatchStrategy
   name: S3MatchStrategy
   href: api/Downlink.S3.S3MatchStrategy.html
@@ -2097,12 +1335,6 @@ references:
   commentId: M:Downlink.S3.S3MatchStrategy.#ctor(System.String)
   fullName: Downlink.S3.S3MatchStrategy.S3MatchStrategy(System.String)
   nameWithType: S3MatchStrategy.S3MatchStrategy(String)
-- uid: Downlink.S3.S3MatchStrategy.#ctor*
-  name: S3MatchStrategy
-  href: api/Downlink.S3.S3MatchStrategy.html#Downlink_S3_S3MatchStrategy__ctor_
-  commentId: Overload:Downlink.S3.S3MatchStrategy.#ctor
-  fullName: Downlink.S3.S3MatchStrategy.S3MatchStrategy
-  nameWithType: S3MatchStrategy.S3MatchStrategy
 - uid: Downlink.S3.S3MatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable{Amazon.S3.Model.S3Object},Downlink.Core.VersionSpec)
   name: MatchAsync(IEnumerable<S3Object>, VersionSpec)
   href: api/Downlink.S3.S3MatchStrategy.html#Downlink_S3_S3MatchStrategy_MatchAsync_System_Collections_Generic_IEnumerable_Amazon_S3_Model_S3Object__Downlink_Core_VersionSpec_
@@ -2112,22 +1344,10 @@ references:
   fullName.vb: Downlink.S3.S3MatchStrategy.MatchAsync(System.Collections.Generic.IEnumerable(Of Amazon.S3.Model.S3Object), Downlink.Core.VersionSpec)
   nameWithType: S3MatchStrategy.MatchAsync(IEnumerable<S3Object>, VersionSpec)
   nameWithType.vb: S3MatchStrategy.MatchAsync(IEnumerable(Of S3Object), VersionSpec)
-- uid: Downlink.S3.S3MatchStrategy.MatchAsync*
-  name: MatchAsync
-  href: api/Downlink.S3.S3MatchStrategy.html#Downlink_S3_S3MatchStrategy_MatchAsync_
-  commentId: Overload:Downlink.S3.S3MatchStrategy.MatchAsync
-  fullName: Downlink.S3.S3MatchStrategy.MatchAsync
-  nameWithType: S3MatchStrategy.MatchAsync
 - uid: Downlink.S3.S3MatchStrategy.Name
   name: Name
   href: api/Downlink.S3.S3MatchStrategy.html#Downlink_S3_S3MatchStrategy_Name
   commentId: P:Downlink.S3.S3MatchStrategy.Name
-  fullName: Downlink.S3.S3MatchStrategy.Name
-  nameWithType: S3MatchStrategy.Name
-- uid: Downlink.S3.S3MatchStrategy.Name*
-  name: Name
-  href: api/Downlink.S3.S3MatchStrategy.html#Downlink_S3_S3MatchStrategy_Name_
-  commentId: Overload:Downlink.S3.S3MatchStrategy.Name
   fullName: Downlink.S3.S3MatchStrategy.Name
   nameWithType: S3MatchStrategy.Name
 - uid: Downlink.S3.S3SearchStorage
@@ -2142,22 +1362,10 @@ references:
   commentId: M:Downlink.S3.S3SearchStorage.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Downlink.S3.S3Configuration)
   fullName: Downlink.S3.S3SearchStorage.S3SearchStorage(Microsoft.Extensions.Configuration.IConfiguration, Downlink.S3.S3Configuration)
   nameWithType: S3SearchStorage.S3SearchStorage(IConfiguration, S3Configuration)
-- uid: Downlink.S3.S3SearchStorage.#ctor*
-  name: S3SearchStorage
-  href: api/Downlink.S3.S3SearchStorage.html#Downlink_S3_S3SearchStorage__ctor_
-  commentId: Overload:Downlink.S3.S3SearchStorage.#ctor
-  fullName: Downlink.S3.S3SearchStorage.S3SearchStorage
-  nameWithType: S3SearchStorage.S3SearchStorage
 - uid: Downlink.S3.S3SearchStorage.BucketName
   name: BucketName
   href: api/Downlink.S3.S3SearchStorage.html#Downlink_S3_S3SearchStorage_BucketName
   commentId: P:Downlink.S3.S3SearchStorage.BucketName
-  fullName: Downlink.S3.S3SearchStorage.BucketName
-  nameWithType: S3SearchStorage.BucketName
-- uid: Downlink.S3.S3SearchStorage.BucketName*
-  name: BucketName
-  href: api/Downlink.S3.S3SearchStorage.html#Downlink_S3_S3SearchStorage_BucketName_
-  commentId: Overload:Downlink.S3.S3SearchStorage.BucketName
   fullName: Downlink.S3.S3SearchStorage.BucketName
   nameWithType: S3SearchStorage.BucketName
 - uid: Downlink.S3.S3SearchStorage.GetFileAsync(Downlink.Core.VersionSpec)
@@ -2166,12 +1374,6 @@ references:
   commentId: M:Downlink.S3.S3SearchStorage.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.S3.S3SearchStorage.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: S3SearchStorage.GetFileAsync(VersionSpec)
-- uid: Downlink.S3.S3SearchStorage.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.S3.S3SearchStorage.html#Downlink_S3_S3SearchStorage_GetFileAsync_
-  commentId: Overload:Downlink.S3.S3SearchStorage.GetFileAsync
-  fullName: Downlink.S3.S3SearchStorage.GetFileAsync
-  nameWithType: S3SearchStorage.GetFileAsync
 - uid: Downlink.S3.S3Storage
   name: S3Storage
   href: api/Downlink.S3.S3Storage.html
@@ -2187,22 +1389,10 @@ references:
   fullName.vb: Downlink.S3.S3Storage.S3Storage(Microsoft.Extensions.Configuration.IConfiguration, Downlink.S3.S3Configuration, System.Collections.Generic.IEnumerable(Of Downlink.Core.IPatternMatcher), System.Collections.Generic.IEnumerable(Of Downlink.S3.S3MatchStrategy))
   nameWithType: S3Storage.S3Storage(IConfiguration, S3Configuration, IEnumerable<IPatternMatcher>, IEnumerable<S3MatchStrategy>)
   nameWithType.vb: S3Storage.S3Storage(IConfiguration, S3Configuration, IEnumerable(Of IPatternMatcher), IEnumerable(Of S3MatchStrategy))
-- uid: Downlink.S3.S3Storage.#ctor*
-  name: S3Storage
-  href: api/Downlink.S3.S3Storage.html#Downlink_S3_S3Storage__ctor_
-  commentId: Overload:Downlink.S3.S3Storage.#ctor
-  fullName: Downlink.S3.S3Storage.S3Storage
-  nameWithType: S3Storage.S3Storage
 - uid: Downlink.S3.S3Storage.BucketName
   name: BucketName
   href: api/Downlink.S3.S3Storage.html#Downlink_S3_S3Storage_BucketName
   commentId: P:Downlink.S3.S3Storage.BucketName
-  fullName: Downlink.S3.S3Storage.BucketName
-  nameWithType: S3Storage.BucketName
-- uid: Downlink.S3.S3Storage.BucketName*
-  name: BucketName
-  href: api/Downlink.S3.S3Storage.html#Downlink_S3_S3Storage_BucketName_
-  commentId: Overload:Downlink.S3.S3Storage.BucketName
   fullName: Downlink.S3.S3Storage.BucketName
   nameWithType: S3Storage.BucketName
 - uid: Downlink.S3.S3Storage.GetFileAsync(Downlink.Core.VersionSpec)
@@ -2211,12 +1401,6 @@ references:
   commentId: M:Downlink.S3.S3Storage.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.S3.S3Storage.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: S3Storage.GetFileAsync(VersionSpec)
-- uid: Downlink.S3.S3Storage.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.S3.S3Storage.html#Downlink_S3_S3Storage_GetFileAsync_
-  commentId: Overload:Downlink.S3.S3Storage.GetFileAsync
-  fullName: Downlink.S3.S3Storage.GetFileAsync
-  nameWithType: S3Storage.GetFileAsync
 - uid: Downlink.S3.ServiceCollectionExtensions
   name: ServiceCollectionExtensions
   href: api/Downlink.S3.ServiceCollectionExtensions.html
@@ -2229,12 +1413,6 @@ references:
   commentId: M:Downlink.S3.ServiceCollectionExtensions.AddS3Storage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   fullName: Downlink.S3.ServiceCollectionExtensions.AddS3Storage(Microsoft.Extensions.DependencyInjection.IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddS3Storage(IServiceCollection)
-- uid: Downlink.S3.ServiceCollectionExtensions.AddS3Storage*
-  name: AddS3Storage
-  href: api/Downlink.S3.ServiceCollectionExtensions.html#Downlink_S3_ServiceCollectionExtensions_AddS3Storage_
-  commentId: Overload:Downlink.S3.ServiceCollectionExtensions.AddS3Storage
-  fullName: Downlink.S3.ServiceCollectionExtensions.AddS3Storage
-  nameWithType: ServiceCollectionExtensions.AddS3Storage
 - uid: Downlink.Startup
   name: Startup
   href: api/Downlink.Startup.html
@@ -2247,22 +1425,10 @@ references:
   commentId: M:Downlink.Startup.#ctor(IConfiguration)
   fullName: Downlink.Startup.Startup(IConfiguration)
   nameWithType: Startup.Startup(IConfiguration)
-- uid: Downlink.Startup.#ctor*
-  name: Startup
-  href: api/Downlink.Startup.html#Downlink_Startup__ctor_
-  commentId: Overload:Downlink.Startup.#ctor
-  fullName: Downlink.Startup.Startup
-  nameWithType: Startup.Startup
 - uid: Downlink.Startup.Configuration
   name: Configuration
   href: api/Downlink.Startup.html#Downlink_Startup_Configuration
   commentId: P:Downlink.Startup.Configuration
-  fullName: Downlink.Startup.Configuration
-  nameWithType: Startup.Configuration
-- uid: Downlink.Startup.Configuration*
-  name: Configuration
-  href: api/Downlink.Startup.html#Downlink_Startup_Configuration_
-  commentId: Overload:Downlink.Startup.Configuration
   fullName: Downlink.Startup.Configuration
   nameWithType: Startup.Configuration
 - uid: Downlink.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory)
@@ -2271,24 +1437,12 @@ references:
   commentId: M:Downlink.Startup.Configure(IApplicationBuilder,IHostingEnvironment,ILoggerFactory)
   fullName: Downlink.Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
   nameWithType: Startup.Configure(IApplicationBuilder, IHostingEnvironment, ILoggerFactory)
-- uid: Downlink.Startup.Configure*
-  name: Configure
-  href: api/Downlink.Startup.html#Downlink_Startup_Configure_
-  commentId: Overload:Downlink.Startup.Configure
-  fullName: Downlink.Startup.Configure
-  nameWithType: Startup.Configure
 - uid: Downlink.Startup.ConfigureServices(IServiceCollection)
   name: ConfigureServices(IServiceCollection)
   href: api/Downlink.Startup.html#Downlink_Startup_ConfigureServices_IServiceCollection_
   commentId: M:Downlink.Startup.ConfigureServices(IServiceCollection)
   fullName: Downlink.Startup.ConfigureServices(IServiceCollection)
   nameWithType: Startup.ConfigureServices(IServiceCollection)
-- uid: Downlink.Startup.ConfigureServices*
-  name: ConfigureServices
-  href: api/Downlink.Startup.html#Downlink_Startup_ConfigureServices_
-  commentId: Overload:Downlink.Startup.ConfigureServices
-  fullName: Downlink.Startup.ConfigureServices
-  nameWithType: Startup.ConfigureServices
 - uid: Downlink.StartupExtensions
   name: StartupExtensions
   href: api/Downlink.StartupExtensions.html
@@ -2301,60 +1455,30 @@ references:
   commentId: M:Downlink.StartupExtensions.AddFormatterMappings(MvcOptions)
   fullName: Downlink.StartupExtensions.AddFormatterMappings(MvcOptions)
   nameWithType: StartupExtensions.AddFormatterMappings(MvcOptions)
-- uid: Downlink.StartupExtensions.AddFormatterMappings*
-  name: AddFormatterMappings
-  href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddFormatterMappings_
-  commentId: Overload:Downlink.StartupExtensions.AddFormatterMappings
-  fullName: Downlink.StartupExtensions.AddFormatterMappings
-  nameWithType: StartupExtensions.AddFormatterMappings
 - uid: Downlink.StartupExtensions.AddMediatR(IServiceCollection)
   name: AddMediatR(IServiceCollection)
   href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddMediatR_IServiceCollection_
   commentId: M:Downlink.StartupExtensions.AddMediatR(IServiceCollection)
   fullName: Downlink.StartupExtensions.AddMediatR(IServiceCollection)
   nameWithType: StartupExtensions.AddMediatR(IServiceCollection)
-- uid: Downlink.StartupExtensions.AddMediatR*
-  name: AddMediatR
-  href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddMediatR_
-  commentId: Overload:Downlink.StartupExtensions.AddMediatR
-  fullName: Downlink.StartupExtensions.AddMediatR
-  nameWithType: StartupExtensions.AddMediatR
 - uid: Downlink.StartupExtensions.AddMvcServices(IServiceCollection)
   name: AddMvcServices(IServiceCollection)
   href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddMvcServices_IServiceCollection_
   commentId: M:Downlink.StartupExtensions.AddMvcServices(IServiceCollection)
   fullName: Downlink.StartupExtensions.AddMvcServices(IServiceCollection)
   nameWithType: StartupExtensions.AddMvcServices(IServiceCollection)
-- uid: Downlink.StartupExtensions.AddMvcServices*
-  name: AddMvcServices
-  href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddMvcServices_
-  commentId: Overload:Downlink.StartupExtensions.AddMvcServices
-  fullName: Downlink.StartupExtensions.AddMvcServices
-  nameWithType: StartupExtensions.AddMvcServices
 - uid: Downlink.StartupExtensions.AddStorageBackend(IServiceCollection,IConfiguration)
   name: AddStorageBackend(IServiceCollection, IConfiguration)
   href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddStorageBackend_IServiceCollection_IConfiguration_
   commentId: M:Downlink.StartupExtensions.AddStorageBackend(IServiceCollection,IConfiguration)
   fullName: Downlink.StartupExtensions.AddStorageBackend(IServiceCollection, IConfiguration)
   nameWithType: StartupExtensions.AddStorageBackend(IServiceCollection, IConfiguration)
-- uid: Downlink.StartupExtensions.AddStorageBackend*
-  name: AddStorageBackend
-  href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_AddStorageBackend_
-  commentId: Overload:Downlink.StartupExtensions.AddStorageBackend
-  fullName: Downlink.StartupExtensions.AddStorageBackend
-  nameWithType: StartupExtensions.AddStorageBackend
 - uid: Downlink.StartupExtensions.UseCorsPolicy(IApplicationBuilder)
   name: UseCorsPolicy(IApplicationBuilder)
   href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_UseCorsPolicy_IApplicationBuilder_
   commentId: M:Downlink.StartupExtensions.UseCorsPolicy(IApplicationBuilder)
   fullName: Downlink.StartupExtensions.UseCorsPolicy(IApplicationBuilder)
   nameWithType: StartupExtensions.UseCorsPolicy(IApplicationBuilder)
-- uid: Downlink.StartupExtensions.UseCorsPolicy*
-  name: UseCorsPolicy
-  href: api/Downlink.StartupExtensions.html#Downlink_StartupExtensions_UseCorsPolicy_
-  commentId: Overload:Downlink.StartupExtensions.UseCorsPolicy
-  fullName: Downlink.StartupExtensions.UseCorsPolicy
-  nameWithType: StartupExtensions.UseCorsPolicy
 - uid: Downlink.Storage
   name: Downlink.Storage
   href: api/Downlink.Storage.html
@@ -2373,22 +1497,10 @@ references:
   commentId: M:Downlink.Storage.LocalFileSource.#ctor(Downlink.Core.VersionSpec,FileInfo)
   fullName: Downlink.Storage.LocalFileSource.LocalFileSource(Downlink.Core.VersionSpec, FileInfo)
   nameWithType: LocalFileSource.LocalFileSource(VersionSpec, FileInfo)
-- uid: Downlink.Storage.LocalFileSource.#ctor*
-  name: LocalFileSource
-  href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource__ctor_
-  commentId: Overload:Downlink.Storage.LocalFileSource.#ctor
-  fullName: Downlink.Storage.LocalFileSource.LocalFileSource
-  nameWithType: LocalFileSource.LocalFileSource
 - uid: Downlink.Storage.LocalFileSource.Available
   name: Available
   href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_Available
   commentId: P:Downlink.Storage.LocalFileSource.Available
-  fullName: Downlink.Storage.LocalFileSource.Available
-  nameWithType: LocalFileSource.Available
-- uid: Downlink.Storage.LocalFileSource.Available*
-  name: Available
-  href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_Available_
-  commentId: Overload:Downlink.Storage.LocalFileSource.Available
   fullName: Downlink.Storage.LocalFileSource.Available
   nameWithType: LocalFileSource.Available
 - uid: Downlink.Storage.LocalFileSource.FileUri
@@ -2397,34 +1509,16 @@ references:
   commentId: P:Downlink.Storage.LocalFileSource.FileUri
   fullName: Downlink.Storage.LocalFileSource.FileUri
   nameWithType: LocalFileSource.FileUri
-- uid: Downlink.Storage.LocalFileSource.FileUri*
-  name: FileUri
-  href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_FileUri_
-  commentId: Overload:Downlink.Storage.LocalFileSource.FileUri
-  fullName: Downlink.Storage.LocalFileSource.FileUri
-  nameWithType: LocalFileSource.FileUri
 - uid: Downlink.Storage.LocalFileSource.Metadata
   name: Metadata
   href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_Metadata
   commentId: P:Downlink.Storage.LocalFileSource.Metadata
   fullName: Downlink.Storage.LocalFileSource.Metadata
   nameWithType: LocalFileSource.Metadata
-- uid: Downlink.Storage.LocalFileSource.Metadata*
-  name: Metadata
-  href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_Metadata_
-  commentId: Overload:Downlink.Storage.LocalFileSource.Metadata
-  fullName: Downlink.Storage.LocalFileSource.Metadata
-  nameWithType: LocalFileSource.Metadata
 - uid: Downlink.Storage.LocalFileSource.Version
   name: Version
   href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_Version
   commentId: P:Downlink.Storage.LocalFileSource.Version
-  fullName: Downlink.Storage.LocalFileSource.Version
-  nameWithType: LocalFileSource.Version
-- uid: Downlink.Storage.LocalFileSource.Version*
-  name: Version
-  href: api/Downlink.Storage.LocalFileSource.html#Downlink_Storage_LocalFileSource_Version_
-  commentId: Overload:Downlink.Storage.LocalFileSource.Version
   fullName: Downlink.Storage.LocalFileSource.Version
   nameWithType: LocalFileSource.Version
 - uid: Downlink.Storage.LocalFileStorage
@@ -2442,24 +1536,12 @@ references:
   fullName.vb: Downlink.Storage.LocalFileStorage.LocalFileStorage(IConfiguration, ILogger(Of Downlink.Storage.LocalFileStorage))
   nameWithType: LocalFileStorage.LocalFileStorage(IConfiguration, ILogger<LocalFileStorage>)
   nameWithType.vb: LocalFileStorage.LocalFileStorage(IConfiguration, ILogger(Of LocalFileStorage))
-- uid: Downlink.Storage.LocalFileStorage.#ctor*
-  name: LocalFileStorage
-  href: api/Downlink.Storage.LocalFileStorage.html#Downlink_Storage_LocalFileStorage__ctor_
-  commentId: Overload:Downlink.Storage.LocalFileStorage.#ctor
-  fullName: Downlink.Storage.LocalFileStorage.LocalFileStorage
-  nameWithType: LocalFileStorage.LocalFileStorage
 - uid: Downlink.Storage.LocalFileStorage.GetFileAsync(Downlink.Core.VersionSpec)
   name: GetFileAsync(VersionSpec)
   href: api/Downlink.Storage.LocalFileStorage.html#Downlink_Storage_LocalFileStorage_GetFileAsync_Downlink_Core_VersionSpec_
   commentId: M:Downlink.Storage.LocalFileStorage.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.Storage.LocalFileStorage.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: LocalFileStorage.GetFileAsync(VersionSpec)
-- uid: Downlink.Storage.LocalFileStorage.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.Storage.LocalFileStorage.html#Downlink_Storage_LocalFileStorage_GetFileAsync_
-  commentId: Overload:Downlink.Storage.LocalFileStorage.GetFileAsync
-  fullName: Downlink.Storage.LocalFileStorage.GetFileAsync
-  nameWithType: LocalFileStorage.GetFileAsync
 - uid: Downlink.Storage.NoneStorage
   name: NoneStorage
   href: api/Downlink.Storage.NoneStorage.html
@@ -2475,24 +1557,12 @@ references:
   fullName.vb: Downlink.Storage.NoneStorage.NoneStorage(ILogger(Of Downlink.Storage.NoneStorage))
   nameWithType: NoneStorage.NoneStorage(ILogger<NoneStorage>)
   nameWithType.vb: NoneStorage.NoneStorage(ILogger(Of NoneStorage))
-- uid: Downlink.Storage.NoneStorage.#ctor*
-  name: NoneStorage
-  href: api/Downlink.Storage.NoneStorage.html#Downlink_Storage_NoneStorage__ctor_
-  commentId: Overload:Downlink.Storage.NoneStorage.#ctor
-  fullName: Downlink.Storage.NoneStorage.NoneStorage
-  nameWithType: NoneStorage.NoneStorage
 - uid: Downlink.Storage.NoneStorage.GetFileAsync(Downlink.Core.VersionSpec)
   name: GetFileAsync(VersionSpec)
   href: api/Downlink.Storage.NoneStorage.html#Downlink_Storage_NoneStorage_GetFileAsync_Downlink_Core_VersionSpec_
   commentId: M:Downlink.Storage.NoneStorage.GetFileAsync(Downlink.Core.VersionSpec)
   fullName: Downlink.Storage.NoneStorage.GetFileAsync(Downlink.Core.VersionSpec)
   nameWithType: NoneStorage.GetFileAsync(VersionSpec)
-- uid: Downlink.Storage.NoneStorage.GetFileAsync*
-  name: GetFileAsync
-  href: api/Downlink.Storage.NoneStorage.html#Downlink_Storage_NoneStorage_GetFileAsync_
-  commentId: Overload:Downlink.Storage.NoneStorage.GetFileAsync
-  fullName: Downlink.Storage.NoneStorage.GetFileAsync
-  nameWithType: NoneStorage.GetFileAsync
 - uid: Downlink.Storage.ServiceCollectionExtensions
   name: ServiceCollectionExtensions
   href: api/Downlink.Storage.ServiceCollectionExtensions.html
@@ -2505,21 +1575,9 @@ references:
   commentId: M:Downlink.Storage.ServiceCollectionExtensions.AddFallbackStorage(IServiceCollection)
   fullName: Downlink.Storage.ServiceCollectionExtensions.AddFallbackStorage(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddFallbackStorage(IServiceCollection)
-- uid: Downlink.Storage.ServiceCollectionExtensions.AddFallbackStorage*
-  name: AddFallbackStorage
-  href: api/Downlink.Storage.ServiceCollectionExtensions.html#Downlink_Storage_ServiceCollectionExtensions_AddFallbackStorage_
-  commentId: Overload:Downlink.Storage.ServiceCollectionExtensions.AddFallbackStorage
-  fullName: Downlink.Storage.ServiceCollectionExtensions.AddFallbackStorage
-  nameWithType: ServiceCollectionExtensions.AddFallbackStorage
 - uid: Downlink.Storage.ServiceCollectionExtensions.AddLocalStorage(IServiceCollection)
   name: AddLocalStorage(IServiceCollection)
   href: api/Downlink.Storage.ServiceCollectionExtensions.html#Downlink_Storage_ServiceCollectionExtensions_AddLocalStorage_IServiceCollection_
   commentId: M:Downlink.Storage.ServiceCollectionExtensions.AddLocalStorage(IServiceCollection)
   fullName: Downlink.Storage.ServiceCollectionExtensions.AddLocalStorage(IServiceCollection)
   nameWithType: ServiceCollectionExtensions.AddLocalStorage(IServiceCollection)
-- uid: Downlink.Storage.ServiceCollectionExtensions.AddLocalStorage*
-  name: AddLocalStorage
-  href: api/Downlink.Storage.ServiceCollectionExtensions.html#Downlink_Storage_ServiceCollectionExtensions_AddLocalStorage_
-  commentId: Overload:Downlink.Storage.ServiceCollectionExtensions.AddLocalStorage
-  fullName: Downlink.Storage.ServiceCollectionExtensions.AddLocalStorage
-  nameWithType: ServiceCollectionExtensions.AddLocalStorage
