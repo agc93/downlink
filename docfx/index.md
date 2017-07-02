@@ -1,8 +1,8 @@
-# Git Profile Manager
+# Downlink
 
 ## Introduction
 
-Git Profile Manager is a simple command line application to manage "profiles" for common Git configurations. For example, if you contribute to multiple repositories or teams and are often needing to change repository-specific (or global) addresses or options.
+Downlink is a simple API used to create predictable, stable and consistent download links for software releases/projects. It serves as an abstraction over your chosen release storage platform so your links are always dependable and predictable, even if you (or your chosen platform) changes how you store your app.
 
 # Using this documentation:
 
