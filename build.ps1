@@ -105,7 +105,7 @@ if($Mono.IsPresent) {
 }
 
 # Should we use the new Roslyn?
-$UseExperimental = "";
+$UseExperimental = "-experimental";
 if($Experimental.IsPresent -and !($Mono.IsPresent)) {
     Write-Verbose -Message "Using experimental version of Roslyn."
     $UseExperimental = "-experimental"
