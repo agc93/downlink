@@ -10,6 +10,7 @@ FROM microsoft/aspnetcore:2.0
 WORKDIR /downlink
 RUN mkdir /downlink/config
 COPY --from=build-env /app/Downlink/out .
+COPY ./build/appsettings.json .
 VOLUME /downlink/config
 EXPOSE 80
 ENTRYPOINT ["dotnet", "Downlink.dll"]

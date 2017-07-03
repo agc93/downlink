@@ -156,11 +156,14 @@ Task("Docker-Build")
 	.Does(() =>
 {
 	CopyFileToDirectory("./build/Dockerfile", artifacts);
+	CopyFileToDirectory("./build/appsettings.json", artifacts);
 	var dSettings = new DockerBuildSettings {
 		//Rm = "true",
 		Tag = new[] { "agc93/downlink:latest" }
 	};
 	DockerBuild(dSettings, artifacts);
+	DeleteFile(artifacts + "Dockerfile");
+	DeleteFile(artifacts + "appsettings.json");
 });
 
 Task("Default")

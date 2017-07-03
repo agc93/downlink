@@ -105,6 +105,10 @@ namespace Downlink
 
         private static void AddPatternMatchers(this IServiceCollection services) {
             services.AddTransient<IPatternMatcher, HierarchicalPatternMatcher>();
+            services.AddTransient<IPatternMatcher, RuntimePatternMatcher>();
+            services.AddTransient<IPatternMatcher, FlatPatternMatcher>();
+            services.AddTransient<IPatternMatcher, FlatVersionMatcher>();
+            services.AddTransient<IPatternMatcher, FlatPlatformMatcher>();
         }
     }
 }

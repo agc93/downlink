@@ -126,10 +126,10 @@ namespace Downlink.Core.IO
         /// Gets the filename without its extension.
         /// </summary>
         /// <returns>The filename without its extension.</returns>
-        public Path GetFilenameWithoutExtension()
+        public string GetFilenameWithoutExtension()
         {
             var filename = System.IO.Path.GetFileNameWithoutExtension(FullPath);
-            return new Path(filename);
+            return filename;
         }
 
         /// <summary>
