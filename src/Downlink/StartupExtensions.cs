@@ -87,6 +87,7 @@ namespace Downlink
             services.AddTransient<ISchemeClient, FileSchemeClient>();
             services.AddTransient<ISchemeClient, HttpDownloadClient>();
             services.AddResponseHandler(config);
+            services.AddPatternMatchers();
             return services;
         }
 

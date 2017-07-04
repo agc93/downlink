@@ -23,13 +23,14 @@ namespace Downlink.AzureStorage
             IEnumerable<AzureMatchStrategy> strategies)
         {
             _logger = logger;
-            var connectionString = configuration.GetConnectionString("AzureStorage");
+            var connectionString = configuration.GetConnectionString("AzureStorage") ?? configuration.GetValue<string>("AzureStorage:ConnectionString");
             Account = CloudStorageAccount.Parse(connectionString);
             Client = Account.CreateCloudBlobClient();
             ContainerName = configuration.GetSection("AzureStorage:Container").Value;
             var stratName = configuration.GetValue("AzureStorage:MatchStrategy", "Hierarchical");
-            MatchStrategy = strategies.FirstOrDefault(s => s.Name == stratName);
-            PatternMatcher = matchers.FirstOrDefault(m => m.Name == stratName) ?? new Downlink.Core.Runtime.HierarchicalPatternMatcher();
+            MatchStrategy = strategies.GetFor<AzureMatchStrategy, IListBlobItem>(stratName);
+            PatternMatcher = matchers.GetFor(stratName) ?? new Downlink.Core.Runtime.HierarchicalPatternMatcher();
+            _logger.LogInformation($"Matching from '{ContainerName}' using {MatchStrategy?.Name ?? PatternMatcher?.Name}");
         }
 
         public CloudStorageAccount Account { get; private set; }
@@ -51,7 +52,7 @@ namespace Downlink.AzureStorage
                     .FirstOrDefault(
                         b => PatternMatcher.Match(b.Name, version)
                     );
-                    if (blob == null) throw new VersionNotFoundException();
+                    if (blob == null) throw new VersionNotFoundException($"No matches found from {blobs.Count} files using {PatternMatcher?.Name} matching!");
                 return blob.ToSource(version);
             }
             var match = await MatchStrategy.MatchAsync(blobs, version);

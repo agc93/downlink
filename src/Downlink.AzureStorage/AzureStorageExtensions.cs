@@ -22,7 +22,7 @@ namespace Downlink.AzureStorage
 
         public static IFileSource ToSource(this CloudBlockBlob blob, VersionSpec version)
         {
-            blob.FetchAttributesAsync().RunSynchronously();
+            blob.FetchAttributesAsync().Wait();
             return new AzureStorageFileSource(blob.Uri)
             {
                 Version = version,
@@ -45,7 +45,14 @@ namespace Downlink.AzureStorage
             List<IListBlobItem> results = new List<IListBlobItem>();
             do
             {
-                var response = await container.ListBlobsSegmentedAsync(continuationToken);
+                var response = await container.ListBlobsSegmentedAsync(
+                    string.Empty, 
+                    true, 
+                    BlobListingDetails.All, 
+                    null, 
+                    continuationToken, 
+                    new BlobRequestOptions(), 
+                    new Microsoft.WindowsAzure.Storage.OperationContext { });
                 continuationToken = response.ContinuationToken;
                 results.AddRange(response.Results);
             }
