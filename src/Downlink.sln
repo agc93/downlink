@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Downlink.S3", "Downlink.S3\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Downlink.AzureStorage", "Downlink.AzureStorage\Downlink.AzureStorage.csproj", "{FA38BDBE-82E2-4EF9-8EB5-9AF25FC64FA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Downlink.API", "Downlink.API\Downlink.API.csproj", "{987C014B-556B-4CA0-98E3-F4C471E183F2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -86,5 +88,17 @@ Global
 		{FA38BDBE-82E2-4EF9-8EB5-9AF25FC64FA7}.Release|x64.Build.0 = Release|x64
 		{FA38BDBE-82E2-4EF9-8EB5-9AF25FC64FA7}.Release|x86.ActiveCfg = Release|x86
 		{FA38BDBE-82E2-4EF9-8EB5-9AF25FC64FA7}.Release|x86.Build.0 = Release|x86
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Debug|x64.ActiveCfg = Debug|x64
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Debug|x64.Build.0 = Debug|x64
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Debug|x86.ActiveCfg = Debug|x86
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Debug|x86.Build.0 = Debug|x86
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Release|x64.ActiveCfg = Release|x64
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Release|x64.Build.0 = Release|x64
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Release|x86.ActiveCfg = Release|x86
+		{987C014B-556B-4CA0-98E3-F4C471E183F2}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal
