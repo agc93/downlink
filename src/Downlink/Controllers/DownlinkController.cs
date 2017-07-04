@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Downlink.Core;
 using Downlink.Handlers;
 using Downlink.Messaging;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -16,12 +17,14 @@ namespace Downlink.Controllers
     public class DownlinkController : ApiController
     {
         private readonly ILogger<DownlinkController> _logger;
+        private readonly IHostingEnvironment _environment;
 
         public IResponseHandler Handler { get; }
         private IConfiguration Configuration { get; }
 
         public DownlinkController(
             IConfiguration config,
+            IHostingEnvironment env,
             MediatR.IMediator mediator,
             IResponseHandler handler,
             ILogger<DownlinkController> logger) : base(mediator)
@@ -29,15 +32,22 @@ namespace Downlink.Controllers
             Configuration = config;
             Handler = handler;
             _logger = logger;
+            _environment = env;
         }
 
         [HttpGet]
         [Route("info")]
-        public IActionResult GetInfo() {
-            return Ok(new {
-                version = this.GetType().Assembly.GetName().Version.ToString(),
-                config = Configuration.AsEnumerable().Select(k => $"{k.Key}={k.Value}").ToList()
-            });
+        public IActionResult GetInfo()
+        {
+            if (_environment.IsDevelopment())
+            {
+                return Ok(new
+                {
+                    version = this.GetType().Assembly.GetName().Version.ToString(),
+                    config = Configuration.AsEnumerable().Select(k => $"{k.Key}={k.Value}").ToList()
+                });
+            }
+            return NotFound();
         }
 
         [HttpGet]
@@ -58,7 +68,6 @@ namespace Downlink.Controllers
                 _logger?.LogWarning(404, ex, "Caught NotFoundException");
                 return NotFound(ex.Message);
             }
-            //return Ok($"Got v: {version}, p: {platform}, a: {arch}, f: {format}");
         }
 
         // yay scar tissue

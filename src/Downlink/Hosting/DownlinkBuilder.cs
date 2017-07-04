@@ -41,7 +41,7 @@ namespace Downlink.Hosting
                 builder.Services.AddSingleton<S3.S3Storage>();
                 builder.Services.AddSingleton<Local.LocalFileStorage>();
                 builder.Services.AddSingleton<Storage.NoneStorage>();
-                builder.Services.AddSingleton<IRemoteStorage>(p => ServiceFactory.GetStorage(p));
+                //builder.Services.AddSingleton<IRemoteStorage>(p => ServiceFactory.GetStorage(p));
             }
         }
     }
