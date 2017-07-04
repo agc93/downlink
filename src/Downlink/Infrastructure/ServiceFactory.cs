@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Downlink.Core;
 using Downlink.Handlers;
 using Microsoft.Extensions.Configuration;
@@ -27,7 +28,9 @@ namespace Downlink.Infrastructure
             logger?.LogInformation("Running service factory for IRemoteStorage");
             var config = provider.GetService<IConfiguration>();
             var backend = config.GetValue("Storage", string.Empty).ToLower().Trim();
-            switch (backend)
+            var providers = provider.GetServices<IRemoteStorage>();
+            return providers.GetStorageFor(backend);
+            /*switch (backend)
             {
                 case "local":
                 case "localstorage":
@@ -42,7 +45,7 @@ namespace Downlink.Infrastructure
                     return provider.GetService<S3.S3Storage>();
                 default:
                     return provider.GetService<Storage.NoneStorage>();
-            }
+            }*/
         }
     }
 }

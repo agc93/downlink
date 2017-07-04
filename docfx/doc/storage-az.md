@@ -6,7 +6,7 @@ The `Downlink.AzureStorage` library (bundled with Downlink) adds support for Azu
 
 > Check the [configuration guide](./configuration.md) for full details
 
-You can quickly enable the Azure Storage backend by setting the **`Storage`** configuration key to "Azure" or "AzureStorage".
+You can quickly enable the Azure Storage backend by setting the **`Storage`** configuration key to "AzureStorage".
 
 This will invoke the `AddAzureStorage()` method and add Azure Storage to your application.
 

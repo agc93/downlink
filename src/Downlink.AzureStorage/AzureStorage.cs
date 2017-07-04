@@ -16,6 +16,8 @@ namespace Downlink.AzureStorage
     {
         private readonly ILogger<AzureStorage> _logger;
 
+        public string Name => "Azure Storage";
+
         public AzureStorage(
             IConfiguration configuration,
             ILogger<AzureStorage> logger,

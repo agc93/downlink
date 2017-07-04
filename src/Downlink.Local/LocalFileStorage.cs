@@ -15,6 +15,8 @@ namespace Downlink.Local
         private readonly ILogger<LocalFileStorage> _logger;
         private readonly bool _forceNameMatching;
 
+        public string Name => "Local";
+
         public LocalFileStorage(
             IConfiguration configuration,
             IEnumerable<IPatternMatcher> matchers,
