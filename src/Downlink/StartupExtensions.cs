@@ -3,6 +3,7 @@ using Downlink.Core;
 using Downlink.Core.Runtime;
 using Downlink.GitHub;
 using Downlink.Handlers;
+using Downlink.Local;
 using Downlink.S3;
 using Downlink.Storage;
 using MediatR;

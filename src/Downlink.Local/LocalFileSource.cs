@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using Downlink.Core;
 
-namespace Downlink.Storage
+namespace Downlink.Local
 {
     public class LocalFileSource : IFileSource
     {

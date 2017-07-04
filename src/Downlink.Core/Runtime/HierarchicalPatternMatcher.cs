@@ -20,7 +20,8 @@ namespace Downlink.Core.Runtime
         public bool Match(Path path, VersionSpec version)
         {
             var search = $"{version.ToString()}/{version.Platform}/{version.Architecture}";
-            var matching = path.FullPath.StartsWith(search);
+            var matching = path.FullPath.StartsWith(search) ||
+                path.FullPath.TrimStart('.', '/').StartsWith(search);
             var nameMatch = _forceNameMatch ? path.GetFilename().Contains(version) : true;
             return matching && nameMatch;
         }
