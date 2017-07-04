@@ -1,6 +1,7 @@
 ﻿using System;
 using Downlink.Core;
 using Downlink.Handlers;
+using Downlink.Messaging;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Downlink.Hosting
@@ -24,6 +25,16 @@ namespace Downlink.Hosting
 
         public static IDownlinkBuilder AddSchemeClient<T>(this IDownlinkBuilder builder) where T : class, ISchemeClient {
             builder.Services.AddTransient<ISchemeClient, T>();
+            return builder;
+        }
+
+        public static IDownlinkBuilder AddResponseAction(this IDownlinkBuilder builder, Action<AppVersionResponseModel> response) {
+            builder.Services.AddTransient<MediatR.INotificationHandler<AppVersionResponseModel>>(provider => new Messaging.ActionNotification(response));
+            return builder;
+        }
+
+        public static IDownlinkBuilder AddNotificationHandler<T>(this IDownlinkBuilder builder) where T : class, MediatR.INotificationHandler<AppVersionResponseModel> {
+            builder.Services.AddScoped<MediatR.INotificationHandler<AppVersionResponseModel>, T>();
             return builder;
         }
      }

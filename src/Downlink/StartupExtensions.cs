@@ -16,9 +16,9 @@ namespace Downlink
 {
     public static class StartupExtensions
     {
-        public static IServiceCollection AddMvcServices(this IServiceCollection services)
+        public static IMvcCoreBuilder AddMvcServices(this IServiceCollection services)
         {
-            services.AddMvcCore(opts =>
+            return services.AddMvcCore(opts =>
             {
                 opts.AddFormatterMappings();
             })
@@ -27,10 +27,8 @@ namespace Downlink
                 j.SerializerSettings.NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore;
             })
             .AddJsonFormatters()
-            .AddXmlSerializerFormatters()
             .AddApiExplorer()
             .AddDataAnnotations();
-            return services;
         }
 
         public static MvcOptions AddFormatterMappings(this MvcOptions opts)
@@ -52,7 +50,7 @@ namespace Downlink
 
         public static IServiceCollection AddMediatR(this IServiceCollection services)
         {
-            services.AddMediatR(typeof(Startup), typeof(Core.IRemoteStorage));
+            services.AddMediatR(typeof(Hosting.DownlinkBuilder), typeof(Core.IRemoteStorage));
             return services;
         }
 

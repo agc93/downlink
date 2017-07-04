@@ -6,6 +6,7 @@ namespace Downlink.Hosting
         None = 0,
         SkipDefaultPatterns = 1,
         SkipDefaultHandlers = 2,
-        SkipDefaultSchemeClients = 4
+        SkipDefaultSchemeClients = 4,
+        SkipDefaultStorage = 8
     }
 }

@@ -7,7 +7,7 @@ namespace Downlink.S3
 {
     public static class ServiceCollectionExtensions
     {
-        public static IServiceCollection AddS3Storage(this IServiceCollection services)
+        public static IServiceCollection AddS3Storage(this IServiceCollection services, bool)
         {
             services.AddConfiguration();
             services.AddSingleton<IRemoteStorage>(S3FileStorageFactory.BuildS3FileStorage);

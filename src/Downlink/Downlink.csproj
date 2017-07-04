@@ -1,27 +1,37 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
   <PropertyGroup>
     <TargetFramework>netcoreapp2.0</TargetFramework>
     <UserSecretsId>aspnet-Downlink-D7CA7BAA-C297-4D17-B442-5FA730B9ADC3</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\"/>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="MediatR" Version="3.0.1" />
-    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="2.0.0" />
-    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0-preview2-final" />
-    <PackageReference Include="Microsoft.AspNetCore.Antiforgery" Version="2.0.0-preview2-final" />
-    <PackageReference Include="NetEscapades.Configuration.Yaml" Version="1.2.0" />
+    <PackageReference Include="MediatR" Version="3.0.1"/>
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="Microsoft.AspNetCore.Server.Kestrel" Version="2.0.0-preview2-final"/>
   </ItemGroup>
   <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0-preview2-final" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="NetEscapades.Configuration.Yaml" Version="1.2.0"/>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Downlink.Core\Downlink.Core.csproj" />
-    <ProjectReference Include="..\Downlink.GitHub\Downlink.GitHub.csproj" />
-    <ProjectReference Include="..\Downlink.AzureStorage\Downlink.AzureStorage.csproj" />
-    <ProjectReference Include="..\Downlink.S3\Downlink.S3.csproj" />
-    <ProjectReference Include="..\Downlink.Local\Downlink.Local.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.0.0-preview2-final"/>
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.0-preview2-final"/>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Downlink.Core\Downlink.Core.csproj"/>
+    <ProjectReference Include="..\Downlink.GitHub\Downlink.GitHub.csproj"/>
+    <ProjectReference Include="..\Downlink.AzureStorage\Downlink.AzureStorage.csproj"/>
+    <ProjectReference Include="..\Downlink.S3\Downlink.S3.csproj"/>
+    <ProjectReference Include="..\Downlink.Local\Downlink.Local.csproj"/>
   </ItemGroup>
 </Project>

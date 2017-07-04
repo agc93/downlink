@@ -1,7 +1,9 @@
 ﻿using System;
 using Downlink.Core;
 using Downlink.Core.Runtime;
+using Downlink.GitHub;
 using Downlink.Handlers;
+using Downlink.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Downlink.Hosting
@@ -20,7 +22,7 @@ namespace Downlink.Hosting
             {
                 builder.Services.AddSingleton<ProxyingResponseHandler>();
                 builder.Services.AddSingleton<RedirectingResponseHandler>();
-                builder.Services.AddSingleton<IResponseHandler>(Downlink.Hosting.Handlers.ServiceFactory.GetResponseHandler);
+                builder.Services.AddSingleton<IResponseHandler>(ServiceFactory.GetResponseHandler);
             }
             if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultPatterns))
             {
@@ -30,6 +32,15 @@ namespace Downlink.Hosting
             {
                 builder.Services.AddTransient<ISchemeClient, HttpDownloadClient>();
                 builder.Services.AddTransient<ISchemeClient, FileSchemeClient>();
+            }
+            if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultStorage)) {
+                builder.Services.AddGitHubReleaseStorage();
+                builder.Services.AddS3Storage();
+                builder.Services.AddSingleton<AzureStorage.AzureStorage>();
+                builder.Services.AddSingleton<S3.S3Storage>();
+                builder.Services.AddSingleton<Local.LocalFileStorage>();
+                builder.Services.AddSingleton<Storage.NoneStorage>();
+                builder.Services.AddSingleton<IRemoteStorage>(p => ServiceFactory.GetStorage(p));
             }
         }
     }

@@ -50,18 +50,19 @@ namespace Downlink.Controllers
             {
                 var res = await Mediator.Send(req);
                 var result = await Handler.HandleAsync(res.Source);
-                _logger.LogInformation(101, result.ToString());
+                _logger?.LogInformation(101, result.ToString());
                 return result;
             }
             catch (Core.Diagnostics.NotFoundException ex)
             {
-                _logger.LogWarning(404, ex, "Caught NotFoundException");
+                _logger?.LogWarning(404, ex, "Caught NotFoundException");
                 return NotFound(ex.Message);
             }
             //return Ok($"Got v: {version}, p: {platform}, a: {arch}, f: {format}");
         }
 
-        [HttpPut]
+        // yay scar tissue
+        /*[HttpPut]
         [Route("{version}/{platform?}/{arch?}")]
         public IActionResult AddArtifact(
             string version,
@@ -71,6 +72,6 @@ namespace Downlink.Controllers
             IEnumerable<IFormFile> files)
         {
             return Ok();
-        }
+        }*/
     }
 }

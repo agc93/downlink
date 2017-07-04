@@ -9,6 +9,7 @@ namespace Downlink.Messaging
     {
         public AppVersionRequestHandler(IRemoteStorage storage) {
             Storage = storage;
+            System.Console.WriteLine($"Storage == null: {Storage == null}");
         }
 
         private IRemoteStorage Storage {get;}

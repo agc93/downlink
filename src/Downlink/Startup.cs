@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Downlink.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,9 +25,10 @@ namespace Downlink
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcServices()
-                .AddStorageBackend(Configuration)
-                .AddDownlinkServices(Configuration)
-                .AddCors()
+                .AddDownlink();
+/*                .AddStorageBackend(Configuration)
+                .AddDownlinkServices(Configuration) */
+                services.AddCors()
                 .AddMediatR();
         }
 
@@ -34,8 +36,7 @@ namespace Downlink
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
             app.UseCorsPolicy()
-                .UseMvc()
-                .UseStaticFiles();
+                .UseMvc();
         }
     }
 }
