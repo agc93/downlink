@@ -11,6 +11,7 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
+var tag = Argument("tag", "latest");
 
 ///////////////////////////////////////////////////////////////////////////////
 // GLOBAL VARIABLES
@@ -159,7 +160,7 @@ Task("Docker-Build")
 	CopyFileToDirectory("./build/appsettings.json", artifacts);
 	var dSettings = new DockerBuildSettings {
 		//Rm = "true",
-		Tag = new[] { "agc93/downlink:latest" }
+		Tag = new[] { $"agc93/downlink:{tag}" }
 	};
 	DockerBuild(dSettings, artifacts);
 	DeleteFile(artifacts + "Dockerfile");

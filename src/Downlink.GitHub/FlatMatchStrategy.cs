@@ -26,8 +26,9 @@ namespace Downlink.GitHub
 
         public override Task<IFileSource> MatchAsync(IEnumerable<Release> releases, VersionSpec version)
         {
-            var release = releases.FirstOrDefault(r => r.TagName == version);
-            if (release == null) throw new VersionNotFoundException($"Could not find version '{version}'");
+            var release = releases.FirstOrDefault(r => r.TagName == version)
+                ?? releases.FirstOrDefault(r => r.Name == version);
+            if (release == null) throw new VersionNotFoundException($"Could not find release for version '{version}'");
             _logger.LogDebug("Found release {0} with {1} assets", release.Name, release.Assets.Count);
             var opts = release.Assets.ToDictionary(a => ParseSpec(a.Name, _splitCharacters.ToArray()), a => a);
             _logger.LogDebug("Found releases: {0}", opts.Keys.Select(k => k.Summary));

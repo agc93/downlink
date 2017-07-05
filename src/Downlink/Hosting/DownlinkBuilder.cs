@@ -1,4 +1,5 @@
 ﻿using System;
+using Downlink.Composition;
 using Downlink.Core;
 using Downlink.Core.Runtime;
 using Downlink.GitHub;
@@ -17,7 +18,13 @@ namespace Downlink.Hosting
         }
         public IServiceCollection Services { get; }
 
-        internal static void AddDefaultServices(IDownlinkBuilder builder, DownlinkBuilderOptions opts)
+        public void Build() {
+            var provider = Services.BuildServiceProvider();
+            var loader = provider.GetService<IPluginLoader>();
+            loader.LoadPlugins(this, provider);
+        }
+
+        /*internal static void AddDefaultServices(IDownlinkBuilder builder, DownlinkBuilderOptions opts)
         {
             if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultHandlers))
             {
@@ -43,6 +50,6 @@ namespace Downlink.Hosting
                 builder.Services.AddSingleton<Storage.NoneStorage>();
                 //builder.Services.AddSingleton<IRemoteStorage>(p => ServiceFactory.GetStorage(p));
             }
-        }
+        } */
     }
 }

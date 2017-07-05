@@ -1,4 +1,5 @@
 ﻿using System;
+using Downlink.Composition;
 using Downlink.Core;
 using Downlink.Core.Runtime;
 using Downlink.Handlers;
@@ -58,8 +59,11 @@ namespace Downlink.Hosting
         private static void BuildDownlink(IServiceCollection services, Action<IDownlinkBuilder> configure, DownlinkBuilderOptions opts) {
             services.AddMediatR();
             var builder = new DownlinkBuilder(services);
-            DownlinkBuilder.AddDefaultServices(builder, opts);
+            builder.Services.AddSingleton<IPluginLoader, PluginLoader>();
+            builder.Services.AddSingleton<DownlinkBuilderDefaults>(new DownlinkBuilderDefaults(opts));
+            builder.AddPlugin<DownlinkDefaultServices>();
             configure?.Invoke(builder);
+            builder.Build();
         }
 
         internal static void AddDefaultPatternMatchers(this IServiceCollection services)

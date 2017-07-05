@@ -37,5 +37,10 @@ namespace Downlink.Hosting
             builder.Services.AddScoped<MediatR.INotificationHandler<AppVersionResponseModel>, T>();
             return builder;
         }
+
+        public static IDownlinkBuilder AddPlugin<T>(this IDownlinkBuilder builder) where T : class, Composition.IDownlinkPlugin {
+            builder.Services.AddSingleton<Composition.IDownlinkPlugin, T>();
+            return builder;
+        }
      }
 }
