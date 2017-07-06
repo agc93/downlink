@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using Downlink.Composition;
+using Downlink.Infrastructure;
 using Downlink.Core;
 using Downlink.Handlers;
 
-namespace Downlink.Infrastructure
+namespace Downlink.Composition
 {
     public class PluginScanner : IPluginScanner
     {
-        private readonly IPluginLoader _loader;
 
-        public PluginScanner(
-            IPluginLoader loader
-        ) {
-            _loader = loader;
+        public PluginScanner() {
         }
         
         public IEnumerable<Type> LoadModulesFromAssemblies(IEnumerable<Assembly> assemblies) {
@@ -36,9 +33,5 @@ namespace Downlink.Infrastructure
             }
             return pluginTypes;
         }
-    }
-
-    public interface IPluginScanner {
-        IEnumerable<Type> LoadModulesFromAssemblies(IEnumerable<Assembly> assemblies);
     }
 }

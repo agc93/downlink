@@ -108,6 +108,7 @@ Task("Run-Unit-Tests")
 Task("Generate-Docs")
 	.Does(() => 
 {
+	DocFxMetadata("./docfx/docfx.json");
 	DocFxBuild("./docfx/docfx.json");
 	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 })

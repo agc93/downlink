@@ -1,7 +1,7 @@
-# Development Guide
+# Developer's Guide
 
 > [!TIP]
-> You can check the [Developer Reference](../api/index.md) above for full API source reference, directly from the source code.
+> You can check the [Developer Reference](../../api/index.md) above for full API source reference, directly from the source code.
 
 ## Building
 
@@ -19,7 +19,7 @@ Downlink has a lot of moving parts, so the code base may appear quite daunting a
 
 ### Extension points
 
-Downlink does include some specifically designed extensions points, but the  `IRemoteStorage` and `ISchemeClient` interfaces are the ones most developers will be interacting with, and are explained in more detail below.
+Downlink does include some specifically designed extensions points, such as the `IRemoteStorage`, `IPatternMatcher` and `ISchemeClient` interfaces. Working with these interfaces is explained in more detail below, and in the other documents available on the left.
 
 ## Storage
 
@@ -33,9 +33,13 @@ Returning a `Uri` rather than the artifact itself enables Downlink's built-in pr
 
 Note that the `Uri` returned from an `IRemoteStorage` implementation can be any valid URI, and it will be passed directly to the response handler in Downlink itself (an `IResponseHandler` implementation). Out of the box, URIs with the 'http', 'https' or 'file' URIs are automatically handled and returned to the user. If Downlink doesn't know how to handle a URI scheme, it will return a *412 Precondition Failed* status.
 
-To add support for another scheme (most often if you are also developing a new backend), you need to implement `ISchemeClient`. To make it easier, you can inherit from `SchemeClient` which takes out a bit of boilerplate.
+## Pattern Matching
 
-Your `ISchemeClient` implementation will need to return an `IActionResult` (just like a Controller action method), and that will be returned to the user. Note that your scheme client will *only* be invoked for the schemes it supports.
+> Make sure to read the [user docs on version matching](../user/matching.md) first!
+
+Matching from a requested version (a `VersionSpec` instance) to a file in the remote storage is performed by either an `IMatchStrategy` implementation (for backend-specific logic) or a simpler `IPatternMatcher` implementation (backend-agnostic).
+
+Pattern matchers are passed a "path" to each file found on the remote backend, and asked to match against a specific version. The first time this match returns `true`, that file is returned from the backend.
 
 ## Dependency Injection
 

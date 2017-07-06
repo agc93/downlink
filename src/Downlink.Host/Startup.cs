@@ -25,7 +25,7 @@ namespace Downlink
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcServices()
-                .AddDownlink()
+                .AddDownlink(b => b.AddLocalPlugins(Configuration))
                 .AddCors();
         }
 

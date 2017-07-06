@@ -1,6 +1,9 @@
 - name: User Documentation
-  href: doc/
-  homepage: doc/intro.md
-- name: Developer Reference
+  href: doc/user/
+  homepage: doc/user/intro.md
+- name: Developer Guides
+  href: doc/dev/
+  homepage: doc/dev/intro.md
+- name: Source Reference
   href: api/
   homepage: api/index.md

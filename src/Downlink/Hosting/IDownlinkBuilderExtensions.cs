@@ -42,5 +42,13 @@ namespace Downlink.Hosting
             builder.Services.AddSingleton<Composition.IDownlinkPlugin, T>();
             return builder;
         }
+
+        public static IDownlinkBuilder AddPlugin(this IDownlinkBuilder builder, params Type[] pluginType) {
+            foreach (var type in pluginType)
+            {
+                builder.Services.AddSingleton(typeof(Composition.IDownlinkPlugin), type);
+            }
+            return builder;
+        }
      }
 }
