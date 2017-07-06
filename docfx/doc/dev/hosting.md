@@ -2,7 +2,7 @@
 
 Want to use Downlink without a separate site? Want to integrate Downlink into an existing ASP.NET Core app? Now you can!
 
-Downlink has been built to integrate cleanly with ASP.NET MVC Core. When you run Downlink directly (such as from the Docker image), you are actually running aginst [Downlink.Host](xref:Downlink.Host.Startup), which is a very basic ASP.NET Core app with Downlink pre-configured for use.
+Downlink has been built to integrate cleanly with ASP.NET MVC Core. When you run Downlink directly (such as from the Docker image), you are actually running aginst [Downlink.Host](xref:Downlink.Startup), which is a very basic ASP.NET Core app with Downlink pre-configured for use.
 
 Note that Downlink requires MVC, so plain ASP.NET Core (without MVC installed) is not supported.
 
