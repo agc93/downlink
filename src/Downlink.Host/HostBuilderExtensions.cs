@@ -10,7 +10,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Downlink
 {
-    public static class BuilderExtensions
+    public static class HostBuilderExtensions
     {
         public static IWebHostBuilder ConfigureLogging(this IWebHostBuilder builder) =>
             builder.ConfigureLogging((ctx, factory) =>

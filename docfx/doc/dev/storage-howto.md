@@ -39,7 +39,7 @@ public class MyAwesomeStorage : IRemoteStorage
 
 The `IFileSource` interface represents the location where Downlink can find the matching app artifact for the requested version. Your storage backend will need to implement it's own file source type, with any logic needed to populate the object. For a good example of this, check out the [`LocalFileSource`](xref:Downlink.Local.LocalFileSource) class.
 
-Note that one of the most important parts of the `IFileSource` is obviously the `FileUri` property. This is the URI that Downlink will fetch to serve (or redirect to) your app artifact. If the URI has a `file://`, `http://` or `https://` scheme, Downlink can automatically serve it up using the built-in services. If your app needs additional logic, you can use a 'scheme client' (an `ISchemeClient` implementation) to include any additional logic. Check the [scheme client docs](./scheme-client.md) for more on this.
+Note that one of the most important parts of the `IFileSource` is obviously the `FileUri` property. This is the URI that Downlink will fetch to serve (or redirect to) your app artifact. If the URI has a `file://`, `http://` or `https://` scheme, Downlink can automatically serve it up using the built-in services. If your app needs additional logic, you can use a 'scheme client' (an `ISchemeClient` implementation) to include any additional logic. Check the [scheme client docs](./scheme-clients.md) for more on this.
 
 If possible, it's recommended to return one of the supported URI schemes and let Downlink handle it.
 

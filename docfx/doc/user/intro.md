@@ -20,4 +20,4 @@ To get started, check out [the getting started guide](./getting-started.md) for 
 
 ## Contributing
 
-This application is completely open-source and is published [on GitHub](https://github.com/agc93/downlink). To get started contributing, check out the [contributing guide](./contributing.md) and the [developer guide](./developers.md).
+This application is completely open-source and is published [on GitHub](https://github.com/agc93/downlink). To get started contributing, check out the [contributing guide](../dev/contributing.md) and the [developer guide](../dev/developers.md).
