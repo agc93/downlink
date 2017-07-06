@@ -4,6 +4,7 @@ using Downlink.Core.Runtime;
 using Downlink.GitHub;
 using Downlink.Handlers;
 using Downlink.Infrastructure;
+using Downlink.S3;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Downlink.Hosting

@@ -47,11 +47,5 @@ namespace Downlink
                 .AllowCredentials());
             return app;
         }
-
-        public static IServiceCollection AddMediatR(this IServiceCollection services)
-        {
-            services.AddMediatR(typeof(Hosting.DownlinkBuilder), typeof(Core.IRemoteStorage));
-            return services;
-        }
     }
 }

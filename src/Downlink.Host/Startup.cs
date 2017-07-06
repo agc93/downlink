@@ -25,11 +25,8 @@ namespace Downlink
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcServices()
-                .AddDownlink();
-/*                .AddStorageBackend(Configuration)
-                .AddDownlinkServices(Configuration) */
-                services.AddCors()
-                .AddMediatR();
+                .AddDownlink()
+                .AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

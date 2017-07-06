@@ -138,9 +138,9 @@ Task("Publish")
 	.Does(() =>
 {
 	CreateDirectory(artifacts + "publish/");
-	var project = projects.SourceProjects.First(p => p.Name == "Downlink");
+	var project = projects.SourceProjects.First(p => p.Name == "Downlink.Host");
 		foreach (var framework in frameworks) {
-			var projectDir = $"{artifacts}publish/{project.Name}";
+			var projectDir = $"{artifacts}publish/Downlink"; // BAD
 			CreateDirectory(projectDir);
 			Information("Publishing {0} to {1}", project.Name, projectDir);
 			var settings = new DotNetCorePublishSettings {
