@@ -36,6 +36,7 @@ Setup(ctx =>
 	Information("Running tasks...");
 	//versionInfo = GetVersion();
 	//Information("Building for version {0}", versionInfo.FullSemVer);
+	CreateDirectory(artifacts);
 	Verbose("Building for " + string.Join(", ", frameworks));
 });
 
@@ -108,12 +109,16 @@ Task("Run-Unit-Tests")
 Task("Generate-Docs")
 	.Does(() => 
 {
+	Information("Building metadata...");
 	DocFxMetadata("./docfx/docfx.json");
+	Information("Building docs...");
 	DocFxBuild("./docfx/docfx.json");
+	Information("Packaging built docs...");
 	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 })
 .OnError(ex => 
 {
+	Warning(ex.Message);
 	Warning("Error generating documentation!");
 });
 
