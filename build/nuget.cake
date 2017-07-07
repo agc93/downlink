@@ -9,8 +9,8 @@ Task("NuGet")
         NoBuild = true,
         OutputDirectory = $"{artifacts}package",
         ArgumentCustomization = args => args
-            .Append("/p:Version=\"0.2.0-unstable\"")
-            .Append("/p:NoWarn=NU1701")
+            .Append($"/p:Version=\"{packageVersion}\"")
+            .Append("/p:NoWarn=\"NU1701 NU1602\"")
     };
     foreach(var project in projects.SourceProjectPaths) {
         Information($"Packing {project.GetDirectoryName()}...");
