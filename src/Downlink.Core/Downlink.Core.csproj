@@ -1,7 +1,12 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
+  <Import Project="../Downlink.props" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>Downlink.Core</PackageId>
+    <Title>Downlink.Core</Title>
+    <Description>This package is the core library used by all Downlink components including the models, abstractions and shared logic.</Description>
   </PropertyGroup>
 
 </Project>

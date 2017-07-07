@@ -82,7 +82,8 @@ Task("Build")
 		Information($"Building {project.GetDirectoryName()} for {configuration}");
 		var settings = new DotNetCoreBuildSettings {
 			Configuration = configuration,
-			NoIncremental = true,
+			ArgumentCustomization = args => args.Append("/p:NoWarn=NU1701"),
+			//NoIncremental = true,
 		};
 		DotNetCoreBuild(project.FullPath, settings);
 	}
@@ -173,7 +174,15 @@ Task("Docker-Build")
 	DeleteFile(artifacts + "appsettings.json");
 });
 
+#load "build/nuget.cake"
+
 Task("Default")
-.IsDependentOn("Publish");
+.IsDependentOn("Publish")
+.IsDependentOn("NuGet");
+
+Task("CI-Build")
+.IsDependentOn("Publish")
+.IsDependentOn("NuGet")
+.IsDependentOn("Generate-Docs");
 
 RunTarget(target);
