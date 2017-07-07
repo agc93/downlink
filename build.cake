@@ -31,7 +31,6 @@ var artifacts = "./dist/";
 var testResultsPath = MakeAbsolute(Directory(artifacts + "./test-results"));
 var frameworks = new List<string> { "netcoreapp2.0" };
 var runtimes = new List<string> { "win10-x64", "osx.10.12-x64", "ubuntu.16.04-x64", "ubuntu.14.04-x64", "centos.7-x64", "debian.8-x64", "rhel.7-x64" };
-//var PackagedRuntimes = new List<string> { "centos", "ubuntu", "debian", "fedora", "rhel" };
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -41,11 +40,13 @@ Setup(ctx =>
 {
 	// Executed BEFORE the first task.
 	Information("Running tasks...");
-	//versionInfo = GetVersion();
-	//Information("Building for version {0}", versionInfo.FullSemVer);
 	CreateDirectory(artifacts);
 	Verbose("Building for " + string.Join(", ", frameworks));
 	packageVersion = BuildVersion(fallbackVersion);
+	if (FileExists("./build/.dotnet/dotnet.exe")) {
+		Information("Using local install of `dotnet` SDK!");
+		Context.Tools.RegisterFile("./build/.dotnet/dotnet.exe");
+	}
 });
 
 Teardown(ctx =>
@@ -180,8 +181,8 @@ Task("Docker-Build")
 		}
 	};
 	DockerBuild(dSettings, artifacts);
-	DeleteFile(artifacts + "Dockerfile");
-	DeleteFile(artifacts + "appsettings.json");
+	//DeleteFile(artifacts + "Dockerfile");
+	//DeleteFile(artifacts + "appsettings.json");
 });
 
 #load "build/nuget.cake"
