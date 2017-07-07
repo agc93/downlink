@@ -181,8 +181,8 @@ Task("Docker-Build")
 		}
 	};
 	DockerBuild(dSettings, artifacts);
-	//DeleteFile(artifacts + "Dockerfile");
-	//DeleteFile(artifacts + "appsettings.json");
+	DeleteFile(artifacts + "Dockerfile");
+	DeleteFile(artifacts + "appsettings.json");
 });
 
 #load "build/nuget.cake"
@@ -194,6 +194,11 @@ Task("Default")
 Task("CI-Build")
 .IsDependentOn("Publish")
 .IsDependentOn("NuGet")
-.IsDependentOn("Generate-Docs");
+.IsDependentOn("Generate-Docs")
+.Does(() => 
+{
+	CopyFileToDirectory("./build/Dockerfile", artifacts);
+	CopyFileToDirectory("./build/appsettings.json", artifacts);
+});
 
 RunTarget(target);
