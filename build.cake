@@ -174,7 +174,6 @@ Task("Docker-Build")
 	CopyFileToDirectory("./build/Dockerfile", artifacts);
 	CopyFileToDirectory("./build/appsettings.json", artifacts);
 	var dSettings = new DockerBuildSettings {
-		//Rm = "true",
 		Tag = new[] { 
 			$"agc93/downlink:{tag}",
 			$"agc93/downlink:{packageVersion}"
