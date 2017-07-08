@@ -19,6 +19,8 @@ namespace Downlink.S3
         private readonly RegionEndpoint _region;
         private readonly AWSCredentials _credentials;
 
+        public string Name => "S3";
+
         public S3Storage(
             IConfiguration configuration,
             S3Configuration opts,

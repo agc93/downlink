@@ -6,7 +6,7 @@ namespace Downlink.Local
 {
     public class LocalFileSource : IFileSource
     {
-        public LocalFileSource(VersionSpec version, FileInfo fileInfo) {
+        internal LocalFileSource(VersionSpec version, FileInfo fileInfo) {
             var builder = new UriBuilder() {
                 Host = string.Empty,
                 Scheme = "file",

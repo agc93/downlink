@@ -16,9 +16,3 @@
     href: storage-s3.md
 - name: FAQ
   href: faq.md
-- name: Developers
-  items:
-  - name: Contributing
-    href: contributing.md
-  - name: Developer Guide
-    href: developers.md

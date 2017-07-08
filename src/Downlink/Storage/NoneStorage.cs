@@ -8,6 +8,7 @@ namespace Downlink.Storage
 {
     public class NoneStorage : IRemoteStorage
     {
+        public string Name => "Fallback";
         private ILogger<NoneStorage> _logger;
 
         public NoneStorage(ILogger<NoneStorage> logger) {

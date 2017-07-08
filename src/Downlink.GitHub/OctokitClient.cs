@@ -11,6 +11,7 @@ namespace Downlink.GitHub
 {
     public class OctokitClient : IGitHubClient
     {
+        public string Name => "GitHub";
 
         public OctokitClient(
             GitHubCredentials credentials,

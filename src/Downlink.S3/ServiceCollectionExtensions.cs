@@ -10,6 +10,7 @@ namespace Downlink.S3
         public static IServiceCollection AddS3Storage(this IServiceCollection services)
         {
             services.AddConfiguration();
+            services.AddSingleton<S3Storage>();
             services.AddSingleton<IRemoteStorage>(S3FileStorageFactory.BuildS3FileStorage);
             return services;
         }

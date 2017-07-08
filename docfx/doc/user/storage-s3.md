@@ -6,7 +6,7 @@ The `Downlink.S3` library (bundled with Downlink) adds support for AWS S3 as a r
 
 > Check the [configuration guide](./configuration.md) for full details
 
-You can quickly enable the AWS S3 backend by setting the **`Storage`** configuration key to "AWS" or "S3".
+You can quickly enable the AWS S3 backend by setting the **`Storage`** configuration key to "S3".
 
 This will invoke the `AddS3Storage()` method and add AWS S3 Storage to your application.
 

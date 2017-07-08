@@ -15,6 +15,9 @@ namespace Downlink.AzureStorage
     public class AzureStorage : IRemoteStorage
     {
         private readonly ILogger<AzureStorage> _logger;
+        private readonly IConfiguration _configuration;
+
+        public string Name => "Azure Storage";
 
         public AzureStorage(
             IConfiguration configuration,
@@ -23,25 +26,32 @@ namespace Downlink.AzureStorage
             IEnumerable<AzureMatchStrategy> strategies)
         {
             _logger = logger;
-            var connectionString = configuration.GetConnectionString("AzureStorage") ?? configuration.GetValue<string>("AzureStorage:ConnectionString");
-            Account = CloudStorageAccount.Parse(connectionString);
-            Client = Account.CreateCloudBlobClient();
-            ContainerName = configuration.GetSection("AzureStorage:Container").Value;
+            _configuration = configuration;
             var stratName = configuration.GetValue("AzureStorage:MatchStrategy", "Hierarchical");
             MatchStrategy = strategies.GetFor<AzureMatchStrategy, IListBlobItem>(stratName);
             PatternMatcher = matchers.GetFor(stratName) ?? new Downlink.Core.Runtime.HierarchicalPatternMatcher();
-            _logger.LogInformation($"Matching from '{ContainerName}' using {MatchStrategy?.Name ?? PatternMatcher?.Name}");
+            _logger.LogDebug($"Using {MatchStrategy?.Name ?? PatternMatcher?.Name}");
         }
 
         public CloudStorageAccount Account { get; private set; }
         public CloudBlobClient Client { get; private set; }
 
-        private string ContainerName { get; }
+        private string ContainerName { get; set; }
         private AzureMatchStrategy MatchStrategy { get; }
         private IPatternMatcher PatternMatcher {get;}
 
+        private void BuildServices() {
+            var connectionString = _configuration.GetConnectionString("AzureStorage") 
+                ?? _configuration.GetValue<string>("AzureStorage:ConnectionString");
+            Account = CloudStorageAccount.Parse(connectionString);
+            Client = Account.CreateCloudBlobClient();
+            ContainerName = _configuration.GetSection("AzureStorage:Container").Value;
+            _logger.LogInformation($"Connected to '{ContainerName} using {MatchStrategy?.Name ?? PatternMatcher?.Name}");
+        }
+
         public async Task<IFileSource> GetFileAsync(VersionSpec version)
         {
+            BuildServices();
             var container = Client.GetContainerReference(ContainerName);
             await container.PrepContainer();
             var path = BuildPath(version);

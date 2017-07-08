@@ -11,6 +11,15 @@
 
 var target = Argument("target", "Default");
 var configuration = Argument("configuration", "Release");
+var tag = Argument("tag", "latest");
+var fallbackVersion = Argument<string>("force-version", EnvironmentVariable("FALLBACK_VERSION") ?? "0.2.0");
+
+///////////////////////////////////////////////////////////////////////////////
+// VERSIONING
+///////////////////////////////////////////////////////////////////////////////
+
+var packageVersion = string.Empty;
+#load "build/version.cake"
 
 ///////////////////////////////////////////////////////////////////////////////
 // GLOBAL VARIABLES
@@ -20,10 +29,8 @@ var solution = File("./src/Downlink.sln");
 var projects = GetProjects(solution, configuration);
 var artifacts = "./dist/";
 var testResultsPath = MakeAbsolute(Directory(artifacts + "./test-results"));
-GitVersion versionInfo = null;
 var frameworks = new List<string> { "netcoreapp2.0" };
 var runtimes = new List<string> { "win10-x64", "osx.10.12-x64", "ubuntu.16.04-x64", "ubuntu.14.04-x64", "centos.7-x64", "debian.8-x64", "rhel.7-x64" };
-//var PackagedRuntimes = new List<string> { "centos", "ubuntu", "debian", "fedora", "rhel" };
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -33,9 +40,13 @@ Setup(ctx =>
 {
 	// Executed BEFORE the first task.
 	Information("Running tasks...");
-	//versionInfo = GetVersion();
-	//Information("Building for version {0}", versionInfo.FullSemVer);
+	CreateDirectory(artifacts);
 	Verbose("Building for " + string.Join(", ", frameworks));
+	packageVersion = BuildVersion(fallbackVersion);
+	if (FileExists("./build/.dotnet/dotnet.exe")) {
+		Information("Using local install of `dotnet` SDK!");
+		Context.Tools.RegisterFile("./build/.dotnet/dotnet.exe");
+	}
 });
 
 Teardown(ctx =>
@@ -80,7 +91,7 @@ Task("Build")
 		Information($"Building {project.GetDirectoryName()} for {configuration}");
 		var settings = new DotNetCoreBuildSettings {
 			Configuration = configuration,
-			NoIncremental = true,
+			ArgumentCustomization = args => args.Append("/p:NoWarn=NU1701"),
 		};
 		DotNetCoreBuild(project.FullPath, settings);
 	}
@@ -107,11 +118,16 @@ Task("Run-Unit-Tests")
 Task("Generate-Docs")
 	.Does(() => 
 {
+	Information("Building metadata...");
+	DocFxMetadata("./docfx/docfx.json");
+	Information("Building docs...");
 	DocFxBuild("./docfx/docfx.json");
+	Information("Packaging built docs...");
 	Zip("./docfx/_site/", artifacts + "/docfx.zip");
 })
 .OnError(ex => 
 {
+	Warning(ex.Message);
 	Warning("Error generating documentation!");
 });
 
@@ -138,9 +154,9 @@ Task("Publish")
 	.Does(() =>
 {
 	CreateDirectory(artifacts + "publish/");
-	var project = projects.SourceProjects.First(p => p.Name == "Downlink");
+	var project = projects.SourceProjects.First(p => p.Name == "Downlink.Host");
 		foreach (var framework in frameworks) {
-			var projectDir = $"{artifacts}publish/{project.Name}";
+			var projectDir = $"{artifacts}publish/Downlink"; // BAD
 			CreateDirectory(projectDir);
 			Information("Publishing {0} to {1}", project.Name, projectDir);
 			var settings = new DotNetCorePublishSettings {
@@ -158,15 +174,30 @@ Task("Docker-Build")
 	CopyFileToDirectory("./build/Dockerfile", artifacts);
 	CopyFileToDirectory("./build/appsettings.json", artifacts);
 	var dSettings = new DockerBuildSettings {
-		//Rm = "true",
-		Tag = new[] { "agc93/downlink:latest" }
+		Tag = new[] { 
+			$"agc93/downlink:{tag}",
+			$"agc93/downlink:{packageVersion}"
+		}
 	};
 	DockerBuild(dSettings, artifacts);
 	DeleteFile(artifacts + "Dockerfile");
 	DeleteFile(artifacts + "appsettings.json");
 });
 
+#load "build/nuget.cake"
+
 Task("Default")
-.IsDependentOn("Publish");
+.IsDependentOn("Publish")
+.IsDependentOn("NuGet");
+
+Task("CI-Build")
+.IsDependentOn("Publish")
+.IsDependentOn("NuGet")
+.IsDependentOn("Generate-Docs")
+.Does(() => 
+{
+	CopyFileToDirectory("./build/Dockerfile", artifacts);
+	CopyFileToDirectory("./build/appsettings.json", artifacts);
+});
 
 RunTarget(target);

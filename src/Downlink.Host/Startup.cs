@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Downlink.Hosting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -24,18 +25,18 @@ namespace Downlink
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvcServices()
-                .AddStorageBackend(Configuration)
-                .AddDownlinkServices(Configuration)
-                .AddCors()
-                .AddMediatR();
+                .AddDownlink(b => b.AddLocalPlugins(Configuration))
+                .AddCors();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
+            if (env.IsDevelopment()) {
+                app.UseDeveloperExceptionPage();
+            }
             app.UseCorsPolicy()
-                .UseMvc()
-                .UseStaticFiles();
+                .UseMvc();
         }
     }
 }

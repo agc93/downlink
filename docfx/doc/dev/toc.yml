@@ -1,0 +1,16 @@
+- name: Introduction
+  href: intro.md
+- name: Contributing
+  href: contributing.md
+- name: Developer's Guide
+  href: developers.md
+- name: Hosting
+  href: hosting.md
+- name: Guides
+  items:
+  - name: Plugins
+    href: plugins.md
+  - name: Storage Backends
+    href: storage.md
+  - name: Scheme Clients
+    href: scheme-clients.md
