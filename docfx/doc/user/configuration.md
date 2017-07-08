@@ -58,3 +58,23 @@ Note that since configuration is loaded sequentially, configuration values can b
 
 > [!TIP]
 > It's recommended to use configuration files for more complex configuration (such as Azure connection strings and complex paths), but environment variables can be used to easily override simple settings.
+
+## Experimental options
+
+There are some features in Downlink that, for various reasons, are still experimental and have to be enabled explicitly. These features are generally enabled using a top-level `Experimental` configuration key:
+
+For example:
+
+```json
+{
+  "Experimental": {
+    "GitHubLatestVersion": true
+  }
+}
+```
+
+```yaml
+Experimental:
+  EnableLocalPlugins: true
+  InjectContext: true
+```

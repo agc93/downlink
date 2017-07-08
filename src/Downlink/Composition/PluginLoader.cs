@@ -16,21 +16,6 @@ namespace Downlink.Composition
             _logger = logger;
         }
 
-        //this is scar tissue in the making right here vvv
-        private void LoadPlugin<T>(IDownlinkBuilder builder) where T : class, IDownlinkPlugin, new()
-        {
-            var module = new T();
-            try
-            {
-                module.AddServices(builder);
-            }
-            catch (System.Exception)
-            {
-                _logger.LogWarning($"Module {module.GetType().Name} failed to register!");
-                // ignored for now
-            }
-        }
-
         public void LoadPlugins(IDownlinkBuilder builder, IServiceProvider provider)
         {
             var plugins = provider.GetServices<IDownlinkPlugin>();

@@ -69,18 +69,5 @@ namespace Downlink.Controllers
                 return NotFound(ex.Message);
             }
         }
-
-        // yay scar tissue
-        /*[HttpPut]
-        [Route("{version}/{platform?}/{arch?}")]
-        public IActionResult AddArtifact(
-            string version,
-            string platform,
-            string arch,
-            [FromQuery] string format,
-            IEnumerable<IFormFile> files)
-        {
-            return Ok();
-        }*/
     }
 }

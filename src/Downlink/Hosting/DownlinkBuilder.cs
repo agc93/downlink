@@ -23,33 +23,5 @@ namespace Downlink.Hosting
             var loader = provider.GetService<IPluginLoader>();
             loader.LoadPlugins(this, provider);
         }
-
-        /*internal static void AddDefaultServices(IDownlinkBuilder builder, DownlinkBuilderOptions opts)
-        {
-            if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultHandlers))
-            {
-                builder.Services.AddSingleton<ProxyingResponseHandler>();
-                builder.Services.AddSingleton<RedirectingResponseHandler>();
-                builder.Services.AddSingleton<IResponseHandler>(ServiceFactory.GetResponseHandler);
-            }
-            if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultPatterns))
-            {
-                builder.Services.AddDefaultPatternMatchers();
-            }
-            if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultSchemeClients))
-            {
-                builder.Services.AddTransient<ISchemeClient, HttpDownloadClient>();
-                builder.Services.AddTransient<ISchemeClient, FileSchemeClient>();
-            }
-            if (!opts.HasFlag(DownlinkBuilderOptions.SkipDefaultStorage)) {
-                builder.Services.AddGitHubReleaseStorage();
-                builder.Services.AddS3Storage();
-                builder.Services.AddSingleton<AzureStorage.AzureStorage>();
-                builder.Services.AddSingleton<S3.S3Storage>();
-                builder.Services.AddSingleton<Local.LocalFileStorage>();
-                builder.Services.AddSingleton<Storage.NoneStorage>();
-                //builder.Services.AddSingleton<IRemoteStorage>(p => ServiceFactory.GetStorage(p));
-            }
-        } */
     }
 }
