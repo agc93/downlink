@@ -1,0 +1,213 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Building and using plugins | Downlink </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Building and using plugins | Downlink ">
+    <meta name="generator" content="docfx 2.18.5.0">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc">
+    <meta property="docfx:tocrel" content="toc">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../assets/downlink-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="">
+                    <a href="../../doc/user/intro.html" title="User Documentation" class="">User Documentation</a>
+                  </li>
+                  <li class="active">
+                    <a href="../../doc/dev/intro.html" title="Developer Guides" class="active">Developer Guides</a>
+                  </li>
+                  <li class="">
+                    <a href="../../api/index.html" title="Source Reference" class="">Source Reference</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="">
+                      <a href="contributing.html" title="Contributing" class="">Contributing</a>
+                    </li>
+                    <li class="">
+                      <a href="developers.html" title="Developer's Guide" class="">Developer's Guide</a>
+                    </li>
+                    <li class="">
+                      <a href="hosting.html" title="Hosting" class="">Hosting</a>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="active">
+                            <a href="plugins.html" title="Plugins" class="active">Plugins</a>
+                          </li>
+                          <li class="">
+                            <a href="storage.html" title="Storage Backends" class="">Storage Backends</a>
+                          </li>
+                          <li class="">
+                            <a href="scheme-clients.html" title="Scheme Clients" class="">Scheme Clients</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="building-and-using-plugins">Building and using plugins</h1>
+
+<p>Downlink includes a built-in plugin system to easily extend Downlink with customised logic and support for additional services.</p>
+<p>Note that plugins aren&#39;t the only way to extend Downlink! If you&#39;re <a href="hosting.html">self hosting</a> Downlink, you can use the <code>IDownlinkBuilder</code> overloads to quickly add individual components like scheme clients or storage backends individually. Unlike that method, plugins can be used to register <em>any</em> service and <em>any number</em> of services with Downlink in one hit. This makes plugins perfect for bundling linked components together (like a new storage backend with it&#39;s own version semantics).</p>
+<div class="TIP"><h5>Tip</h5><p>You can look at plugins as a &quot;<em>bundle</em>&quot; of extension points for Downlink, distributed and loaded together</p>
+</div>
+<h2 id="plugin-basics">Plugin basics</h2>
+<p>At it&#39;s heart, a plugin consists of an <code>IDownlinkPlugin</code> implementation. That&#39;s what the <code>AddPlugin</code> method accepts, and is what the host uses to load up your plugin. In practice, the <code>IDownlinkPlugin</code> implementation should be your entry point, responsible for adding any other extension points your plugin is installing to the services container.</p>
+<h2 id="building-a-plugin">Building a plugin</h2>
+<p>To get started building a plugin, create a new .NET Standard class library and add a reference to the <code>Downlink</code> and <code>Downlink.Core</code> packages. Next you&#39;ll want to add your plugin&#39;s resources. This will usually be things like a <a href="storage.html">storage backend</a>, a pattern matcher, a <a href="scheme-clients.html">scheme client</a> or any other Downlink service such as a response handler. For this example, we&#39;re going to assume you&#39;ve created a new storage backend called <code>MyAwesomeStorage</code> that needs a custom scheme client called <code>MyAwesomeSchemeClient</code>.</p>
+<p>To package these into a plugin, create a new class (e.g. <code>MyAwesomePlugin</code>) and implement <code>IDownlinkPlugin</code> (from the <code>Downlink.Composition</code> namespace). For example:</p>
+<pre><code class="lang-csharp">public class MyAwesomePlugin : IDownlinkPlugin
+{
+    public void AddServices(IDownlinkBuilder builder)
+    {
+    }
+}
+</code></pre><p>In the <code>AddServices</code> method, call the builder&#39;s <code>Add*</code> methods to add your new awesome services to the Downlink container. Note that if, for example, your storage backend also needed an instance of <code>MyAwesomeService</code> injected into the constructor you can add that directly to the container:</p>
+<div class="WARNING"><h5>Warning</h5><p>If you want to add services directly to the container (i.e. not using the Downlink builder methods), you&#39;ll need to install the <code>Microsoft.Extensions.DependencyInjection.Abstractions</code> package</p>
+</div>
+<pre><code class="lang-csharp">public void AddServices(IDownlinkBuilder builder)
+{
+    builder.Services.AddSingleton&lt;MyAwesomeService&gt;();
+    builder.AddStorage&lt;MyAwesomeStorage&gt;();
+    builder.AddSchemeClient&lt;MyAwesomeSchemeClient&gt;();
+}
+</code></pre><p>Now, to add your plugin to your self-hosted app, just add a call to <code>AddPlugin</code> to your app&#39;s <code>Startup.cs</code> in the <code>ConfigureServices</code> method.</p>
+<pre><code class="lang-csharp">// in Startup.cs
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc()
+        .AddDownlink(b =&gt; b.AddPlugin&lt;MyAwesomePlugin&gt;());
+}
+</code></pre><p>That&#39;s it! Your plugin&#39;s implementation of <code>IDownlinkBuilder</code> will automatically get invoked, adding your services to the container. Update your configuration as needed and start your app again to test it out.</p>
+<h2 id="default-plugin-discovery">Default plugin discovery</h2>
+<p>The default Downlink host (the one packaged in the Docker image, and in binary packages) also supports an experimental new feature: local plugin discovery. What this means is that you can drop a <code>.dll</code> file in the app folder that matches the conventions and <code>Downlink.Host</code> will attempt to automatically locate and load it!</p>
+<p>To make this an opt-in feature, there&#39;s two changes you need to make for this to work. First, the plugin assembly&#39;s file name must start with <code>Downlink.Extensions.</code> and be located in the app directory (that&#39;s <code>/downlink</code> for Docker users). Second, you must opt-in to this feature as it&#39;s currently experimental. This is done using the <code>Experimental:EnableLocalPlugins</code> variable.</p>
+<p>Environment Variable: <code>DOWNLINK__Experimental__EnableLocalPlugins</code></p>
+<p>JSON:</p>
+<pre><code class="lang-json">{
+    &quot;Experimental&quot;: {
+        &quot;EnableLocalPlugins&quot;: true
+    }
+}
+</code></pre><p>YAML:</p>
+<pre><code class="lang-yaml">Experimental:
+  EnableLocalPlugins: true
+</code></pre><p>If matching assemblies are found, they will be scanned for an <code>IDownlinkPlugin</code> implementation. If it finds one, that is loaded as a plugin and the rest of the assembly is ignored. If there is no plugin declared, Downlink will automatically scan for any storage backends (<code>IRemoteStorage</code>), pattern matchers (<code>IPatternMatcher</code>), response handlers (<code>IResponseHandler</code>) or scheme clients (<code>ISchemeClient</code>) and automatically load them into the app container.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/docfx/doc/dev/plugins.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Downlink is MIT licensed and © Alistair Chapman 2017
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

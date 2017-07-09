@@ -1,0 +1,986 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class IDownlinkBuilderExtensions
+   | Downlink </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class IDownlinkBuilderExtensions
+   | Downlink ">
+    <meta name="generator" content="docfx 2.18.5.0">
+    
+    <link rel="shortcut icon" href="../assets/favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc">
+    <meta property="docfx:tocrel" content="toc">
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../assets/downlink-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="">
+                    <a href="../doc/user/intro.html" title="User Documentation" class="">User Documentation</a>
+                  </li>
+                  <li class="">
+                    <a href="../doc/dev/intro.html" title="Developer Guides" class="">Developer Guides</a>
+                  </li>
+                  <li class="active">
+                    <a href="../api/index.html" title="Source Reference" class="active">Source Reference</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.html" title="Downlink" class="">Downlink</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.BuilderExtensions.html" title="BuilderExtensions" class="">BuilderExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.HostBuilderExtensions.html" title="HostBuilderExtensions" class="">HostBuilderExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Program.html" title="Program" class="">Program</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Startup.html" title="Startup" class="">Startup</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.StartupExtensions.html" title="StartupExtensions" class="">StartupExtensions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.AzureStorage.html" title="Downlink.AzureStorage" class="">Downlink.AzureStorage</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.AzureStorage.AzureStorage.html" title="AzureStorage" class="">AzureStorage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.AzureStorage.AzureStorageExtensions.html" title="AzureStorageExtensions" class="">AzureStorageExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.AzureStorage.AzureStorageFileSource.html" title="AzureStorageFileSource" class="">AzureStorageFileSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.AzureStorage.ServiceCollectionExtensions.html" title="ServiceCollectionExtensions" class="">ServiceCollectionExtensions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.AzureStorage.Strategies.html" title="Downlink.AzureStorage.Strategies" class="">Downlink.AzureStorage.Strategies</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.AzureStorage.Strategies.AzureMatchStrategy.html" title="AzureMatchStrategy" class="">AzureMatchStrategy</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Composition.html" title="Downlink.Composition" class="">Downlink.Composition</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Composition.IDownlinkPlugin.html" title="IDownlinkPlugin" class="">IDownlinkPlugin</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Composition.IPluginLoader.html" title="IPluginLoader" class="">IPluginLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Composition.IPluginScanner.html" title="IPluginScanner" class="">IPluginScanner</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Composition.PluginLoader.html" title="PluginLoader" class="">PluginLoader</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Composition.PluginScanner.html" title="PluginScanner" class="">PluginScanner</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Controllers.html" title="Downlink.Controllers" class="">Downlink.Controllers</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Controllers.ApiController.html" title="ApiController" class="">ApiController</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Controllers.ApiController.GoneResult.html" title="ApiController.GoneResult" class="">ApiController.GoneResult</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Controllers.DownlinkController.html" title="DownlinkController" class="">DownlinkController</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Core.html" title="Downlink.Core" class="">Downlink.Core</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Core.CollectionExtensions.html" title="CollectionExtensions" class="">CollectionExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.FileMetadata.html" title="FileMetadata" class="">FileMetadata</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.IFileSource.html" title="IFileSource" class="">IFileSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.IMatchStrategy-1.html" title="IMatchStrategy&lt;TObject&gt;" class="">IMatchStrategy&lt;TObject&gt;</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.IPatternMatcher.html" title="IPatternMatcher" class="">IPatternMatcher</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.IRemoteStorage.html" title="IRemoteStorage" class="">IRemoteStorage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.IStreamingStorage.html" title="IStreamingStorage" class="">IStreamingStorage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.VersionSpec.html" title="VersionSpec" class="">VersionSpec</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Core.Diagnostics.html" title="Downlink.Core.Diagnostics" class="">Downlink.Core.Diagnostics</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Core.Diagnostics.ArchitectureNotFoundException.html" title="ArchitectureNotFoundException" class="">ArchitectureNotFoundException</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Diagnostics.NotFoundException.html" title="NotFoundException" class="">NotFoundException</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Diagnostics.PlatformNotFoundException.html" title="PlatformNotFoundException" class="">PlatformNotFoundException</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Diagnostics.VersionNotFoundException.html" title="VersionNotFoundException" class="">VersionNotFoundException</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Diagnostics.VersionParseException.html" title="VersionParseException" class="">VersionParseException</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Core.IO.html" title="Downlink.Core.IO" class="">Downlink.Core.IO</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Core.IO.Path.html" title="Path" class="">Path</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Core.Runtime.html" title="Downlink.Core.Runtime" class="">Downlink.Core.Runtime</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Core.Runtime.FlatPatternMatcher.html" title="FlatPatternMatcher" class="">FlatPatternMatcher</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Runtime.FlatPlatformMatcher.html" title="FlatPlatformMatcher" class="">FlatPlatformMatcher</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Runtime.FlatVersionMatcher.html" title="FlatVersionMatcher" class="">FlatVersionMatcher</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Runtime.HierarchicalPatternMatcher.html" title="HierarchicalPatternMatcher" class="">HierarchicalPatternMatcher</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Core.Runtime.RuntimePatternMatcher.html" title="RuntimePatternMatcher" class="">RuntimePatternMatcher</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.GitHub.html" title="Downlink.GitHub" class="">Downlink.GitHub</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.GitHub.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.CredentialFactory.html" title="CredentialFactory" class="">CredentialFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.FlatMatchStrategy.html" title="FlatMatchStrategy" class="">FlatMatchStrategy</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.GitHubCredentials.html" title="GitHubCredentials" class="">GitHubCredentials</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.GitHubFileSource.html" title="GitHubFileSource" class="">GitHubFileSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.GitHubMatchStrategy.html" title="GitHubMatchStrategy" class="">GitHubMatchStrategy</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.IGitHubClient.html" title="IGitHubClient" class="">IGitHubClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.OctokitClient.html" title="OctokitClient" class="">OctokitClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.GitHub.ServiceCollectionExtensions.html" title="ServiceCollectionExtensions" class="">ServiceCollectionExtensions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Handlers.html" title="Downlink.Handlers" class="">Downlink.Handlers</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Handlers.FileSchemeClient.html" title="FileSchemeClient" class="">FileSchemeClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.HttpDownloadClient.html" title="HttpDownloadClient" class="">HttpDownloadClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.IResponseHandler.html" title="IResponseHandler" class="">IResponseHandler</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.ISchemeClient.html" title="ISchemeClient" class="">ISchemeClient</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.ProxyingResponseHandler.html" title="ProxyingResponseHandler" class="">ProxyingResponseHandler</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.RedirectingResponseHandler.html" title="RedirectingResponseHandler" class="">RedirectingResponseHandler</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.ResponseHandler.html" title="ResponseHandler" class="">ResponseHandler</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Handlers.SchemeClient.html" title="SchemeClient" class="">SchemeClient</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Hosting.html" title="Downlink.Hosting" class="">Downlink.Hosting</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkBuilder.html" title="DownlinkBuilder" class="">DownlinkBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
+                          </li>
+                          <li class="active">
+                            <a href="Downlink.Hosting.IDownlinkBuilderExtensions.html" title="IDownlinkBuilderExtensions" class="active">IDownlinkBuilderExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.MvcBuilderExtensions.html" title="MvcBuilderExtensions" class="">MvcBuilderExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.WebHostBuilderExtensions.html" title="WebHostBuilderExtensions" class="">WebHostBuilderExtensions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Infrastructure.html" title="Downlink.Infrastructure" class="">Downlink.Infrastructure</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Local.html" title="Downlink.Local" class="">Downlink.Local</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Local.LocalFileMatchStrategy.html" title="LocalFileMatchStrategy" class="">LocalFileMatchStrategy</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Local.LocalFileSource.html" title="LocalFileSource" class="">LocalFileSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Local.LocalFileStorage.html" title="LocalFileStorage" class="">LocalFileStorage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Local.ServiceCollectionExtensions.html" title="ServiceCollectionExtensions" class="">ServiceCollectionExtensions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Messaging.html" title="Downlink.Messaging" class="">Downlink.Messaging</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Messaging.ActionNotification.html" title="ActionNotification" class="">ActionNotification</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Messaging.AppVersionRequest.html" title="AppVersionRequest" class="">AppVersionRequest</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Messaging.AppVersionRequestHandler.html" title="AppVersionRequestHandler" class="">AppVersionRequestHandler</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Messaging.AppVersionResponseModel.html" title="AppVersionResponseModel" class="">AppVersionResponseModel</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.S3.html" title="Downlink.S3" class="">Downlink.S3</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.S3.S3Configuration.html" title="S3Configuration" class="">S3Configuration</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.S3.S3FileSource.html" title="S3FileSource" class="">S3FileSource</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.S3.S3FileStorageFactory.html" title="S3FileStorageFactory" class="">S3FileStorageFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.S3.S3MatchStrategy.html" title="S3MatchStrategy" class="">S3MatchStrategy</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.S3.S3SearchStorage.html" title="S3SearchStorage" class="">S3SearchStorage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.S3.S3Storage.html" title="S3Storage" class="">S3Storage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.S3.ServiceCollectionExtensions.html" title="ServiceCollectionExtensions" class="">ServiceCollectionExtensions</a>
+                          </li>
+                        </ul>  </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a href="Downlink.Storage.html" title="Downlink.Storage" class="">Downlink.Storage</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="Downlink.Storage.NoneStorage.html" title="NoneStorage" class="">NoneStorage</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Storage.ServiceCollectionExtensions.html" title="ServiceCollectionExtensions" class="">ServiceCollectionExtensions</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions">
+  
+  
+  <h1 id="Downlink_Hosting_IDownlinkBuilderExtensions" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions">Class IDownlinkBuilderExtensions
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">IDownlinkBuilderExtensions</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Downlink.Hosting.html">Downlink.Hosting</a></h6>
+  <h6><strong>Assembly</strong>: Downlink.dll</h6>
+  <h5 id="Downlink_Hosting_IDownlinkBuilderExtensions_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static class IDownlinkBuilderExtensions : object</code></pre>
+  </div>
+  <h3 id="methods">Methods
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L36">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler``1(Downlink.Hosting.IDownlinkBuilder)">AddNotificationHandler&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddNotificationHandler&lt;T&gt;(this IDownlinkBuilder builder)where T : class, MediatR.INotificationHandler&lt;AppVersionResponseModel&gt;</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L11">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher``1(Downlink.Hosting.IDownlinkBuilder)">AddPatternMatcher&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddPatternMatcher&lt;T&gt;(this IDownlinkBuilder builder)where T : class, IPatternMatcher</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_Downlink_Hosting_IDownlinkBuilder_Type___.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin(Downlink.Hosting.IDownlinkBuilder%2CType%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L46">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_Downlink_Hosting_IDownlinkBuilder_Type___" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin(Downlink.Hosting.IDownlinkBuilder,Type[])">AddPlugin(IDownlinkBuilder, Type[])</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddPlugin(this IDownlinkBuilder builder, params Type[] pluginType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Type</span>[]</td>
+        <td><span class="parametername">pluginType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L41">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin``1(Downlink.Hosting.IDownlinkBuilder)">AddPlugin&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddPlugin&lt;T&gt;(this IDownlinkBuilder builder)where T : class, IDownlinkPlugin</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_Downlink_Hosting_IDownlinkBuilder_Action_Downlink_Messaging_AppVersionResponseModel__.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction(Downlink.Hosting.IDownlinkBuilder%2CAction%7BDownlink.Messaging.AppVersionResponseModel%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L31">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_Downlink_Hosting_IDownlinkBuilder_Action_Downlink_Messaging_AppVersionResponseModel__" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction(Downlink.Hosting.IDownlinkBuilder,Action{Downlink.Messaging.AppVersionResponseModel})">AddResponseAction(IDownlinkBuilder, Action&lt;AppVersionResponseModel&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddResponseAction(this IDownlinkBuilder builder, Action&lt;AppVersionResponseModel&gt; response)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<a class="xref" href="Downlink.Messaging.AppVersionResponseModel.html">AppVersionResponseModel</a>&gt;</td>
+        <td><span class="parametername">response</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L21">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler``1(Downlink.Hosting.IDownlinkBuilder)">AddResponseHandler&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddResponseHandler&lt;T&gt;(this IDownlinkBuilder builder)where T : class, IResponseHandler</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L26">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient``1(Downlink.Hosting.IDownlinkBuilder)">AddSchemeClient&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddSchemeClient&lt;T&gt;(this IDownlinkBuilder builder)where T : class, ISchemeClient</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L16">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage``1(Downlink.Hosting.IDownlinkBuilder)">AddStorage&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddStorage&lt;T&gt;(this IDownlinkBuilder builder)where T : class, IRemoteStorage</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L9" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Downlink is MIT licensed and © Alistair Chapman 2017
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

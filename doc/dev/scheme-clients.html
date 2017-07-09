@@ -1,0 +1,214 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Scheme Clients | Downlink </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Scheme Clients | Downlink ">
+    <meta name="generator" content="docfx 2.18.5.0">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc">
+    <meta property="docfx:tocrel" content="toc">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../assets/downlink-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="">
+                    <a href="../../doc/user/intro.html" title="User Documentation" class="">User Documentation</a>
+                  </li>
+                  <li class="active">
+                    <a href="../../doc/dev/intro.html" title="Developer Guides" class="active">Developer Guides</a>
+                  </li>
+                  <li class="">
+                    <a href="../../api/index.html" title="Source Reference" class="">Source Reference</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="">
+                      <a href="contributing.html" title="Contributing" class="">Contributing</a>
+                    </li>
+                    <li class="">
+                      <a href="developers.html" title="Developer's Guide" class="">Developer's Guide</a>
+                    </li>
+                    <li class="">
+                      <a href="hosting.html" title="Hosting" class="">Hosting</a>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="plugins.html" title="Plugins" class="">Plugins</a>
+                          </li>
+                          <li class="">
+                            <a href="storage.html" title="Storage Backends" class="">Storage Backends</a>
+                          </li>
+                          <li class="active">
+                            <a href="scheme-clients.html" title="Scheme Clients" class="active">Scheme Clients</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="scheme-clients">Scheme Clients</h1>
+
+<p>As outlined in the storage docs, the storage backend is responsible for simply returning a URI where Downlink can find the requested artifact. Downlink uses <em>scheme clients</em> to resolve those URIs back to a result that can be returned to a user. The scheme client is invoked by the response handler, but you will likely not need to interact directly with response handlers, and it&#39;s best to leave the default handlers in place.</p>
+<p>Out of the box, Downlink includes logic to correctly handle any <code>file://</code>, <code>http://</code> or <code>https://</code> scheme returned from a storage backend. To add support for another scheme (most often if you are also developing a new backend), you need to implement <code>ISchemeClient</code>. To make it easier, you can inherit from <code>SchemeClient</code> which takes out a bit of boilerplate.</p>
+<p>Your <code>ISchemeClient</code> implementation will need to return an <code>IActionResult</code> (just like a Controller action method), and that will be returned to the user. Note that your scheme client will <em>only</em> be invoked for the schemes it explicitly supports.</p>
+<div class="TIP"><h5>Tip</h5><p>You&#39;ll need to install the <code>Microsoft.AspNetCore.Mvc.Abstractions</code> package as well.</p>
+</div>
+<h2 id="example">Example</h2>
+<p>Scheme clients are generally quite simple. For example, here is the scheme client for handling <code>file://</code> URIs (included in Downlink):</p>
+<pre><code class="lang-csharp">public class FileSchemeClient : SchemeClient
+{
+    public FileSchemeClient() : base(&quot;file&quot;) { }
+    public override Task&lt;IActionResult&gt; GetContentAsync(IFileSource file)
+    {
+        return Task.FromResult(new FileStreamResult(System.IO.File.OpenRead(file.FileUri.AbsolutePath), &quot;application/octet-stream&quot;) as IActionResult);
+    }
+}
+</code></pre><p>or the client for handling <code>http://</code>/<code>https://</code> URIs (also included by default):</p>
+<pre><code class="lang-csharp">// trimmed and simplified for brevity and readability
+public class HttpDownloadClient : SchemeClient
+{
+    public HttpDownloadClient(ILogger&lt;HttpDownloadClient&gt; logger) : base(new[] { &quot;http&quot;, &quot;https&quot; })
+    {
+        DownloadLocation = System.IO.Path.GetTempPath();
+    }
+
+    public string DownloadLocation { get; private set; }
+
+    public override async Task&lt;IActionResult&gt; GetContentAsync(IFileSource file)
+    {
+        using (var client = new HttpClient())
+        {
+            var fileStream = await client.GetStreamAsync(requestUri);
+        }
+        return new FileStreamResult(fileStream, &quot;application/octet-stream&quot;) {
+            FileDownloadName = file.Metadata.FileName
+        };
+    }
+}
+</code></pre><h2 id="activating-new-scheme-clients">Activating new scheme clients</h2>
+<p>New scheme client implementations needed to be added to Downlink either through inclusion in a <a href="plugins.html">plugin</a>, or using the builder in <code>Startup.cs</code>:</p>
+<pre><code class="lang-csharp">public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc()
+        .AddDownlink(b =&gt; b.AddSchemeClient&lt;MyAwesomeSchemeClient&gt;());
+}
+</code></pre><p>Downlink will then call your scheme client when any storage backend returns a URI with your client&#39;s scheme.</p>
+<div class="NOTE"><h5>Note</h5><p>Your scheme client will <strong>only</strong> be invoked for URIs that you explicitly support (in the <code>Schemes</code> property, or the constructor for <code>SchemeClient</code> implementations)</p>
+</div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/docfx/doc/dev/scheme-clients.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Downlink is MIT licensed and © Alistair Chapman 2017
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
