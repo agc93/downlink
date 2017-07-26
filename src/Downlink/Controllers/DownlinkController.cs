@@ -37,14 +37,15 @@ namespace Downlink.Controllers
 
         [HttpGet]
         [Route("info")]
-        public IActionResult GetInfo()
+        public IActionResult GetInfo([FromServices] IEnumerable<IRemoteStorage> storage)
         {
             if (_environment.IsDevelopment())
             {
                 return Ok(new
                 {
                     version = this.GetType().Assembly.GetName().Version.ToString(),
-                    config = Configuration.AsEnumerable().Select(k => $"{k.Key}={k.Value}").ToList()
+                    config = Configuration.AsEnumerable().Select(k => $"{k.Key}={k.Value}").ToList(),
+                    availableStorage = storage.Select(s => s.Name)
                 });
             }
             return NotFound();

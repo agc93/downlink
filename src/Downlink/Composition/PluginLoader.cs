@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Downlink.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -19,6 +20,7 @@ namespace Downlink.Composition
         public void LoadPlugins(IDownlinkBuilder builder, IServiceProvider provider)
         {
             var plugins = provider.GetServices<IDownlinkPlugin>();
+            _logger.LogDebug("Resolved {0} plugins from provider.", plugins.Count());
             foreach (var plugin in plugins)
             {
                 var name = plugin.GetType().Name;

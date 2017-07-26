@@ -24,6 +24,9 @@ When a user requests a version (such as `/v1.2/windows/x64`) and your storage ba
 
 If your storage class needs additional dependencies, just declare them in the constructor. They will be resolved from the DI container on the first request.
 
+> [!WARNING]
+> As a result of how Downlink resolves storage backends, your constructor should complete successfully, **even if your provider is not currently activated/configured!**
+
 ```csharp
 public class MyAwesomeStorage : IRemoteStorage
 {
