@@ -61,6 +61,7 @@ namespace Downlink.Hosting
             var builder = new DownlinkBuilder(services);
             builder.Services.AddSingleton<IPluginLoader, PluginLoader>();
             builder.Services.AddSingleton<DownlinkBuilderDefaults>(new DownlinkBuilderDefaults(opts));
+            builder.AddPlugin<DownlinkRoutingPlugin>();
             builder.AddPlugin<DownlinkContextPlugin>();
             builder.AddPlugin<DownlinkDefaultServices>();
             configure?.Invoke(builder);

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Downlink.Core;
 using Downlink.Handlers;
+using Downlink.Infrastructure;
 using Downlink.Messaging;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -13,7 +14,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Downlink.Controllers
 {
-    [Route("/")]
+    [Route("{prefix?}")]
     public class DownlinkController : ApiController
     {
         private readonly ILogger<DownlinkController> _logger;
@@ -52,6 +53,7 @@ namespace Downlink.Controllers
         }
 
         [HttpGet]
+        //[DownlinkRoute("{version}/{platform?}/{arch?}")]
         [Route("{version}/{platform?}/{arch?}")]
         public async Task<IActionResult> GetDownloadAsync(string version, string platform, string arch, [FromQuery] string format)
         {
