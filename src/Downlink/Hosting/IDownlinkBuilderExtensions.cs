@@ -1,6 +1,7 @@
 ﻿using System;
 using Downlink.Core;
 using Downlink.Handlers;
+using Downlink.Infrastructure;
 using Downlink.Messaging;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -48,6 +49,11 @@ namespace Downlink.Hosting
             {
                 builder.Services.AddSingleton(typeof(Composition.IDownlinkPlugin), type);
             }
+            return builder;
+        }
+
+        public static IDownlinkBuilder UseRoutePrefix(this IDownlinkBuilder builder, string prefix) {
+            builder.Services.AddSingleton<IRoutePrefixBuilder>(provider => new StaticRoutePrefixBuilder(prefix));
             return builder;
         }
      }

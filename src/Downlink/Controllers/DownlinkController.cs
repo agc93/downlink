@@ -14,7 +14,6 @@ using Microsoft.Extensions.Logging;
 
 namespace Downlink.Controllers
 {
-    [Route("{prefix?}")]
     public class DownlinkController : ApiController
     {
         private readonly ILogger<DownlinkController> _logger;
