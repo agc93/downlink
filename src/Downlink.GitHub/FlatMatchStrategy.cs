@@ -23,7 +23,7 @@ namespace Downlink.GitHub
             _enableLatestTag = config.GetValue("Experimental:GitHubLatestVersion", false);
             _splitCharacters = config.GetList("GitHubStorage:SplitCharacters", new[] { "_" }).ToList();
             _logger = logger;
-            _logger.LogDebug("Parsing releases using {1}", string.Join("|", _splitCharacters));
+            _logger.LogDebug("Parsing releases using {0}", string.Join("|", _splitCharacters));
         }
 
         public override Task<IFileSource> MatchAsync(IEnumerable<Release> releases, VersionSpec version)

@@ -6,6 +6,8 @@
   href: developers.md
 - name: Hosting
   href: hosting.md
+- name: Routing
+  href: routing.md
 - name: Guides
   items:
   - name: Plugins

@@ -28,9 +28,6 @@ namespace Downlink.Infrastructure
         internal StaticRoutePrefixBuilder(string prefix) {
             _prefix = prefix;
         }
-        public string GetPrefix()
-        {
-            return _prefix;
-        }
+        public string GetPrefix() => _prefix ?? string.Empty;
     }
 }

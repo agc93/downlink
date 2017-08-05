@@ -56,5 +56,17 @@ namespace Downlink.Hosting
             builder.Services.AddSingleton<IRoutePrefixBuilder>(provider => new StaticRoutePrefixBuilder(prefix));
             return builder;
         }
+
+        public static IDownlinkBuilder UseRouteBuilder<T>(this IDownlinkBuilder builder) where T : class, Infrastructure.IRoutePrefixBuilder {
+            builder.Services.AddSingleton<IRoutePrefixBuilder, T>();
+            return builder;
+        }
+
+        public static IDownlinkBuilder UseRouteBuilder(this IDownlinkBuilder builder, Type builderType) {
+            if (builderType.IsAssignableTo<IRoutePrefixBuilder>()) {
+                builder.Services.AddSingleton(typeof(IRoutePrefixBuilder), builderType);
+            }
+            return builder;
+        }
      }
 }

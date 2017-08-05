@@ -10,29 +10,11 @@ using Microsoft.Extensions.Logging;
 
 namespace Downlink.Infrastructure
 {
-    public class DownlinkActionConstraint : IActionConstraint, IActionConstraintMetadata
-    {
-        private readonly ILogger _logger;
+    public interface IDownlinkRouteConvention : IActionModelConvention {
 
-        public string Prefix { get; private set; }
-        internal DownlinkActionConstraint(string prefix, ILogger logger)
-        {
-            Prefix = prefix;
-            _logger = logger;
-        }
-        public int Order => 0;
-
-        public bool Accept(ActionConstraintContext context)
-        {
-            _logger.LogDebug("Matching route using prefix: {0}", Prefix ?? string.Empty);
-            return string.IsNullOrWhiteSpace(Prefix)
-                //? !context.RouteContext.RouteData.Values.Any(v => v.Key == "prefix" && !string.IsNullOrWhiteSpace(v.Value.ToString()))
-                ? true
-                : context.RouteContext.RouteData.Values.First().Value?.ToString() == Prefix;
-        }
     }
 
-    public class DownlinkRouteConvention : IActionModelConvention
+    public class DownlinkRouteConvention : IDownlinkRouteConvention
     {
         private readonly string _prefix;
         private readonly ILoggerFactory _factory;

@@ -22,8 +22,11 @@ namespace Downlink.Hosting
                 // such a hack job
                 builder.Services.AddSingleton<IRoutePrefixBuilder, ConfigurationRoutePrefixBuilder>();
             }
-            builder.Services.AddSingleton<DownlinkRouteConvention>();
-            builder.Services.Configure<MvcOptions>(opts => opts.Conventions.Add(builder.Services.BuildServiceProvider().GetService<DownlinkRouteConvention>()));
+            if (!builder.Services.Any(s => s.ServiceType == typeof(IDownlinkRouteConvention))) {
+                _logger?.LogDebug("No route convention provider found, falling back to default");
+                builder.Services.AddSingleton<IDownlinkRouteConvention, DownlinkRouteConvention>();
+            }
+            builder.Services.Configure<MvcOptions>(opts => opts.Conventions.Add(builder.Services.BuildServiceProvider().GetService<IDownlinkRouteConvention>()));
         }
     }
 }
