@@ -36,10 +36,10 @@ namespace Downlink.Controllers
         }
 
         [HttpGet]
-        [Route("info")]
+        [Route("info", Name = "DownlinkGetInfo")]
         public IActionResult GetInfo([FromServices] IEnumerable<IRemoteStorage> storage)
         {
-            if (_environment.IsDevelopment())
+            if (_environment.IsDevelopment() && Request.IsLocal())
             {
                 return Ok(new
                 {
@@ -52,8 +52,7 @@ namespace Downlink.Controllers
         }
 
         [HttpGet]
-        //[DownlinkRoute("{version}/{platform?}/{arch?}")]
-        [Route("{version}/{platform?}/{arch?}")]
+        [Route("{version}/{platform?}/{arch?}", Name = "DownlinkGetDownload")]
         public async Task<IActionResult> GetDownloadAsync(string version, string platform, string arch, [FromQuery] string format)
         {
             var spec = new VersionSpec(version, platform, arch);
