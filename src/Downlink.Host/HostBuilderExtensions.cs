@@ -60,7 +60,11 @@ namespace Downlink
                 {
                     var scanner = new PluginScanner();
                     var root = new DirectoryInfo(Directory.GetCurrentDirectory());
-                    var dlls = root.GetFiles("Downlink.Extensions.*.dll");
+                    var dlls = root.GetFiles("Downlink.Extensions.*.dll").ToList();
+                    if (Directory.Exists("Downlink.Extensions")) {
+                        var extDir = new DirectoryInfo(Path.Combine(root.FullName, "Downlink.Extensions"));
+                        dlls.AddRange(extDir.GetFiles("Downlink.Extensions.*.dll", SearchOption.AllDirectories));
+                    }
                     var assemblies = dlls.Select(f => Assembly.LoadFile(f.FullName));
                     var modules = scanner.LoadModulesFromAssemblies(assemblies);
                     foreach (var plugin in modules)

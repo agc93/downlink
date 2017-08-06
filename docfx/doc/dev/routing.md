@@ -6,6 +6,9 @@ To correct this, Downlink (since 0.2) includes support for **prefixing** the rou
 
 ## Configuration
 
+> [!TIP]
+> This method is also supported in the Docker image (even though it is not generally needed)
+
 By default, Downlink will look for a configuration key called `DownlinkPrefix` and prepend the value of that to Downlink's action routes:
 
 ```yaml

@@ -11,6 +11,9 @@ Note that plugins aren't the only way to extend Downlink! If you're [self hostin
 
 At it's heart, a plugin consists of an `IDownlinkPlugin` implementation. That's what the `AddPlugin` method accepts, and is what the host uses to load up your plugin. In practice, the `IDownlinkPlugin` implementation should be your entry point, responsible for adding any other extension points your plugin is installing to the services container.
 
+> [!TIP]
+> It may be helpful to define your `IDownlinkPlugin` implementation in the `Downlink.Hosting` namespace. Your users won't need to add a `using` statement!
+
 ## Building a plugin
 
 To get started building a plugin, create a new .NET Standard class library and add a reference to the `Downlink` and `Downlink.Core` packages. Next you'll want to add your plugin's resources. This will usually be things like a [storage backend](./storage.md), a pattern matcher, a [scheme client](./scheme-clients.md) or any other Downlink service such as a response handler. For this example, we're going to assume you've created a new storage backend called `MyAwesomeStorage` that needs a custom scheme client called `MyAwesomeSchemeClient`.
