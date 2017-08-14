@@ -1,6 +1,6 @@
 $DotNetChannel = 'preview';
-$DotNetVersion = '2.0.0-preview2-006497';
-$DotNetInstallerUri = 'https://raw.githubusercontent.com/dotnet/cli/v2.0.0-preview2/scripts/obtain/dotnet-install.ps1'
+$DotNetVersion = '2.0.0';
+$DotNetInstallerUri = 'https://raw.githubusercontent.com/dotnet/cli/v2.0.0/scripts/obtain/dotnet-install.ps1'
 
 ###########################################################################
 # INSTALL .NET CORE CLI
