@@ -5,19 +5,25 @@ using System.Threading.Tasks;
 using Downlink.Core;
 using Downlink.Core.Diagnostics;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 using Octokit;
 
 namespace Downlink.GitHub
 {
     public class OctokitClient : IGitHubClient
     {
+        private readonly ILogger<OctokitClient> _logger;
+
+        public string Name => "GitHub";
 
         public OctokitClient(
             GitHubCredentials credentials,
             IConfiguration configuration,
+            ILogger<OctokitClient> logger,
             IEnumerable<GitHubMatchStrategy> matchStrategies,
             IEnumerable<IPatternMatcher> patternMatchers)
         {
+            _logger = logger;
             PatternMatcher = patternMatchers.GetFor("flat")
                 ?? new Core.Runtime.FlatPatternMatcher();
             Credentials = credentials;
@@ -48,6 +54,10 @@ namespace Downlink.GitHub
 
         public async Task<IFileSource> GetFileAsync(VersionSpec version)
         {
+            if (Credentials == null) {
+                _logger.LogCritical("Repo details not found! Please add GitHubStorage to your app configuration and restart the server.");
+                throw new UnauthorizedAccessException("Repository details not found in configuration!");
+            }
             var releases = await Client.Repository.Release.GetAll(Credentials.Owner, Credentials.Repo);
             if (MatchStrategy == null) {
                 foreach (var release in releases)

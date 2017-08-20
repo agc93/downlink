@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Project Sdk="Microsoft.NET.Sdk">
+  <Import Project="../Downlink.props" />
   <ItemGroup>
     <ProjectReference Include="..\Downlink.Core\Downlink.Core.csproj"/>
   </ItemGroup>
+  <PropertyGroup>
+    <PackageId>Downlink.GitHub</PackageId>
+    <Title>GitHub Release Storage for Downlink</Title>
+    <Description>This package includes a new backend for Downlink to support artifacts stored in GitHub Releases</Description>
+  </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Octokit" Version="0.24.0"/>
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0-preview2-final"/>
-    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.0.0-preview2-final"/>
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0-preview2-final"/>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.0.0"/>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0"/>
   </ItemGroup>
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>

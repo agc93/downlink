@@ -13,21 +13,30 @@ namespace Downlink.GitHub
     {
         private readonly List<string> _splitCharacters;
         private readonly ILogger<FlatMatchStrategy> _logger;
+        private readonly bool _enableLatestTag;
 
         public FlatMatchStrategy(
             IConfiguration config,
             ILogger<FlatMatchStrategy> logger
         ) : base("flat")
         {
-            _splitCharacters = config.GetList("GitHubStorage:SplitCharacters", new[] {"_"}).ToList();
+            _enableLatestTag = config.GetValue("Experimental:GitHubLatestVersion", false);
+            _splitCharacters = config.GetList("GitHubStorage:SplitCharacters", new[] { "_" }).ToList();
             _logger = logger;
-            _logger.LogDebug("Parsing releases using {1}", string.Join("|", _splitCharacters));
+            _logger.LogDebug("Parsing releases using {0}", string.Join("|", _splitCharacters));
         }
 
         public override Task<IFileSource> MatchAsync(IEnumerable<Release> releases, VersionSpec version)
         {
-            var release = releases.FirstOrDefault(r => r.TagName == version);
-            if (release == null) throw new VersionNotFoundException($"Could not find version '{version}'");
+            var release = _enableLatestTag
+                ? releases
+                    .Where(r => !r.Draft)
+                    .Where(r => !r.Prerelease)
+                    .OrderByDescending(r => r.PublishedAt)
+                    .FirstOrDefault()
+                : releases.FirstOrDefault(r => r.TagName == version)
+                    ?? releases.FirstOrDefault(r => r.Name == version);
+            if (release == null) throw new VersionNotFoundException($"Could not find release for version '{version}'");
             _logger.LogDebug("Found release {0} with {1} assets", release.Name, release.Assets.Count);
             var opts = release.Assets.ToDictionary(a => ParseSpec(a.Name, _splitCharacters.ToArray()), a => a);
             _logger.LogDebug("Found releases: {0}", opts.Keys.Select(k => k.Summary));
@@ -42,9 +51,10 @@ namespace Downlink.GitHub
             return Task.FromResult(file as IFileSource);
         }
 
-        private static VersionSpec ParseSpec(string s, string[] chars) {
+        private static VersionSpec ParseSpec(string s, string[] chars)
+        {
             s = System.IO.Path.GetFileNameWithoutExtension(s);
-	        var parts = s.Split(chars, System.StringSplitOptions.RemoveEmptyEntries);
+            var parts = s.Split(chars, System.StringSplitOptions.RemoveEmptyEntries);
             if (parts.Length == 1)
             {
                 throw new VersionParseException($"Failed to parse version from '{s}'");
@@ -59,11 +69,12 @@ namespace Downlink.GitHub
                     return new VersionSpec(parts[1], parts[2], parts[3]);
                 default:
                     return new VersionSpec(s, null, null);
-            }            
+            }
         }
 
-        internal static VersionSpec ParseSpec(string s) {
-            return ParseSpec(s, new[] { "_"});
+        internal static VersionSpec ParseSpec(string s)
+        {
+            return ParseSpec(s, new[] { "_" });
         }
 
     }

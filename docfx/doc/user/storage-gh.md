@@ -70,3 +70,24 @@ GitHubStorage:
 You can also provide the `MatchStrategy` option under `GitHubStorage` configuration to control the matching behaviour.
 
 Note that due to the limited nature of GitHub Releases, it is recommended to not change the version matching method unless absolutely required, as even the flat matching documented here is adjusted for GitHub compared to other backends.
+
+### Experimental `latest` support
+
+There is also experimental support for the magic `latest` version when using the GitHub backend. This will automatically use the most recently published non-draft non-prerelease release, saving you the trouble of updating links for getting the most recent version.
+
+For example, if your most recent release was `v0.24.1` then a request to `/v0.24.1/windows/x64` and to `/latest/windows/x64` would serve the same package, until you publish another release at which point `latest` will update to the new one.
+
+Since this is experimental it has to be enabled using the `Experimental:GitHubLatestVersion` flag. This can be done by setting the `DOWNLINK__Experimental__GitHubLatestVersion` environment variable to `true`, or using the config file:
+
+```json
+{
+    "Experimental": {
+        "GitHubLatestVersion": true
+    }
+}
+```
+
+```yaml
+Experimental:
+  GitHubLatestVersion: true
+```

@@ -94,10 +94,10 @@ namespace Downlink.Core.IO
         }
 
         /// <summary>
-        /// Returns a <see cref="System.String" /> that represents this path.
+        /// Returns a <c>string</c> that represents this path.
         /// </summary>
         /// <returns>
-        /// A <see cref="System.String" /> that represents this instance.
+        /// A <c>string</c> that represents this instance.
         /// </returns>
         public override string ToString()
         {
@@ -139,7 +139,7 @@ namespace Downlink.Core.IO
         }
 
         /// <summary>
-        /// Performs an implicit conversion from <see cref="System.String"/> to <see cref="Path"/>.
+        /// Performs an implicit conversion from a string to <see cref="Path"/>.
         /// </summary>
         /// <param name="path">The path.</param>
         /// <returns>A <see cref="Path"/>.</returns>

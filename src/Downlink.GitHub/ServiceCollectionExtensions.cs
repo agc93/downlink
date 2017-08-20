@@ -15,7 +15,6 @@ namespace Downlink.GitHub
             services.AddSingleton<IGitHubClient, OctokitClient>();
             services.AddSingleton<GitHubMatchStrategy, FlatMatchStrategy>();
             services.AddSingleton<IRemoteStorage>(provider => provider.GetService<IGitHubClient>());
-
             return services;
         }
     }

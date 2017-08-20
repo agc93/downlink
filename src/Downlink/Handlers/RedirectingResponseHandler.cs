@@ -18,9 +18,6 @@ namespace Downlink.Handlers
             IActionResult result;
             switch (file.FileUri.Scheme)
             {
-                /*case "file":
-                    result =  new FileStreamResult(System.IO.File.OpenRead(file.FileUri.AbsolutePath), "application/octet-stream");
-                    break; */
                 case "http":
                 case "https":
                     result = new RedirectResult(file.FileUri.AbsoluteUri);

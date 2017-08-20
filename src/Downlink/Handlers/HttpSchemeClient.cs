@@ -43,9 +43,6 @@ namespace Downlink.Handlers
             using (var client = new HttpClient())
             {
                 return await client.GetStreamAsync(requestUri);
-                /*var ms = new MemoryStream();
-                await (await client.GetStreamAsync(requestUri)).CopyToAsync(ms);
-                return ms; */
             }
         }
     }

@@ -1,55 +1,26 @@
 using System.Reflection;
+using MediatR;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
 namespace Downlink
 {
     public static class BuilderExtensions
     {
-        public static IWebHostBuilder ConfigureLogging(this IWebHostBuilder builder) =>
-            builder.ConfigureLogging((ctx, factory) =>
-            {
-                factory.AddConfiguration(ctx.Configuration.GetSection("Logging"));
-                factory.AddConsole();
-                factory.AddDebug();
-            });
+        internal static IConfigurationBuilder AddConfigFile(this IConfigurationBuilder config, string fileName)
+        {
+            fileName = fileName.Replace(".json", string.Empty).Replace(".yml", string.Empty);
+            config.AddJsonFile($"{fileName}.json", optional: true, reloadOnChange: true);
+            config.AddYamlFile($"{fileName}.yml", optional: true, reloadOnChange: true);
+            return config;
+        }
 
-        public static IWebHostBuilder ConfigureAppConfiguration(this IWebHostBuilder builder, string[] args) =>
-            builder.ConfigureAppConfiguration((ctx, config) =>
-            {
-                var env = ctx.HostingEnvironment;
-
-                config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                      .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true, reloadOnChange: true)
-                      .AddConfigFile("downlink")
-                      .AddConfigFile("config")
-                      .AddConfigFile("./config/downlink");
-
-                if (env.IsDevelopment())
-                {
-                    var appAssembly = Assembly.Load(new AssemblyName(env.ApplicationName));
-                    if (appAssembly != null)
-                    {
-                        config.AddUserSecrets(appAssembly, optional: true);
-                    }
-                }
-                //config.AddEnvironmentVariables();
-                config.AddEnvironmentVariables("DOWNLINK_");
-                config.AddEnvironmentVariables("DOWNLINK__");
-                config.AddEnvironmentVariables("DOWNLINK:");
-
-                if (args != null)
-                {
-                    config.AddCommandLine(args);
-                }
-            });
-
-            public static IConfigurationBuilder AddConfigFile(this IConfigurationBuilder config, string fileName) {
-                fileName = fileName.Replace(".json", string.Empty).Replace(".yml", string.Empty);
-                config.AddJsonFile($"{fileName}.json", optional: true, reloadOnChange: true);
-                config.AddYamlFile($"{fileName}.yml", optional: true, reloadOnChange: true);
-                return config;
-            }
+        internal static IServiceCollection AddMediatR(this IServiceCollection services)
+        {
+            services.AddMediatR(typeof(Hosting.DownlinkBuilder), typeof(Core.IRemoteStorage));
+            return services;
+        }
     }
 }

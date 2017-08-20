@@ -6,4 +6,4 @@ COPY ./publish/Downlink .
 ADD ./appsettings.json .
 VOLUME /downlink/config
 EXPOSE 80
-ENTRYPOINT ["dotnet", "Downlink.dll"]
+ENTRYPOINT ["dotnet", "Downlink.Host.dll"]

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Project>
+    <PropertyGroup>
+        <Authors>achapman</Authors>
+        <Copyright>© Alistair Chapman 2017</Copyright>
+        <PackageTags>Downlink;api;gateway;download;release</PackageTags>
+        <RepositoryUrl>https://github.com/agc93/downlink</RepositoryUrl>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <PackageLicenseUrl>https://raw.githubusercontent.com/agc93/downlink/master/LICENSE</PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/agc93/downlink</PackageProjectUrl>
+    </PropertyGroup>
+</Project>
