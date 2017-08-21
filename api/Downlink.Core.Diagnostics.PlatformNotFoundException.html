@@ -331,7 +331,13 @@
                             <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Hosting.DownlinkContextPlugin.html" title="DownlinkContextPlugin" class="">DownlinkContextPlugin</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkRoutingPlugin.html" title="DownlinkRoutingPlugin" class="">DownlinkRoutingPlugin</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
@@ -355,13 +361,31 @@
                             <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationRoutePrefixBuilder.html" title="ConfigurationRoutePrefixBuilder" class="">ConfigurationRoutePrefixBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.DownlinkRouteConvention.html" title="DownlinkRouteConvention" class="">DownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpRequestExtensions.html" title="HttpRequestExtensions" class="">HttpRequestExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IDownlinkRouteConvention.html" title="IDownlinkRouteConvention" class="">IDownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IRoutePrefixBuilder.html" title="IRoutePrefixBuilder" class="">IRoutePrefixBuilder</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.StaticRoutePrefixBuilder.html" title="StaticRoutePrefixBuilder" class="">StaticRoutePrefixBuilder</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -456,23 +480,82 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Downlink.Core.Diagnostics.NotFoundException.html">NotFoundException</a></div>
-    <div class="level2"><span class="xref">PlatformNotFoundException</span></div>
+    <div class="level1"><span class="xref">System.Exception</span></div>
+    <div class="level2"><a class="xref" href="Downlink.Core.Diagnostics.NotFoundException.html">NotFoundException</a></div>
+    <div class="level3"><span class="xref">PlatformNotFoundException</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Exception.GetBaseException()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetObjectData(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Data</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HelpLink</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.HResult</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.InnerException</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Message</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.Source</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.StackTrace</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.TargetSite</span>
+    </div>
+    <div>
+      <span class="xref">System.Exception.SerializeObjectState</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Downlink.Core.Diagnostics.html">Downlink.Core.Diagnostics</a></h6>
   <h6><strong>Assembly</strong>: Downlink.Core.dll</h6>
   <h5 id="Downlink_Core_Diagnostics_PlatformNotFoundException_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class PlatformNotFoundException : NotFoundException</code></pre>
+    <pre><code class="lang-csharp hljs">[Serializable]
+public class PlatformNotFoundException : NotFoundException, ISerializable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L6">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L6">View Source</a>
   </span>
   <a id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor*"></a>
   <h4 id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor">PlatformNotFoundException()</h4>
@@ -484,18 +567,18 @@
   </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor(System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor(System.Runtime.Serialization.SerializationInfo%2CSystem.Runtime.Serialization.StreamingContext)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L9">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L9">View Source</a>
   </span>
   <a id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor*"></a>
-  <h4 id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">PlatformNotFoundException(System.Runtime.Serialization.SerializationInfo, System.Runtime.Serialization.StreamingContext)</h4>
+  <h4 id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_Runtime_Serialization_SerializationInfo_System_Runtime_Serialization_StreamingContext_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor(System.Runtime.Serialization.SerializationInfo,System.Runtime.Serialization.StreamingContext)">PlatformNotFoundException(SerializationInfo, StreamingContext)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected PlatformNotFoundException(System.Runtime.Serialization.SerializationInfo info, System.Runtime.Serialization.StreamingContext context)</code></pre>
+    <pre><code class="lang-csharp hljs">protected PlatformNotFoundException(SerializationInfo info, StreamingContext context)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -521,10 +604,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L7">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L7">View Source</a>
   </span>
   <a id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor*"></a>
   <h4 id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor(System.String)">PlatformNotFoundException(String)</h4>
@@ -553,18 +636,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_System_Exception_.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor(System.String%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_System_Exception_.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException.%23ctor(System.String%2CSystem.Exception)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L8">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L8">View Source</a>
   </span>
   <a id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor*"></a>
-  <h4 id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_System_Exception_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor(System.String,System.Exception)">PlatformNotFoundException(String, System.Exception)</h4>
+  <h4 id="Downlink_Core_Diagnostics_PlatformNotFoundException__ctor_System_String_System_Exception_" data-uid="Downlink.Core.Diagnostics.PlatformNotFoundException.#ctor(System.String,System.Exception)">PlatformNotFoundException(String, Exception)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlatformNotFoundException(string message, System.Exception inner)</code></pre>
+    <pre><code class="lang-csharp hljs">public PlatformNotFoundException(string message, Exception inner)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -600,10 +683,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Core_Diagnostics_PlatformNotFoundException.md&amp;value=---%0Auid%3A%20Downlink.Core.Diagnostics.PlatformNotFoundException%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L3" class="contribution-link">View Source</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Core/Diagnostics/PlatformNotFoundException.cs/#L3" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

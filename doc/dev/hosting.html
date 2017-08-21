@@ -102,6 +102,9 @@
                       <a href="hosting.html" title="Hosting" class="active">Hosting</a>
                     </li>
                     <li class="">
+                      <a href="routing.html" title="Routing" class="">Routing</a>
+                    </li>
+                    <li class="">
                       <span class="expand-stub"></span>
                       <a class="">Guides</a>
                         
@@ -132,7 +135,12 @@
 <h2 id="getting-started">Getting Started</h2>
 <p>The easiest way of understanding Downlink&#39;s hosting model is to show it.</p>
 <h3 id="example">Example</h3>
-<p>To quickly setup a Downlink instance, create a new empty ASP.NET MVC Core app (such as using <code>dotnet new empty</code>). Once that has finished, you should have a <code>Program.cs</code> with the basic boilerplate code. First, add <code>ConfigureDownlink()</code> before the <code>Build()</code> method is called. You may need to add <code>using Downlink.Hosting</code> to your namespaces.</p>
+<p>To quickly setup a Downlink instance, create a new empty ASP.NET MVC Core app (such as using <code>dotnet new empty</code>). Once that has finished, you should have a <code>Program.cs</code> with the basic boilerplate code.</p>
+<h4 id="1-install-packages">1. Install packages</h4>
+<p>First, you&#39;ll need to install the Downlink packages into your project. Using the CLI, run <code>dotnet add package Downlink</code>, or add the following <code>PackageReference</code> to your <code>csproj</code>:</p>
+<pre><code class="lang-xml">&lt;PackageReference Include=&quot;Downlink&quot; Version=&quot;0.2.0&quot; /&gt;
+</code></pre><h4 id="2-add-downlink-to-your-app">2. Add Downlink to your app</h4>
+<p>First, add <code>ConfigureDownlink()</code> before the <code>Build()</code> method is called. You may need to add <code>using Downlink.Hosting</code> to your namespaces.</p>
 <pre><code class="lang-csharp">// in Program.cs
 public class Program
 {
@@ -148,6 +156,8 @@ public class Program
             .Build();
 }
 </code></pre><p>This registers the Downlink configuration defaults with the app.</p>
+<div class="TIP"><h5>Tip</h5><p>This only registers the Downlink-specific configuration bits so should not have any effect on your app&#39;s configuration.</p>
+</div>
 <p>Next, in your <code>Startup.cs</code> file, just add the <code>AddDownlink()</code> method to your <code>ConfigureServices</code> method. Again, you may need to add <code>using Downlink.Hosting</code> to your namespace imports.</p>
 <pre><code class="lang-csharp">// in Startup.cs
 public class Startup
@@ -164,6 +174,8 @@ public class Startup
     }
 }
 </code></pre><p><strong>That&#39;s it!</strong> You&#39;ve just added Downlink to a new ASP.NET MVC Core app. Run the app and the Downlink parts will be automatically registered, and you can browse to <code>myapp:5000/version-here/platform-here/arch-here</code> to get your app downloads. Note that we haven&#39;t added any of the configuration Downlink needs so make sure to follow the configuration steps outlined in the <a href="../user/getting-started.html">Getting Started guide</a> and the <a href="../user/configuration.html">Configuration guide</a>.</p>
+<div class="WARNING"><h5>Warning</h5><p>Downlink&#39;s default routing configuration is quite aggressive so you may get some routing conflicts. Check out the <a href="routing.html">routing documentation</a> to see how to control Downlink&#39;s routing behaviour.</p>
+</div>
 </article>
           </div>
           
@@ -172,7 +184,7 @@ public class Startup
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/docfx/doc/dev/hosting.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/docfx/doc/dev/hosting.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

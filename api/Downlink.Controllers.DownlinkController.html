@@ -331,7 +331,13 @@
                             <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Hosting.DownlinkContextPlugin.html" title="DownlinkContextPlugin" class="">DownlinkContextPlugin</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkRoutingPlugin.html" title="DownlinkRoutingPlugin" class="">DownlinkRoutingPlugin</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
@@ -355,13 +361,31 @@
                             <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationRoutePrefixBuilder.html" title="ConfigurationRoutePrefixBuilder" class="">ConfigurationRoutePrefixBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.DownlinkRouteConvention.html" title="DownlinkRouteConvention" class="">DownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpRequestExtensions.html" title="HttpRequestExtensions" class="">HttpRequestExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IDownlinkRouteConvention.html" title="IDownlinkRouteConvention" class="">IDownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IRoutePrefixBuilder.html" title="IRoutePrefixBuilder" class="">IRoutePrefixBuilder</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.StaticRoutePrefixBuilder.html" title="StaticRoutePrefixBuilder" class="">StaticRoutePrefixBuilder</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -456,8 +480,10 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><a class="xref" href="Downlink.Controllers.ApiController.html">ApiController</a></div>
-    <div class="level2"><span class="xref">DownlinkController</span></div>
+    <div class="level1"><span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase</span></div>
+    <div class="level2"><span class="xref">Microsoft.AspNetCore.Mvc.Controller</span></div>
+    <div class="level3"><a class="xref" href="Downlink.Controllers.ApiController.html">ApiController</a></div>
+    <div class="level4"><span class="xref">DownlinkController</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -467,29 +493,530 @@
     <div>
       <a class="xref" href="Downlink.Controllers.ApiController.html#Downlink_Controllers_ApiController_Gone">ApiController.Gone()</a>
     </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.View()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.View(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.View(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.View(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.PartialView()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.PartialView(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.PartialView(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.PartialView(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.ViewComponent(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.ViewComponent(System.Type)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.ViewComponent(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.ViewComponent(System.Type, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.Json(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.Json(System.Object, Newtonsoft.Json.JsonSerializerSettings)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.OnActionExecuting(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.OnActionExecuted(Microsoft.AspNetCore.Mvc.Filters.ActionExecutedContext)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.OnActionExecutionAsync(Microsoft.AspNetCore.Mvc.Filters.ActionExecutingContext, Microsoft.AspNetCore.Mvc.Filters.ActionExecutionDelegate)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.Dispose(System.Boolean)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.ViewData</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.TempData</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.Controller.ViewBag</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.StatusCode(System.Int32)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.StatusCode(System.Int32, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Content(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Content(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Content(System.String, System.String, System.Text.Encoding)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Content(System.String, Microsoft.Net.Http.Headers.MediaTypeHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.NoContent()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Ok()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Ok(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Redirect(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanent(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPreserveMethod(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectPermanentPreserveMethod(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirect(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanent(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPreserveMethod(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.LocalRedirectPermanentPreserveMethod(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToAction(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPreserveMethod(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanent(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToActionPermanentPreserveMethod(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoute(System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePreserveMethod(System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanent(System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToRoutePermanentPreserveMethod(System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPage(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanent(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePreserveMethod(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RedirectToPagePermanentPreserveMethod(System.String, System.String, System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[], System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[], System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[], System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.Byte[], System.String, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.IO.Stream, System.String, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.File(System.String, System.String, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.PhysicalFile(System.String, System.String, System.String, System.Nullable&lt;System.DateTimeOffset&gt;, Microsoft.Net.Http.Headers.EntityTagHeaderValue)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Unauthorized()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.NotFound()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.NotFound(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.BadRequest()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.BadRequest(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.BadRequest(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Created(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Created(System.Uri, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtAction(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtAction(System.String, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtAction(System.String, System.String, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtRoute(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtRoute(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.CreatedAtRoute(System.String, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Accepted()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Accepted(System.Uri, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtAction(System.String, System.String, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.AcceptedAtRoute(System.String, System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Challenge()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Challenge(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Forbid()</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Forbid(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.SignIn(System.Security.Claims.ClaimsPrincipal, Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.SignOut(Microsoft.AspNetCore.Authentication.AuthenticationProperties, System.String[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, System.String, Microsoft.AspNetCore.Mvc.ModelBinding.IValueProvider)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, System.String, System.Linq.Expressions.Expression&lt;System.Func&lt;TModel, System.Object&gt;&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, System.String, System.Func&lt;Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata, System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, System.String, Microsoft.AspNetCore.Mvc.ModelBinding.IValueProvider, System.Linq.Expressions.Expression&lt;System.Func&lt;TModel, System.Object&gt;&gt;[])</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync&lt;TModel&gt;(TModel, System.String, Microsoft.AspNetCore.Mvc.ModelBinding.IValueProvider, System.Func&lt;Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata, System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync(System.Object, System.Type, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryUpdateModelAsync(System.Object, System.Type, System.String, Microsoft.AspNetCore.Mvc.ModelBinding.IValueProvider, System.Func&lt;Microsoft.AspNetCore.Mvc.ModelBinding.ModelMetadata, System.Boolean&gt;)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryValidateModel(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.TryValidateModel(System.Object, System.String)</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.HttpContext</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Request</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Response</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.RouteData</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.ModelState</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.ControllerContext</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.MetadataProvider</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.ModelBinderFactory</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.Url</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.ObjectValidator</span>
+    </div>
+    <div>
+      <span class="xref">Microsoft.AspNetCore.Mvc.ControllerBase.User</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Finalize()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Downlink.Controllers.html">Downlink.Controllers</a></h6>
   <h6><strong>Assembly</strong>: Downlink.dll</h6>
   <h5 id="Downlink_Controllers_DownlinkController_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class DownlinkController : ApiController</code></pre>
+    <pre><code class="lang-csharp hljs">public class DownlinkController : ApiController, IActionFilter, IAsyncActionFilter, IFilterMetadata, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Controllers_DownlinkController__ctor_IConfiguration_IHostingEnvironment_MediatR_IMediator_Downlink_Handlers_IResponseHandler_ILogger_Downlink_Controllers_DownlinkController__.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.%23ctor(IConfiguration%2CIHostingEnvironment%2CMediatR.IMediator%2CDownlink.Handlers.IResponseHandler%2CILogger%7BDownlink.Controllers.DownlinkController%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Controllers_DownlinkController__ctor_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_AspNetCore_Hosting_IHostingEnvironment_MediatR_IMediator_Downlink_Handlers_IResponseHandler_Microsoft_Extensions_Logging_ILogger_Downlink_Controllers_DownlinkController__.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.%23ctor(Microsoft.Extensions.Configuration.IConfiguration%2CMicrosoft.AspNetCore.Hosting.IHostingEnvironment%2CMediatR.IMediator%2CDownlink.Handlers.IResponseHandler%2CMicrosoft.Extensions.Logging.ILogger%7BDownlink.Controllers.DownlinkController%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Controllers/DownlinkController.cs/#L25">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Controllers/DownlinkController.cs/#L25">View Source</a>
   </span>
   <a id="Downlink_Controllers_DownlinkController__ctor_" data-uid="Downlink.Controllers.DownlinkController.#ctor*"></a>
-  <h4 id="Downlink_Controllers_DownlinkController__ctor_IConfiguration_IHostingEnvironment_MediatR_IMediator_Downlink_Handlers_IResponseHandler_ILogger_Downlink_Controllers_DownlinkController__" data-uid="Downlink.Controllers.DownlinkController.#ctor(IConfiguration,IHostingEnvironment,MediatR.IMediator,Downlink.Handlers.IResponseHandler,ILogger{Downlink.Controllers.DownlinkController})">DownlinkController(IConfiguration, IHostingEnvironment, MediatR.IMediator, IResponseHandler, ILogger&lt;DownlinkController&gt;)</h4>
+  <h4 id="Downlink_Controllers_DownlinkController__ctor_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_AspNetCore_Hosting_IHostingEnvironment_MediatR_IMediator_Downlink_Handlers_IResponseHandler_Microsoft_Extensions_Logging_ILogger_Downlink_Controllers_DownlinkController__" data-uid="Downlink.Controllers.DownlinkController.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Hosting.IHostingEnvironment,MediatR.IMediator,Downlink.Handlers.IResponseHandler,Microsoft.Extensions.Logging.ILogger{Downlink.Controllers.DownlinkController})">DownlinkController(IConfiguration, IHostingEnvironment, IMediator, IResponseHandler, ILogger&lt;DownlinkController&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DownlinkController(IConfiguration config, IHostingEnvironment env, MediatR.IMediator mediator, IResponseHandler handler, ILogger&lt;DownlinkController&gt; logger)</code></pre>
+    <pre><code class="lang-csharp hljs">public DownlinkController(IConfiguration config, IHostingEnvironment env, IMediator mediator, IResponseHandler handler, ILogger&lt;DownlinkController&gt; logger)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -502,12 +1029,12 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="xref">Microsoft.Extensions.Configuration.IConfiguration</span></td>
         <td><span class="parametername">config</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IHostingEnvironment</span></td>
+        <td><span class="xref">Microsoft.AspNetCore.Hosting.IHostingEnvironment</span></td>
         <td><span class="parametername">env</span></td>
         <td></td>
       </tr>
@@ -522,7 +1049,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Downlink.Controllers.DownlinkController.html">DownlinkController</a>&gt;</td>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="Downlink.Controllers.DownlinkController.html">DownlinkController</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -532,10 +1059,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Controllers_DownlinkController_Handler.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.Handler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Controllers_DownlinkController_Handler.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.Handler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Controllers/DownlinkController.cs/#L22">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Controllers/DownlinkController.cs/#L22">View Source</a>
   </span>
   <a id="Downlink_Controllers_DownlinkController_Handler_" data-uid="Downlink.Controllers.DownlinkController.Handler*"></a>
   <h4 id="Downlink_Controllers_DownlinkController_Handler" data-uid="Downlink.Controllers.DownlinkController.Handler">Handler</h4>
@@ -564,10 +1091,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Controllers_DownlinkController_GetDownloadAsync_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.GetDownloadAsync(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Controllers_DownlinkController_GetDownloadAsync_System_String_System_String_System_String_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.GetDownloadAsync(System.String%2CSystem.String%2CSystem.String%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Controllers/DownlinkController.cs/#L53">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Controllers/DownlinkController.cs/#L54">View Source</a>
   </span>
   <a id="Downlink_Controllers_DownlinkController_GetDownloadAsync_" data-uid="Downlink.Controllers.DownlinkController.GetDownloadAsync*"></a>
   <h4 id="Downlink_Controllers_DownlinkController_GetDownloadAsync_System_String_System_String_System_String_System_String_" data-uid="Downlink.Controllers.DownlinkController.GetDownloadAsync(System.String,System.String,System.String,System.String)">GetDownloadAsync(String, String, String, String)</h4>
@@ -619,26 +1146,43 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<span class="xref">IActionResult</span>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<span class="xref">Microsoft.AspNetCore.Mvc.IActionResult</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Controllers_DownlinkController_GetInfo.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.GetInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Controllers_DownlinkController_GetInfo_System_Collections_Generic_IEnumerable_Downlink_Core_IRemoteStorage__.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController.GetInfo(System.Collections.Generic.IEnumerable%7BDownlink.Core.IRemoteStorage%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Controllers/DownlinkController.cs/#L38">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Controllers/DownlinkController.cs/#L38">View Source</a>
   </span>
   <a id="Downlink_Controllers_DownlinkController_GetInfo_" data-uid="Downlink.Controllers.DownlinkController.GetInfo*"></a>
-  <h4 id="Downlink_Controllers_DownlinkController_GetInfo" data-uid="Downlink.Controllers.DownlinkController.GetInfo">GetInfo()</h4>
+  <h4 id="Downlink_Controllers_DownlinkController_GetInfo_System_Collections_Generic_IEnumerable_Downlink_Core_IRemoteStorage__" data-uid="Downlink.Controllers.DownlinkController.GetInfo(System.Collections.Generic.IEnumerable{Downlink.Core.IRemoteStorage})">GetInfo(IEnumerable&lt;IRemoteStorage&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IActionResult GetInfo()</code></pre>
+    <pre><code class="lang-csharp hljs">public IActionResult GetInfo(IEnumerable&lt;IRemoteStorage&gt; storage)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Downlink.Core.IRemoteStorage.html">IRemoteStorage</a>&gt;</td>
+        <td><span class="parametername">storage</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
@@ -649,7 +1193,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IActionResult</span></td>
+        <td><span class="xref">Microsoft.AspNetCore.Mvc.IActionResult</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -666,10 +1210,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Controllers_DownlinkController.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Controllers_DownlinkController.md&amp;value=---%0Auid%3A%20Downlink.Controllers.DownlinkController%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Controllers/DownlinkController.cs/#L16" class="contribution-link">View Source</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Controllers/DownlinkController.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

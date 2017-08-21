@@ -331,7 +331,13 @@
                             <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Hosting.DownlinkContextPlugin.html" title="DownlinkContextPlugin" class="">DownlinkContextPlugin</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkRoutingPlugin.html" title="DownlinkRoutingPlugin" class="">DownlinkRoutingPlugin</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
@@ -355,13 +361,31 @@
                             <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationRoutePrefixBuilder.html" title="ConfigurationRoutePrefixBuilder" class="">ConfigurationRoutePrefixBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.DownlinkRouteConvention.html" title="DownlinkRouteConvention" class="">DownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpRequestExtensions.html" title="HttpRequestExtensions" class="">HttpRequestExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IDownlinkRouteConvention.html" title="IDownlinkRouteConvention" class="">IDownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IRoutePrefixBuilder.html" title="IRoutePrefixBuilder" class="">IRoutePrefixBuilder</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.StaticRoutePrefixBuilder.html" title="StaticRoutePrefixBuilder" class="">StaticRoutePrefixBuilder</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -458,20 +482,44 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">LocalFileSource</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Downlink.Local.html">Downlink.Local</a></h6>
   <h6><strong>Assembly</strong>: Downlink.Local.dll</h6>
   <h5 id="Downlink_Local_LocalFileSource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LocalFileSource : object, IFileSource</code></pre>
+    <pre><code class="lang-csharp hljs">public class LocalFileSource : IFileSource</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileSource_Available.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.Available%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileSource_Available.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.Available%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileSource.cs/#L22">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileSource.cs/#L22">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileSource_Available_" data-uid="Downlink.Local.LocalFileSource.Available*"></a>
   <h4 id="Downlink_Local_LocalFileSource_Available" data-uid="Downlink.Local.LocalFileSource.Available">Available</h4>
@@ -496,12 +544,14 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_Available">IFileSource.Available</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileSource_FileUri.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.FileUri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileSource_FileUri.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.FileUri%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileSource.cs/#L18">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileSource.cs/#L18">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileSource_FileUri_" data-uid="Downlink.Local.LocalFileSource.FileUri*"></a>
   <h4 id="Downlink_Local_LocalFileSource_FileUri" data-uid="Downlink.Local.LocalFileSource.FileUri">FileUri</h4>
@@ -521,17 +571,19 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Uri</span></td>
+        <td><span class="xref">System.Uri</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_FileUri">IFileSource.FileUri</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileSource_Metadata.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.Metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileSource_Metadata.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.Metadata%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileSource.cs/#L24">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileSource.cs/#L24">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileSource_Metadata_" data-uid="Downlink.Local.LocalFileSource.Metadata*"></a>
   <h4 id="Downlink_Local_LocalFileSource_Metadata" data-uid="Downlink.Local.LocalFileSource.Metadata">Metadata</h4>
@@ -560,10 +612,10 @@
       <div><a class="xref" href="Downlink.Core.IFileSource.html#Downlink_Core_IFileSource_Metadata">IFileSource.Metadata</a></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileSource_Version.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileSource_Version.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileSource.cs/#L20">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileSource.cs/#L20">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileSource_Version_" data-uid="Downlink.Local.LocalFileSource.Version*"></a>
   <h4 id="Downlink_Local_LocalFileSource_Version" data-uid="Downlink.Local.LocalFileSource.Version">Version</h4>
@@ -602,10 +654,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileSource.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileSource.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileSource%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileSource.cs/#L7" class="contribution-link">View Source</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileSource.cs/#L7" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

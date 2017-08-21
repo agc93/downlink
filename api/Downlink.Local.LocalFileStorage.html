@@ -331,7 +331,13 @@
                             <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Hosting.DownlinkContextPlugin.html" title="DownlinkContextPlugin" class="">DownlinkContextPlugin</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkRoutingPlugin.html" title="DownlinkRoutingPlugin" class="">DownlinkRoutingPlugin</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
@@ -355,13 +361,31 @@
                             <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationRoutePrefixBuilder.html" title="ConfigurationRoutePrefixBuilder" class="">ConfigurationRoutePrefixBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.DownlinkRouteConvention.html" title="DownlinkRouteConvention" class="">DownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpRequestExtensions.html" title="HttpRequestExtensions" class="">HttpRequestExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IDownlinkRouteConvention.html" title="IDownlinkRouteConvention" class="">IDownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IRoutePrefixBuilder.html" title="IRoutePrefixBuilder" class="">IRoutePrefixBuilder</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.StaticRoutePrefixBuilder.html" title="StaticRoutePrefixBuilder" class="">StaticRoutePrefixBuilder</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -458,23 +482,47 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">LocalFileStorage</span></div>
   </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Downlink.Local.html">Downlink.Local</a></h6>
   <h6><strong>Assembly</strong>: Downlink.Local.dll</h6>
   <h5 id="Downlink_Local_LocalFileStorage_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class LocalFileStorage : object, IRemoteStorage</code></pre>
+    <pre><code class="lang-csharp hljs">public class LocalFileStorage : IRemoteStorage</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileStorage__ctor_IConfiguration_IEnumerable_Downlink_Core_IPatternMatcher__IEnumerable_Downlink_Local_LocalFileMatchStrategy__ILogger_Downlink_Local_LocalFileStorage__.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage.%23ctor(IConfiguration%2CIEnumerable%7BDownlink.Core.IPatternMatcher%7D%2CIEnumerable%7BDownlink.Local.LocalFileMatchStrategy%7D%2CILogger%7BDownlink.Local.LocalFileStorage%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileStorage__ctor_Microsoft_Extensions_Configuration_IConfiguration_System_Collections_Generic_IEnumerable_Downlink_Core_IPatternMatcher__System_Collections_Generic_IEnumerable_Downlink_Local_LocalFileMatchStrategy__Microsoft_Extensions_Logging_ILogger_Downlink_Local_LocalFileStorage__.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage.%23ctor(Microsoft.Extensions.Configuration.IConfiguration%2CSystem.Collections.Generic.IEnumerable%7BDownlink.Core.IPatternMatcher%7D%2CSystem.Collections.Generic.IEnumerable%7BDownlink.Local.LocalFileMatchStrategy%7D%2CMicrosoft.Extensions.Logging.ILogger%7BDownlink.Local.LocalFileStorage%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileStorage.cs/#L20">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileStorage.cs/#L20">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileStorage__ctor_" data-uid="Downlink.Local.LocalFileStorage.#ctor*"></a>
-  <h4 id="Downlink_Local_LocalFileStorage__ctor_IConfiguration_IEnumerable_Downlink_Core_IPatternMatcher__IEnumerable_Downlink_Local_LocalFileMatchStrategy__ILogger_Downlink_Local_LocalFileStorage__" data-uid="Downlink.Local.LocalFileStorage.#ctor(IConfiguration,IEnumerable{Downlink.Core.IPatternMatcher},IEnumerable{Downlink.Local.LocalFileMatchStrategy},ILogger{Downlink.Local.LocalFileStorage})">LocalFileStorage(IConfiguration, IEnumerable&lt;IPatternMatcher&gt;, IEnumerable&lt;LocalFileMatchStrategy&gt;, ILogger&lt;LocalFileStorage&gt;)</h4>
+  <h4 id="Downlink_Local_LocalFileStorage__ctor_Microsoft_Extensions_Configuration_IConfiguration_System_Collections_Generic_IEnumerable_Downlink_Core_IPatternMatcher__System_Collections_Generic_IEnumerable_Downlink_Local_LocalFileMatchStrategy__Microsoft_Extensions_Logging_ILogger_Downlink_Local_LocalFileStorage__" data-uid="Downlink.Local.LocalFileStorage.#ctor(Microsoft.Extensions.Configuration.IConfiguration,System.Collections.Generic.IEnumerable{Downlink.Core.IPatternMatcher},System.Collections.Generic.IEnumerable{Downlink.Local.LocalFileMatchStrategy},Microsoft.Extensions.Logging.ILogger{Downlink.Local.LocalFileStorage})">LocalFileStorage(IConfiguration, IEnumerable&lt;IPatternMatcher&gt;, IEnumerable&lt;LocalFileMatchStrategy&gt;, ILogger&lt;LocalFileStorage&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -492,22 +540,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IConfiguration</span></td>
+        <td><span class="xref">Microsoft.Extensions.Configuration.IConfiguration</span></td>
         <td><span class="parametername">configuration</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Downlink.Core.IPatternMatcher.html">IPatternMatcher</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Downlink.Core.IPatternMatcher.html">IPatternMatcher</a>&gt;</td>
         <td><span class="parametername">matchers</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">IEnumerable</span>&lt;<a class="xref" href="Downlink.Local.LocalFileMatchStrategy.html">LocalFileMatchStrategy</a>&gt;</td>
+        <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="Downlink.Local.LocalFileMatchStrategy.html">LocalFileMatchStrategy</a>&gt;</td>
         <td><span class="parametername">strategies</span></td>
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">ILogger</span>&lt;<a class="xref" href="Downlink.Local.LocalFileStorage.html">LocalFileStorage</a>&gt;</td>
+        <td><span class="xref">Microsoft.Extensions.Logging.ILogger</span>&lt;<a class="xref" href="Downlink.Local.LocalFileStorage.html">LocalFileStorage</a>&gt;</td>
         <td><span class="parametername">logger</span></td>
         <td></td>
       </tr>
@@ -517,10 +565,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileStorage_Name.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileStorage_Name.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage.Name%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileStorage.cs/#L18">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileStorage.cs/#L18">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileStorage_Name_" data-uid="Downlink.Local.LocalFileStorage.Name*"></a>
   <h4 id="Downlink_Local_LocalFileStorage_Name" data-uid="Downlink.Local.LocalFileStorage.Name">Name</h4>
@@ -545,14 +593,16 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Downlink.Core.IRemoteStorage.html#Downlink_Core_IRemoteStorage_Name">IRemoteStorage.Name</a></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileStorage_GetFileAsync_Downlink_Core_VersionSpec_.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage.GetFileAsync(Downlink.Core.VersionSpec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileStorage_GetFileAsync_Downlink_Core_VersionSpec_.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage.GetFileAsync(Downlink.Core.VersionSpec)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileStorage.cs/#L43">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileStorage.cs/#L43">View Source</a>
   </span>
   <a id="Downlink_Local_LocalFileStorage_GetFileAsync_" data-uid="Downlink.Local.LocalFileStorage.GetFileAsync*"></a>
   <h4 id="Downlink_Local_LocalFileStorage_GetFileAsync_Downlink_Core_VersionSpec_" data-uid="Downlink.Local.LocalFileStorage.GetFileAsync(Downlink.Core.VersionSpec)">GetFileAsync(VersionSpec)</h4>
@@ -589,11 +639,13 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">Task</span>&lt;<a class="xref" href="Downlink.Core.IFileSource.html">IFileSource</a>&gt;</td>
+        <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="Downlink.Core.IFileSource.html">IFileSource</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h5 class="implements">Implements</h5>
+      <div><a class="xref" href="Downlink.Core.IRemoteStorage.html#Downlink_Core_IRemoteStorage_GetFileAsync_Downlink_Core_VersionSpec_">IRemoteStorage.GetFileAsync(VersionSpec)</a></div>
   <h3 id="extensionmethods">Extension Methods</h3>
   <div>
       <a class="xref" href="Downlink.Infrastructure.ReflectionExtensions.html#Downlink_Infrastructure_ReflectionExtensions_IsAssignableTo__1_System_Object_">ReflectionExtensions.IsAssignableTo&lt;TTarget&gt;(Object)</a>
@@ -606,10 +658,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Local_LocalFileStorage.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Local_LocalFileStorage.md&amp;value=---%0Auid%3A%20Downlink.Local.LocalFileStorage%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink.Local/LocalFileStorage.cs/#L13" class="contribution-link">View Source</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink.Local/LocalFileStorage.cs/#L13" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

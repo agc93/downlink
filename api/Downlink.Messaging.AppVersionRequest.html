@@ -331,7 +331,13 @@
                             <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Hosting.DownlinkContextPlugin.html" title="DownlinkContextPlugin" class="">DownlinkContextPlugin</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkRoutingPlugin.html" title="DownlinkRoutingPlugin" class="">DownlinkRoutingPlugin</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
@@ -355,13 +361,31 @@
                             <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationRoutePrefixBuilder.html" title="ConfigurationRoutePrefixBuilder" class="">ConfigurationRoutePrefixBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.DownlinkRouteConvention.html" title="DownlinkRouteConvention" class="">DownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpRequestExtensions.html" title="HttpRequestExtensions" class="">HttpRequestExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IDownlinkRouteConvention.html" title="IDownlinkRouteConvention" class="">IDownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IRoutePrefixBuilder.html" title="IRoutePrefixBuilder" class="">IRoutePrefixBuilder</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.StaticRoutePrefixBuilder.html" title="StaticRoutePrefixBuilder" class="">StaticRoutePrefixBuilder</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -462,16 +486,16 @@
   <h6><strong>Assembly</strong>: Downlink.dll</h6>
   <h5 id="Downlink_Messaging_AppVersionRequest_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class AppVersionRequest : IRequest&lt;AppVersionResponseModel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public class AppVersionRequest : object, IRequest&lt;AppVersionResponseModel&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest__ctor_Downlink_Core_VersionSpec_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest.%23ctor(Downlink.Core.VersionSpec%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest__ctor_Downlink_Core_VersionSpec_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest.%23ctor(Downlink.Core.VersionSpec%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Messaging/AppVersionRequest.cs/#L8">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Messaging/AppVersionRequest.cs/#L8">View Source</a>
   </span>
   <a id="Downlink_Messaging_AppVersionRequest__ctor_" data-uid="Downlink.Messaging.AppVersionRequest.#ctor*"></a>
   <h4 id="Downlink_Messaging_AppVersionRequest__ctor_Downlink_Core_VersionSpec_System_String_" data-uid="Downlink.Messaging.AppVersionRequest.#ctor(Downlink.Core.VersionSpec,System.String)">AppVersionRequest(VersionSpec, String)</h4>
@@ -507,10 +531,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest_Format.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest.Format%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest_Format.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest.Format%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Messaging/AppVersionRequest.cs/#L15">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Messaging/AppVersionRequest.cs/#L15">View Source</a>
   </span>
   <a id="Downlink_Messaging_AppVersionRequest_Format_" data-uid="Downlink.Messaging.AppVersionRequest.Format*"></a>
   <h4 id="Downlink_Messaging_AppVersionRequest_Format" data-uid="Downlink.Messaging.AppVersionRequest.Format">Format</h4>
@@ -537,10 +561,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest_Version.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest_Version.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest.Version%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Messaging/AppVersionRequest.cs/#L13">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Messaging/AppVersionRequest.cs/#L13">View Source</a>
   </span>
   <a id="Downlink_Messaging_AppVersionRequest_Version_" data-uid="Downlink.Messaging.AppVersionRequest.Version*"></a>
   <h4 id="Downlink_Messaging_AppVersionRequest_Version" data-uid="Downlink.Messaging.AppVersionRequest.Version">Version</h4>
@@ -577,10 +601,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Messaging_AppVersionRequest.md&amp;value=---%0Auid%3A%20Downlink.Messaging.AppVersionRequest%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Messaging/AppVersionRequest.cs/#L6" class="contribution-link">View Source</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Messaging/AppVersionRequest.cs/#L6" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

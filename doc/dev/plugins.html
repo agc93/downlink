@@ -102,6 +102,9 @@
                       <a href="hosting.html" title="Hosting" class="">Hosting</a>
                     </li>
                     <li class="">
+                      <a href="routing.html" title="Routing" class="">Routing</a>
+                    </li>
+                    <li class="">
                       <span class="expand-stub"></span>
                       <a class="">Guides</a>
                         
@@ -132,6 +135,8 @@
 </div>
 <h2 id="plugin-basics">Plugin basics</h2>
 <p>At it&#39;s heart, a plugin consists of an <code>IDownlinkPlugin</code> implementation. That&#39;s what the <code>AddPlugin</code> method accepts, and is what the host uses to load up your plugin. In practice, the <code>IDownlinkPlugin</code> implementation should be your entry point, responsible for adding any other extension points your plugin is installing to the services container.</p>
+<div class="TIP"><h5>Tip</h5><p>It may be helpful to define your <code>IDownlinkPlugin</code> implementation in the <code>Downlink.Hosting</code> namespace. Your users won&#39;t need to add a <code>using</code> statement!</p>
+</div>
 <h2 id="building-a-plugin">Building a plugin</h2>
 <p>To get started building a plugin, create a new .NET Standard class library and add a reference to the <code>Downlink</code> and <code>Downlink.Core</code> packages. Next you&#39;ll want to add your plugin&#39;s resources. This will usually be things like a <a href="storage.html">storage backend</a>, a pattern matcher, a <a href="scheme-clients.html">scheme client</a> or any other Downlink service such as a response handler. For this example, we&#39;re going to assume you&#39;ve created a new storage backend called <code>MyAwesomeStorage</code> that needs a custom scheme client called <code>MyAwesomeSchemeClient</code>.</p>
 <p>To package these into a plugin, create a new class (e.g. <code>MyAwesomePlugin</code>) and implement <code>IDownlinkPlugin</code> (from the <code>Downlink.Composition</code> namespace). For example:</p>
@@ -180,7 +185,7 @@ public void ConfigureServices(IServiceCollection services)
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/docfx/doc/dev/plugins.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/docfx/doc/dev/plugins.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

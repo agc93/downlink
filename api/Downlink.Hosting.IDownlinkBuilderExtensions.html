@@ -331,7 +331,13 @@
                             <a href="Downlink.Hosting.DownlinkBuilderOptions.html" title="DownlinkBuilderOptions" class="">DownlinkBuilderOptions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Hosting.DownlinkContextPlugin.html" title="DownlinkContextPlugin" class="">DownlinkContextPlugin</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Hosting.DownlinkDefaultServices.html" title="DownlinkDefaultServices" class="">DownlinkDefaultServices</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Hosting.DownlinkRoutingPlugin.html" title="DownlinkRoutingPlugin" class="">DownlinkRoutingPlugin</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Hosting.IDownlinkBuilder.html" title="IDownlinkBuilder" class="">IDownlinkBuilder</a>
@@ -355,13 +361,31 @@
                             <a href="Downlink.Infrastructure.ConfigurationExtensions.html" title="ConfigurationExtensions" class="">ConfigurationExtensions</a>
                           </li>
                           <li class="">
+                            <a href="Downlink.Infrastructure.ConfigurationRoutePrefixBuilder.html" title="ConfigurationRoutePrefixBuilder" class="">ConfigurationRoutePrefixBuilder</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.DownlinkRouteConvention.html" title="DownlinkRouteConvention" class="">DownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
                             <a href="Downlink.Infrastructure.HttpClientExtensions.html" title="HttpClientExtensions" class="">HttpClientExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.HttpRequestExtensions.html" title="HttpRequestExtensions" class="">HttpRequestExtensions</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IDownlinkRouteConvention.html" title="IDownlinkRouteConvention" class="">IDownlinkRouteConvention</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.IRoutePrefixBuilder.html" title="IRoutePrefixBuilder" class="">IRoutePrefixBuilder</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ReflectionExtensions.html" title="ReflectionExtensions" class="">ReflectionExtensions</a>
                           </li>
                           <li class="">
                             <a href="Downlink.Infrastructure.ServiceFactory.html" title="ServiceFactory" class="">ServiceFactory</a>
+                          </li>
+                          <li class="">
+                            <a href="Downlink.Infrastructure.StaticRoutePrefixBuilder.html" title="StaticRoutePrefixBuilder" class="">StaticRoutePrefixBuilder</a>
                           </li>
                         </ul>  </li>
                     <li class="">
@@ -468,10 +492,10 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L36">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L37">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler*"></a>
   <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddNotificationHandler__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddNotificationHandler``1(Downlink.Hosting.IDownlinkBuilder)">AddNotificationHandler&lt;T&gt;(IDownlinkBuilder)</h4>
@@ -479,7 +503,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddNotificationHandler&lt;T&gt;(this IDownlinkBuilder builder)where T : class, MediatR.INotificationHandler&lt;AppVersionResponseModel&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder AddNotificationHandler&lt;T&gt;(this IDownlinkBuilder builder)where T : class, INotificationHandler&lt;AppVersionResponseModel&gt;</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -530,10 +554,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L11">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L12">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher*"></a>
   <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPatternMatcher__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPatternMatcher``1(Downlink.Hosting.IDownlinkBuilder)">AddPatternMatcher&lt;T&gt;(IDownlinkBuilder)</h4>
@@ -592,13 +616,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_Downlink_Hosting_IDownlinkBuilder_Type___.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin(Downlink.Hosting.IDownlinkBuilder%2CType%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_Downlink_Hosting_IDownlinkBuilder_System_Type___.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin(Downlink.Hosting.IDownlinkBuilder%2CSystem.Type%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L46">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L47">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin*"></a>
-  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_Downlink_Hosting_IDownlinkBuilder_Type___" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin(Downlink.Hosting.IDownlinkBuilder,Type[])">AddPlugin(IDownlinkBuilder, Type[])</h4>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_Downlink_Hosting_IDownlinkBuilder_System_Type___" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin(Downlink.Hosting.IDownlinkBuilder,System.Type[])">AddPlugin(IDownlinkBuilder, Type[])</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -621,7 +645,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Type</span>[]</td>
+        <td><span class="xref">System.Type</span>[]</td>
         <td><span class="parametername">pluginType</span></td>
         <td></td>
       </tr>
@@ -644,10 +668,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L41">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L42">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin*"></a>
   <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddPlugin__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddPlugin``1(Downlink.Hosting.IDownlinkBuilder)">AddPlugin&lt;T&gt;(IDownlinkBuilder)</h4>
@@ -706,13 +730,13 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_Downlink_Hosting_IDownlinkBuilder_Action_Downlink_Messaging_AppVersionResponseModel__.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction(Downlink.Hosting.IDownlinkBuilder%2CAction%7BDownlink.Messaging.AppVersionResponseModel%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_Downlink_Hosting_IDownlinkBuilder_System_Action_Downlink_Messaging_AppVersionResponseModel__.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction(Downlink.Hosting.IDownlinkBuilder%2CSystem.Action%7BDownlink.Messaging.AppVersionResponseModel%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L31">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L32">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction*"></a>
-  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_Downlink_Hosting_IDownlinkBuilder_Action_Downlink_Messaging_AppVersionResponseModel__" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction(Downlink.Hosting.IDownlinkBuilder,Action{Downlink.Messaging.AppVersionResponseModel})">AddResponseAction(IDownlinkBuilder, Action&lt;AppVersionResponseModel&gt;)</h4>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseAction_Downlink_Hosting_IDownlinkBuilder_System_Action_Downlink_Messaging_AppVersionResponseModel__" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseAction(Downlink.Hosting.IDownlinkBuilder,System.Action{Downlink.Messaging.AppVersionResponseModel})">AddResponseAction(IDownlinkBuilder, Action&lt;AppVersionResponseModel&gt;)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -735,7 +759,7 @@
         <td></td>
       </tr>
       <tr>
-        <td><span class="xref">Action</span>&lt;<a class="xref" href="Downlink.Messaging.AppVersionResponseModel.html">AppVersionResponseModel</a>&gt;</td>
+        <td><span class="xref">System.Action</span>&lt;<a class="xref" href="Downlink.Messaging.AppVersionResponseModel.html">AppVersionResponseModel</a>&gt;</td>
         <td><span class="parametername">response</span></td>
         <td></td>
       </tr>
@@ -758,10 +782,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L21">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L22">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler*"></a>
   <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddResponseHandler__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddResponseHandler``1(Downlink.Hosting.IDownlinkBuilder)">AddResponseHandler&lt;T&gt;(IDownlinkBuilder)</h4>
@@ -820,10 +844,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L26">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L27">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient*"></a>
   <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddSchemeClient__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddSchemeClient``1(Downlink.Hosting.IDownlinkBuilder)">AddSchemeClient&lt;T&gt;(IDownlinkBuilder)</h4>
@@ -882,10 +906,10 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L16">View Source</a>
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L17">View Source</a>
   </span>
   <a id="Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage*"></a>
   <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_AddStorage__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.AddStorage``1(Downlink.Hosting.IDownlinkBuilder)">AddStorage&lt;T&gt;(IDownlinkBuilder)</h4>
@@ -942,6 +966,172 @@
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_UseRouteBuilder_Downlink_Hosting_IDownlinkBuilder_System_Type_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.UseRouteBuilder(Downlink.Hosting.IDownlinkBuilder%2CSystem.Type)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L65">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_UseRouteBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.UseRouteBuilder*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_UseRouteBuilder_Downlink_Hosting_IDownlinkBuilder_System_Type_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.UseRouteBuilder(Downlink.Hosting.IDownlinkBuilder,System.Type)">UseRouteBuilder(IDownlinkBuilder, Type)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder UseRouteBuilder(this IDownlinkBuilder builder, Type builderType)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Type</span></td>
+        <td><span class="parametername">builderType</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_UseRouteBuilder__1_Downlink_Hosting_IDownlinkBuilder_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.UseRouteBuilder%60%601(Downlink.Hosting.IDownlinkBuilder)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L60">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_UseRouteBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.UseRouteBuilder*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_UseRouteBuilder__1_Downlink_Hosting_IDownlinkBuilder_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.UseRouteBuilder``1(Downlink.Hosting.IDownlinkBuilder)">UseRouteBuilder&lt;T&gt;(IDownlinkBuilder)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder UseRouteBuilder&lt;T&gt;(this IDownlinkBuilder builder)where T : class, IRoutePrefixBuilder</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions_UseRoutePrefix_Downlink_Hosting_IDownlinkBuilder_System_String_.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions.UseRoutePrefix(Downlink.Hosting.IDownlinkBuilder%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L55">View Source</a>
+  </span>
+  <a id="Downlink_Hosting_IDownlinkBuilderExtensions_UseRoutePrefix_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.UseRoutePrefix*"></a>
+  <h4 id="Downlink_Hosting_IDownlinkBuilderExtensions_UseRoutePrefix_Downlink_Hosting_IDownlinkBuilder_System_String_" data-uid="Downlink.Hosting.IDownlinkBuilderExtensions.UseRoutePrefix(Downlink.Hosting.IDownlinkBuilder,System.String)">UseRoutePrefix(IDownlinkBuilder, String)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static IDownlinkBuilder UseRoutePrefix(this IDownlinkBuilder builder, string prefix)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td><span class="parametername">builder</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">prefix</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Downlink.Hosting.IDownlinkBuilder.html">IDownlinkBuilder</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           
@@ -950,10 +1140,10 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/new/hosting-refactor/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/new/master/apiSpec/new?filename=Downlink_Hosting_IDownlinkBuilderExtensions.md&amp;value=---%0Auid%3A%20Downlink.Hosting.IDownlinkBuilderExtensions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/src/Downlink/Hosting/IDownlinkBuilderExtensions.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

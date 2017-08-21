@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Routing in Downlink | Downlink </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Routing in Downlink | Downlink ">
+    <meta name="generator" content="docfx 2.18.5.0">
+    
+    <link rel="shortcut icon" href="../../assets/favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc">
+    <meta property="docfx:tocrel" content="toc">
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../assets/downlink-logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+                <ul class="nav level1 navbar-nav">
+                  <li class="">
+                    <a href="../../doc/user/intro.html" title="User Documentation" class="">User Documentation</a>
+                  </li>
+                  <li class="active">
+                    <a href="../../doc/dev/intro.html" title="Developer Guides" class="active">Developer Guides</a>
+                  </li>
+                  <li class="">
+                    <a href="../../api/index.html" title="Source Reference" class="">Source Reference</a>
+                  </li>
+                </ul>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items"></div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div>
+              <div class="sidefilter">
+                <form class="toc-filter">
+                  <span class="glyphicon glyphicon-filter filter-icon"></span>
+                  <input type="text" id="toc_filter_input" placeholder="Enter here to filter..." onkeypress="if(event.keyCode==13) {return false;}">
+                </form>
+              </div>
+              <div class="sidetoc">
+                <div class="toc" id="toc">
+                  
+                  <ul class="nav level1">
+                    <li class="">
+                      <a href="intro.html" title="Introduction" class="">Introduction</a>
+                    </li>
+                    <li class="">
+                      <a href="contributing.html" title="Contributing" class="">Contributing</a>
+                    </li>
+                    <li class="">
+                      <a href="developers.html" title="Developer's Guide" class="">Developer's Guide</a>
+                    </li>
+                    <li class="">
+                      <a href="hosting.html" title="Hosting" class="">Hosting</a>
+                    </li>
+                    <li class="active">
+                      <a href="routing.html" title="Routing" class="active">Routing</a>
+                    </li>
+                    <li class="">
+                      <span class="expand-stub"></span>
+                      <a class="">Guides</a>
+                        
+                        <ul class="nav level2">
+                          <li class="">
+                            <a href="plugins.html" title="Plugins" class="">Plugins</a>
+                          </li>
+                          <li class="">
+                            <a href="storage.html" title="Storage Backends" class="">Storage Backends</a>
+                          </li>
+                          <li class="">
+                            <a href="scheme-clients.html" title="Scheme Clients" class="">Scheme Clients</a>
+                          </li>
+                        </ul>  </li>
+                  </ul>        </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="routing-in-downlink">Routing in Downlink</h1>
+
+<p>Downlink by default has a very aggressive route template: <code>{version}/{platform?}/{arch?}</code> meaning it will often match routes you didn&#39;t want it to.</p>
+<p>To correct this, Downlink (since 0.2) includes support for <strong>prefixing</strong> the route template used for Downlink&#39;s actions.</p>
+<h2 id="configuration">Configuration</h2>
+<div class="TIP"><h5>Tip</h5><p>This method is also supported in the Docker image (even though it is not generally needed)</p>
+</div>
+<p>By default, Downlink will look for a configuration key called <code>DownlinkPrefix</code> and prepend the value of that to Downlink&#39;s action routes:</p>
+<pre><code class="lang-yaml">DownlinkPrefix: &#39;download&#39;
+</code></pre><pre><code class="lang-json">{
+    &quot;DownlinkPrefix&quot;: &quot;download&quot;
+}
+</code></pre><p>This will change the template to <code>download/{version}/{platform?}/{arch?}</code>, effectively isolating Downlink form other routes in your application.</p>
+<h2 id="code-for-self-hosting">Code (for self-hosting)</h2>
+<p>If you&#39;re hosting Downlink, you can also add a prefix in your startup code:</p>
+<pre><code class="lang-csharp">// in Startup.cs
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc().AddDownlink(d =&gt; d.UseRoutePrefix(&quot;download&quot;));
+}
+</code></pre><p>This will result in the same route template as the first example.</p>
+<p>Internally, this is replacing the <code>ConfigurationRoutePrefixBuilder</code> with the <code>StaticRoutePrefixBuilder</code>.</p>
+<h2 id="extensibility">Extensibility</h2>
+<p>This functionality is specifically designed for extensibility and is built around a super-simple <code>IRoutePrefixBuilder</code> interface:</p>
+<pre><code class="lang-csharp">string GetPrefix();
+</code></pre><p>If you have your own implementation of the <code>IRoutePrefixBuilder</code> interface, register it using the <code>UseRouteBuilder</code> builder method and Downlink will invoke it instead on app start:</p>
+<pre><code class="lang-csharp">// in Startup.cs
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc().AddDownlink(d =&gt; d.UseRouteBuilder&lt;MyAwesomeBuilder&gt;());
+}
+</code></pre><h3 id="advanced-extensibility">Advanced extensibility</h3>
+<div class="WARNING"><h5>Warning</h5><p>This is only recommended for advanced users who really know what they&#39;re doing: you can completely break your app this way.</p>
+</div>
+<p>If you need super-finegrained control over Downlink&#39;s routing behaviour, you can also re-implement the convention used for Downlink routing. This is mostly useful if you need to make non-trivial edits to the route template used by Downlink.</p>
+<p>Downlink provides the <code>IDownlinkRouteConvention</code> interface to override the conventions applied on app start. If you register an implementation of <code>IDownlinkRouteConvention</code> in the Downlink builder, it will be added to the app&#39;s convention map and applied on app start.</p>
+<div class="WARNING"><h5>Warning</h5><p>Your <code>IDownlinkRouteConvention</code> implementation will be applied to <strong>the whole app</strong>, not just Downlink controllers and actions.</p>
+</div>
+<p>You can find the default convention implementation in <a href="xref:DownlinkRouteConvention"><code>DownlinkRouteConvention</code></a>.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/agc93/downlink/blob/master/docfx/doc/dev/routing.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Downlink is MIT licensed and © Alistair Chapman 2017
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

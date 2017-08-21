@@ -102,6 +102,9 @@
                       <a href="hosting.html" title="Hosting" class="">Hosting</a>
                     </li>
                     <li class="">
+                      <a href="routing.html" title="Routing" class="">Routing</a>
+                    </li>
+                    <li class="">
                       <span class="expand-stub"></span>
                       <a class="">Guides</a>
                         
@@ -141,6 +144,8 @@
 </code></pre><p>The <code>Name</code> property is important as it is the name your users will set &#39;Storage&#39; to in their configuration.</p>
 <p>When a user requests a version (such as <code>/v1.2/windows/x64</code>) and your storage backend is active, your <code>GetFileAsync</code> method will be invoked with a <code>VersionSpec</code> object for the current request.</p>
 <p>If your storage class needs additional dependencies, just declare them in the constructor. They will be resolved from the DI container on the first request.</p>
+<div class="WARNING"><h5>Warning</h5><p>As a result of how Downlink resolves storage backends, your constructor should complete successfully, <strong>even if your provider is not currently activated/configured!</strong></p>
+</div>
 <pre><code class="lang-csharp">public class MyAwesomeStorage : IRemoteStorage
 {
     // trimmed
@@ -205,7 +210,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/agc93/downlink/blob/hosting-refactor/docfx/doc/dev/storage-howto.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/agc93/downlink/blob/master/docfx/doc/dev/storage-howto.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>
