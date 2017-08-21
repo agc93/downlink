@@ -4,6 +4,7 @@ namespace Downlink.Core
     {
 
         public VersionSpec(string version, string platform, string architecture) {
+            if (string.IsNullOrWhiteSpace(version)) throw new System.ArgumentNullException(nameof(version));
             VersionString = version;
             Platform = platform ?? "any";
             Architecture = architecture ?? "any";
@@ -27,7 +28,7 @@ namespace Downlink.Core
         public string Architecture { get; } = string.Empty;
         private string VersionString { get; }
 
-        public string Summary => $"'{VersionString}' [{(Platform ?? "unknown")}/{(Architecture ?? "unknown")}]";
+        public string Summary => $"'{VersionString}' [{(string.IsNullOrWhiteSpace(Platform) ? "unknown" : Platform)}/{(string.IsNullOrWhiteSpace(Architecture) ? "unknown" : Architecture)}]";
 
         public bool IsStable {get;}
 
