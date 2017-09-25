@@ -28,6 +28,8 @@ GitHubStorage:
   ServerUrl: 'https://github.myenterprise.com'
 ```
 
+Note that by default, Downlink will not authenticate API requests. If you are using it heavily, you might quickly exhaust the GitHub API rate limit. To avoid this, create an API token and add it to your configuration in the `GitHubStorage/ApiToken` key. Downlink will then automatically authenticate all outgoing requests with this key.
+
 ## How it works
 
 The GitHub Release backend is quite unique from other currently supported backends in not having any notion of folders or hierarchy, since it uses the assets attached to a given release. Due to this, it relies on naming conventions in asset files to work correctly.
