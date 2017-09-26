@@ -22,6 +22,8 @@ namespace Downlink.Controllers
         public IResponseHandler Handler { get; }
         private IConfiguration Configuration { get; }
 
+        private List<string> IgnoredKeywords = new List<string> { "robots.txt", "favicon.ico", "sitemap.xml"};
+
         public DownlinkController(
             IConfiguration config,
             IHostingEnvironment env,
@@ -55,6 +57,7 @@ namespace Downlink.Controllers
         [Route("{version}/{platform?}/{arch?}", Name = "DownlinkGetDownload")]
         public async Task<IActionResult> GetDownloadAsync(string version, string platform, string arch, [FromQuery] string format)
         {
+            if (IgnoredKeywords.Contains(version)) return NotFound();
             var spec = new VersionSpec(version, platform, arch);
             var req = new AppVersionRequest(spec, format);
             try
