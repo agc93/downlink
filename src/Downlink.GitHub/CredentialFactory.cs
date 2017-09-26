@@ -16,7 +16,9 @@ namespace Downlink.GitHub
         {
             var repo = config.GetValue<string>("GitHubStorage:Repository", null) ??
                             config.GetValue<string>("GitHub:Repository", null);
-            return repo == null ? null : new GitHubCredentials(string.Empty, repo);
+            var token = config.GetValue<string>("GitHubStorage:ApiToken", string.Empty) ??
+                            config.GetValue<string>("GitHub:ApiToken", string.Empty);
+            return repo == null ? null : new GitHubCredentials(token, repo);
         }
     }
 }
