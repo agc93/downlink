@@ -28,22 +28,20 @@ namespace Downlink.GitHub
             PatternMatcher = patternMatchers.GetFor(stratName)
                 ?? new Core.Runtime.FlatPatternMatcher();
             Credentials = credentials;
-            var strategy = configuration.GetValue<string>(stratName);
-            MatchStrategy = matchStrategies.GetFor<GitHubMatchStrategy, Release>(strategy);
+            MatchStrategy = matchStrategies.GetFor<GitHubMatchStrategy, Release>(stratName);
             var server = configuration.GetValue<string>("GitHubStorage:ServerUrl", string.Empty);
-            var token = configuration.GetValue<string>("GitHubStorage:ApiToken", string.Empty);
-            Client = GetClient(server, token);
+            Client = GetClient(server);
         }
 
-        private GitHubClient GetClient(string serverUrl, string token = null)
+        private GitHubClient GetClient(string serverUrl)
         {
             var header = new ProductHeaderValue("Downlink");
             var client = string.IsNullOrWhiteSpace(serverUrl)
                 ? new GitHubClient(header)
                 : new GitHubClient(header, new Uri(serverUrl));
-            if (!string.IsNullOrWhiteSpace(token))
+            if (!string.IsNullOrWhiteSpace(Credentials.Token))
             {
-                client.Credentials = new Credentials(token);
+                client.Credentials = new Credentials(Credentials.Token);
             }
             return client;
         }
