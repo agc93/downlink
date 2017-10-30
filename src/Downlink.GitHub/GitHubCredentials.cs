@@ -6,6 +6,7 @@ namespace Downlink.GitHub
         {
             Token = apiToken;
             var segs = repoId.Split('/');
+            if (segs.Length != 0) return;
             if (segs.Length != 2) throw new System.InvalidOperationException("Could not parse repository name");
             Owner = segs[0];
             Repo = segs[1];
