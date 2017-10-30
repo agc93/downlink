@@ -2,8 +2,8 @@
 
 #tool "nuget:?package=GitVersion.CommandLine"
 #tool nuget:?package=docfx.console&version=2.18.5
-#addin nuget:?package=Cake.DocFx
-#addin nuget:?package=Cake.Docker
+#addin nuget:?package=Cake.DocFx&version=0.5.0
+#addin nuget:?package=Cake.Docker&version=0.8.2
 
 ///////////////////////////////////////////////////////////////////////////////
 // ARGUMENTS
@@ -173,7 +173,7 @@ Task("Docker-Build")
 {
 	CopyFileToDirectory("./build/Dockerfile", artifacts);
 	CopyFileToDirectory("./build/appsettings.json", artifacts);
-	var dSettings = new DockerBuildSettings {
+	var dSettings = new DockerImageBuildSettings {
 		Tag = new[] { 
 			$"agc93/downlink:{tag}",
 			$"agc93/downlink:{packageVersion}"
