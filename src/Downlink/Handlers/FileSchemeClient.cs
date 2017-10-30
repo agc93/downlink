@@ -10,7 +10,9 @@ namespace Downlink.Handlers
         public FileSchemeClient() : base("file") { }
         public override Task<IActionResult> GetContentAsync(IFileSource file)
         {
-            return Task.FromResult(new FileStreamResult(System.IO.File.OpenRead(file.FileUri.AbsolutePath), "application/octet-stream") as IActionResult);
+            return Task.FromResult(new FileStreamResult(System.IO.File.OpenRead(file.FileUri.AbsolutePath), "application/octet-stream") {
+                FileDownloadName = file.Metadata.FileName
+            } as IActionResult);
         }
     }
 }

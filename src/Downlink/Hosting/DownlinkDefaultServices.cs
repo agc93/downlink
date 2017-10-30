@@ -1,6 +1,7 @@
 using System;
 using Downlink.AzureStorage;
 using Downlink.Composition;
+using Downlink.Core;
 using Downlink.GitHub;
 using Downlink.Handlers;
 using Downlink.Infrastructure;
@@ -26,6 +27,7 @@ namespace Downlink.Hosting
                 builder.Services.AddSingleton<ProxyingResponseHandler>();
                 builder.Services.AddSingleton<RedirectingResponseHandler>();
                 builder.Services.AddSingleton<IResponseHandler>(ServiceFactory.GetResponseHandler);
+                builder.Services.AddSingleton<IExceptionHandler, ExceptionHandler>();
             }
             if (opts.RegisterDefaultPatterns) {
                 logger?.LogDebug("Registering default pattern matchers");
@@ -44,6 +46,7 @@ namespace Downlink.Hosting
                 builder.Services.AddLocalStorage();
             }
             builder.Services.AddFallbackStorage();
+            builder.Services.AddTransient<IFormatParser, PathFormatParser>();
         }
     }
 }

@@ -29,7 +29,7 @@ namespace Downlink.AzureStorage
             _configuration = configuration;
             var stratName = configuration.GetValue("AzureStorage:MatchStrategy", "Hierarchical");
             MatchStrategy = strategies.GetFor<AzureMatchStrategy, IListBlobItem>(stratName);
-            PatternMatcher = matchers.GetFor(stratName) ?? new Downlink.Core.Runtime.HierarchicalPatternMatcher();
+            PatternMatcher = matchers.GetFor(stratName);
             _logger.LogDebug($"Using {MatchStrategy?.Name ?? PatternMatcher?.Name}");
         }
 

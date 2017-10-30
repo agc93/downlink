@@ -1,7 +1,7 @@
 FROM microsoft/aspnetcore-build:2.0 AS build-env
 
 WORKDIR /app
-COPY ../src/ ./
+COPY ./src/ ./
 WORKDIR /app/Downlink.Host
 RUN dotnet publish -c Release -o out
 

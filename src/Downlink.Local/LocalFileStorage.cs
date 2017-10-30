@@ -29,6 +29,7 @@ namespace Downlink.Local
                 "LocalStorage:PackageRoot",
                 Path.Combine(Directory.GetCurrentDirectory(), "Packages")
             );
+            path = path.EndsWith(Path.DirectorySeparatorChar.ToString()) ? path : path + Path.DirectorySeparatorChar;
             _forceNameMatching = configuration.GetValue("LocalStorage:ForceNameMatching", false);
             var stratName = configuration.GetValue("LocalStorage:MatchStrategy", "Hierarchical");
             MatchStrategy = strategies.GetFor<LocalFileMatchStrategy, FileSystemInfo>(stratName);

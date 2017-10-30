@@ -19,6 +19,7 @@ namespace Downlink.Controllers
         private readonly ILogger<DownlinkController> _logger;
         private readonly IHostingEnvironment _environment;
 
+        public IExceptionHandler Exceptionhandler { get; }
         public IResponseHandler Handler { get; }
         private IConfiguration Configuration { get; }
 
@@ -29,12 +30,14 @@ namespace Downlink.Controllers
             IHostingEnvironment env,
             MediatR.IMediator mediator,
             IResponseHandler handler,
+            IExceptionHandler exHandler,
             ILogger<DownlinkController> logger) : base(mediator)
         {
             Configuration = config;
             Handler = handler;
             _logger = logger;
             _environment = env;
+            Exceptionhandler = exHandler;
         }
 
         [HttpGet]
@@ -63,6 +66,7 @@ namespace Downlink.Controllers
             try
             {
                 var res = await Mediator.Send(req);
+                await Mediator.Publish(new DownlinkResultNotification(spec, res));
                 var result = await Handler.HandleAsync(res.Source);
                 _logger?.LogInformation(101, result.ToString());
                 return result;
@@ -70,7 +74,9 @@ namespace Downlink.Controllers
             catch (Core.Diagnostics.NotFoundException ex)
             {
                 _logger?.LogWarning(404, ex, "Caught NotFoundException");
-                return NotFound(ex.Message);
+                await Mediator.Publish(ex.ToNotification(spec));
+                var result = await Exceptionhandler.HandleAsync(ex, spec);
+                return result;
             }
         }
     }

@@ -10,13 +10,13 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceRoot}/src/Downlink/bin/Debug/netcoreapp2.0/Downlink.dll",
+            "program": "${workspaceRoot}/src/Downlink.Host/bin/Debug/netcoreapp2.0/Downlink.Host.dll",
             "args": [],
-            "cwd": "${workspaceRoot}/src/Downlink",
+            "cwd": "${workspaceRoot}/src/Downlink.Host",
             "stopAtEntry": false,
             "internalConsoleOptions": "openOnSessionStart",
             "launchBrowser": {
-                "enabled": true,
+                "enabled": false,
                 "args": "${auto-detect-url}",
                 "windows": {
                     "command": "cmd.exe",

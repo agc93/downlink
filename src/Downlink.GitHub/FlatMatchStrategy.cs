@@ -13,16 +13,19 @@ namespace Downlink.GitHub
     {
         private readonly List<string> _splitCharacters;
         private readonly ILogger<FlatMatchStrategy> _logger;
+        private readonly IFormatParser _formatParser;
         private readonly bool _enableLatestTag;
 
         public FlatMatchStrategy(
             IConfiguration config,
-            ILogger<FlatMatchStrategy> logger
+            ILogger<FlatMatchStrategy> logger,
+            IFormatParser formatParser
         ) : base("flat")
         {
             _enableLatestTag = config.GetValue("Experimental:GitHubLatestVersion", false);
             _splitCharacters = config.GetList("GitHubStorage:SplitCharacters", new[] { "_" }).ToList();
             _logger = logger;
+            _formatParser = formatParser;
             _logger.LogDebug("Parsing releases using {0}", string.Join("|", _splitCharacters));
         }
 
@@ -46,8 +49,13 @@ namespace Downlink.GitHub
             var archs = platforms.Where(a => a.Key.Architecture.ToLower() == version.Architecture.ToLower()).ToList();
             if (!archs.Any()) throw new ArchitectureNotFoundException($"Could not find requested architecture '{version.Architecture}' for version '{version}'");
             _logger.LogDebug("Found architecture match for {0} assets: {1}", archs.Count, archs.Select(a => a.Key.Summary));
-            var file = new GitHubFileSource(archs.First().Key, !release.Draft);
-            file.Build(archs.First().Value);
+            var match = string.IsNullOrWhiteSpace(version.Format)
+                ? archs.First()
+                : archs.First(r => (_formatParser.GetFormat(r.Value.Name).ToLower() == version.Format));
+            if (match.Value == null) throw new FormatNotFoundException($"Could not find requested format '{version.Format}' for version '{version}'!");
+            // var file = new GitHubFileSource(archs.First().Key, !release.Draft);
+            var file = new GitHubFileSource(match.Key, !release.Draft);
+            file.Build(match.Value);
             return Task.FromResult(file as IFileSource);
         }
 

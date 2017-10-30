@@ -27,9 +27,9 @@ namespace Downlink.Core
         public string Architecture { get; } = string.Empty;
         private string VersionString { get; }
 
-        public string Summary => $"'{VersionString}' [{(Platform ?? "unknown")}/{(Architecture ?? "unknown")}]";
+        public string Format { get; set; } = string.Empty;
 
-        public bool IsStable {get;}
+        public string Summary => $"'{VersionString}' [{(Platform ?? "unknown")}/{(Architecture ?? "unknown")}]";
 
         public override string ToString()
         {
@@ -50,12 +50,11 @@ namespace Downlink.Core
             {
                 return false;
             }
-            
-            // TODO: write your implementation of Equals() here
             var spec = (VersionSpec)obj;
             return obj.ToString() == ToString() &&
                 spec.Platform == Platform &&
-                spec.Architecture == Architecture;
+                spec.Architecture == Architecture &&
+                spec.Format == Format;
         }
 
         public override int GetHashCode() {

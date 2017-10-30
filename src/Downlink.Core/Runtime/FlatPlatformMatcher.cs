@@ -5,12 +5,14 @@ namespace Downlink.Core.Runtime
 {
     public class FlatPlatformMatcher : IPatternMatcher
     {
+        private readonly IFormatParser _parser;
         private readonly bool _forceNameMatch;
 
         public string Name => "FlatPlatform";
 
-        public FlatPlatformMatcher(bool forceNameMatching = false)
+        public FlatPlatformMatcher(IFormatParser parser, bool forceNameMatching = false)
         {
+            _parser = parser;
             _forceNameMatch = forceNameMatching;
         }
         public bool Match(Path path, VersionSpec version)
@@ -20,9 +22,11 @@ namespace Downlink.Core.Runtime
             var nameMatch = _forceNameMatch 
                 ? path.GetFilenameWithoutExtension().Contains(version.ToString())
                 : true;
-            var platMatch = path.GetFilenameWithoutExtension().Contains(version.Architecture) &&
-                    path.GetFilenameWithoutExtension().Contains(version.ToString());
-            return pathMatch && nameMatch && platMatch;
+            var platMatch = path.GetFilenameWithoutExtension().Contains(version.Architecture);
+            var formatMatch = string.IsNullOrWhiteSpace(version.Format)
+                ? true
+                : _parser.GetFormat(path).ToLower() == version.Format.ToLower();
+            return pathMatch && nameMatch && platMatch && formatMatch;
         }
     }
 }

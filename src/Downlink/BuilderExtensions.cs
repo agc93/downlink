@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Reflection;
 using MediatR;
 using Microsoft.AspNetCore.Hosting;
@@ -20,6 +21,11 @@ namespace Downlink
         internal static IServiceCollection AddMediatR(this IServiceCollection services)
         {
             services.AddMediatR(typeof(Hosting.DownlinkBuilder), typeof(Core.IRemoteStorage));
+            foreach (var item in services.Where(s => s.ServiceType == typeof(INotificationHandler<Messaging.DownlinkResultNotification>)).ToList())
+            {
+                services.Remove(item);
+            }
+            //  services.Where(s => s.ServiceType == typeof(INotificationHandler<Messaging.DownlinkResultNotification>));
             return services;
         }
     }

@@ -24,18 +24,23 @@ namespace Downlink.Hosting
             return builder;
         }
 
+        public static IDownlinkBuilder AddExceptionHandler<T>(this IDownlinkBuilder builder) where T : class, IExceptionHandler {
+            builder.Services.AddTransient<IExceptionHandler, T>();
+            return builder;
+        }
+
         public static IDownlinkBuilder AddSchemeClient<T>(this IDownlinkBuilder builder) where T : class, ISchemeClient {
             builder.Services.AddTransient<ISchemeClient, T>();
             return builder;
         }
 
-        public static IDownlinkBuilder AddResponseAction(this IDownlinkBuilder builder, Action<AppVersionResponseModel> response) {
-            builder.Services.AddTransient<MediatR.INotificationHandler<AppVersionResponseModel>>(provider => new Messaging.ActionNotification(response));
+        public static IDownlinkBuilder AddResponseAction(this IDownlinkBuilder builder, Action<DownlinkResultNotification> response) {
+            builder.Services.AddTransient<MediatR.INotificationHandler<DownlinkResultNotification>>(provider => new Messaging.ActionNotification(response));
             return builder;
         }
 
-        public static IDownlinkBuilder AddNotificationHandler<T>(this IDownlinkBuilder builder) where T : class, MediatR.INotificationHandler<AppVersionResponseModel> {
-            builder.Services.AddScoped<MediatR.INotificationHandler<AppVersionResponseModel>, T>();
+        public static IDownlinkBuilder AddNotificationHandler<T>(this IDownlinkBuilder builder) where T : class, MediatR.INotificationHandler<DownlinkResultNotification> {
+            builder.Services.AddScoped<MediatR.INotificationHandler<DownlinkResultNotification>, T>();
             return builder;
         }
 

@@ -7,7 +7,7 @@
         {
             "taskName": "build",
             "args": [
-                "${workspaceRoot}/src/Downlink/Downlink.csproj"
+                "${workspaceRoot}/src/Downlink.Host/Downlink.Host.csproj"
             ],
             "isBuildCommand": true,
             "problemMatcher": "$msCompile"

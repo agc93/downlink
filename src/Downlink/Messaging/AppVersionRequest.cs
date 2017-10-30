@@ -8,10 +8,10 @@ namespace Downlink.Messaging
         public AppVersionRequest(VersionSpec version, string format = null)
         {
             Version = version;
-            Format = format;
+            if (Version.Format == null || (string.IsNullOrWhiteSpace(Version.Format) && !string.IsNullOrWhiteSpace(format))) {
+                Version.Format = format;
+            }
         }
         public VersionSpec Version { get; }
-
-        public string Format { get; }
     }
 }

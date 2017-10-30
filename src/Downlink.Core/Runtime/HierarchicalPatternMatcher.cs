@@ -8,12 +8,14 @@ namespace Downlink.Core.Runtime
 {
     public class HierarchicalPatternMatcher : IPatternMatcher
     {
+        private readonly IFormatParser _parser;
         private readonly bool _forceNameMatch;
 
         public string Name => "Hierarchical";
 
-        public HierarchicalPatternMatcher(bool forceNameMatching = false)
+        public HierarchicalPatternMatcher(IFormatParser parser, bool forceNameMatching = false)
         {
+            _parser = parser;
             _forceNameMatch = forceNameMatching;
         }
 
@@ -22,8 +24,17 @@ namespace Downlink.Core.Runtime
             var search = $"{version.ToString()}/{version.Platform}/{version.Architecture}";
             var matching = path.FullPath.StartsWith(search) ||
                 path.FullPath.TrimStart('.', '/').StartsWith(search);
+            if (!matching && version.Architecture == "any") {
+                matching = path.FullPath.TrimStart('.', '/').StartsWith($"{version}/{version.Platform}/");
+            }
+            if (!matching && version.Architecture == "any" && version.Platform == "any") {
+                matching = path.FullPath.TrimStart('.', '/').StartsWith($"{version}/");
+            }
             var nameMatch = _forceNameMatch ? path.GetFilename().Contains(version) : true;
-            return matching && nameMatch;
+            var formatMatch = string.IsNullOrWhiteSpace(version.Format)
+                ? true
+                : _parser.GetFormat(path).ToLower() == version.Format.ToLower();
+            return matching && nameMatch && formatMatch;
         }
     }
 }

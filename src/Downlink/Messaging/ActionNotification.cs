@@ -3,13 +3,13 @@ using MediatR;
 
 namespace Downlink.Messaging
 {
-    public class ActionNotification : MediatR.INotificationHandler<AppVersionResponseModel>
+    public class ActionNotification : MediatR.INotificationHandler<DownlinkResultNotification>
     {
-        private Action<AppVersionResponseModel> _responseAction;
-        internal ActionNotification(Action<AppVersionResponseModel> responseAction) {
+        private Action<DownlinkResultNotification> _responseAction;
+        internal ActionNotification(Action<DownlinkResultNotification> responseAction) {
             _responseAction = responseAction;
         }
-        public void Handle(AppVersionResponseModel notification)
+        public void Handle(DownlinkResultNotification notification)
         {
             _responseAction?.Invoke(notification);
         }

@@ -14,11 +14,11 @@ namespace Downlink.GitHub
 
         public static GitHubCredentials BuildCredentials(IConfiguration config, ILogger<GitHubCredentials> logger = null)
         {
-            var repo = config.GetValue<string>("GitHubStorage:Repository", null) ??
-                            config.GetValue<string>("GitHub:Repository", null);
+            var repo = config.GetValue<string>("GitHubStorage:Repository", string.Empty) ??
+                            config.GetValue<string>("GitHub:Repository", string.Empty);
             var token = config.GetValue<string>("GitHubStorage:ApiToken", string.Empty) ??
                             config.GetValue<string>("GitHub:ApiToken", string.Empty);
-            return repo == null ? null : new GitHubCredentials(token, repo);
+            return new GitHubCredentials(token, repo);
         }
     }
 }
