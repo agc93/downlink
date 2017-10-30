@@ -3,6 +3,7 @@
   <Import Project="../Downlink.props" />
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <NoWarn>NU1701</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
     <PackageId>Downlink</PackageId>
@@ -18,12 +19,12 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.0.0"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="2.0.0" />
-    <PackageReference Include="NetEscapades.Configuration.Yaml" Version="1.2.0"/>
+    <PackageReference Include="NetEscapades.Configuration.Yaml" Version="1.3.0"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Downlink.Core\Downlink.Core.csproj"/>
     <ProjectReference Include="..\Downlink.GitHub\Downlink.GitHub.csproj"/>
-    <ProjectReference Include="..\Downlink.AzureStorage\Downlink.AzureStorage.csproj"/>
+    <ProjectReference Include="..\Downlink.AzureStorage\Downlink.AzureStorage.csproj" NoWarn="NU1701" />
     <ProjectReference Include="..\Downlink.S3\Downlink.S3.csproj"/>
     <ProjectReference Include="..\Downlink.Local\Downlink.Local.csproj"/>
   </ItemGroup>

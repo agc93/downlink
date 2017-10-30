@@ -10,7 +10,7 @@
     <Description>This package includes a new backend for Downlink to support artifacts stored in GitHub Releases</Description>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Octokit" Version="0.24.0"/>
+    <PackageReference Include="Octokit" Version="0.27.0"/>
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="2.0.0"/>
     <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.0.0"/>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="2.0.0"/>
