@@ -7,7 +7,8 @@ namespace Downlink.Hosting
         SkipDefaultPatterns = 1,
         SkipDefaultHandlers = 2,
         SkipDefaultSchemeClients = 4,
-        SkipDefaultStorage = 8
+        SkipDefaultStorage = 8,
+        SkipDefaultFormatParsers = 16
     }
 
     internal class DownlinkBuilderDefaults {
@@ -16,11 +17,13 @@ namespace Downlink.Hosting
             RegisterDefaultHandlers = !opts.HasFlag(DownlinkBuilderOptions.SkipDefaultHandlers);
             RegisterDefaultSchemeClients = !opts.HasFlag(DownlinkBuilderOptions.SkipDefaultSchemeClients);
             RegisterDefaultStorage = !opts.HasFlag(DownlinkBuilderOptions.SkipDefaultStorage);
+            RegisterDefaultFormatParsers = !opts.HasFlag(DownlinkBuilderOptions.SkipDefaultFormatParsers);
         }
 
         internal bool RegisterDefaultPatterns {get;}
         internal bool RegisterDefaultHandlers {get;}
         internal bool RegisterDefaultSchemeClients {get;}
         internal bool RegisterDefaultStorage {get;}
+        internal bool RegisterDefaultFormatParsers {get;}
     }
 }

@@ -45,8 +45,11 @@ namespace Downlink.Hosting
                 builder.Services.AddAzureStorage();
                 builder.Services.AddLocalStorage();
             }
+            if (opts.RegisterDefaultFormatParsers) {
+                logger?.LogDebug("Registering default format parser");
+                builder.Services.AddTransient<IFormatParser, PathFormatParser>();
+            }
             builder.Services.AddFallbackStorage();
-            builder.Services.AddTransient<IFormatParser, PathFormatParser>();
         }
     }
 }
