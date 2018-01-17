@@ -22,6 +22,7 @@ Pattern matching is the much simpler alternative to match strategies, but has th
 |Hierarchical|✅|✅|❌|
 |FlatVersion|✅|✅|❌|
 |FlatPlatform|✅|✅|❌|
+|Package|✅|✅|❌|
 |Search|❌|✅|❌|
 
 ## Configuration
