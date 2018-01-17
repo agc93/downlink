@@ -9,9 +9,9 @@ namespace Downlink.Core.Runtime
         private readonly IFormatParser _parser;
         private readonly bool _forceNameMatch;
         public string Name => "Runtime";
-        public RuntimePatternMatcher(IFormatParser parser, bool forceNameMatching = false) {
+        public RuntimePatternMatcher(IFormatParser parser, DownlinkMatchConventions conventions) {
             _parser = parser;
-            _forceNameMatch = forceNameMatching;
+            _forceNameMatch = conventions.ForceNameMatching;
         }
         public bool Match(Path path, VersionSpec version)
         {

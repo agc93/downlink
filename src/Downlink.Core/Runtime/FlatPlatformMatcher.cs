@@ -10,10 +10,10 @@ namespace Downlink.Core.Runtime
 
         public string Name => "FlatPlatform";
 
-        public FlatPlatformMatcher(IFormatParser parser, bool forceNameMatching = false)
+        public FlatPlatformMatcher(IFormatParser parser, DownlinkMatchConventions conventions)
         {
             _parser = parser;
-            _forceNameMatch = forceNameMatching;
+            _forceNameMatch = conventions.ForceNameMatching;
         }
         public bool Match(Path path, VersionSpec version)
         {

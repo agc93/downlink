@@ -13,10 +13,10 @@ namespace Downlink.Core.Runtime
 
         public string Name => "Hierarchical";
 
-        public HierarchicalPatternMatcher(IFormatParser parser, bool forceNameMatching = false)
+        public HierarchicalPatternMatcher(IFormatParser parser, DownlinkMatchConventions conventions)
         {
             _parser = parser;
-            _forceNameMatch = forceNameMatching;
+            _forceNameMatch = conventions.ForceNameMatching;
         }
 
         public bool Match(Path path, VersionSpec version)

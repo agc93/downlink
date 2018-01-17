@@ -10,10 +10,10 @@ namespace Downlink.Core.Runtime
 
         public string Name => "Package";
 
-        public PackagePatternMatcher(IFormatParser formatParser, bool forceNameMatching = false)
+        public PackagePatternMatcher(IFormatParser formatParser, DownlinkMatchConventions conventions)
         {
             _parser = formatParser;
-            _forceNameMatch = forceNameMatching;
+            _forceNameMatch = conventions.ForceNameMatching;
         }
 
         public bool Match(Path path, VersionSpec version)

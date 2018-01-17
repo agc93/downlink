@@ -24,13 +24,8 @@ namespace Downlink.Infrastructure
         }
 
         // this should be removed in a future release
-        internal static IRemoteStorage GetStorage(System.IServiceProvider provider) {
-            var logger = provider.GetService<ILogger<Hosting.DownlinkBuilder>>();
-            logger?.LogDebug("Running service factory for IRemoteStorage");
-            var config = provider.GetService<IConfiguration>();
-            var backend = config.GetValue("Storage", string.Empty).ToLower().Trim();
-            var providers = provider.GetServices<IRemoteStorage>();
-            return providers.GetStorageFor(backend);
+        internal static DownlinkMatchConventions GetConventions(System.IServiceProvider provider) {
+            return DownlinkMatchConventions.Default;
         }
     }
 }

@@ -50,6 +50,7 @@ namespace Downlink.Hosting
                 builder.Services.AddTransient<IFormatParser, PathFormatParser>();
             }
             builder.Services.AddFallbackStorage();
+            builder.Services.AddSingleton<DownlinkMatchConventions>(ServiceFactory.GetConventions);
         }
     }
 }
